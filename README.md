@@ -1,6 +1,10 @@
 # Berfin Nida Ozturk
 
+![Portfolio Preview](preview.png)
+
 Personal portfolio website and project showcase.
+
+---
 
 ## About
 - Focus: Frontend and UI-first web development
@@ -8,7 +12,7 @@ Personal portfolio website and project showcase.
 - Background: Molecular Biology and Genetics -> Web Development
 
 ## Live Portfolio
-- Website: https://berfinida.github.io/Portfolio/
+- **Website:** https://berfinida.github.io/Portfolio/
 
 ## Featured Projects
 
@@ -43,7 +47,7 @@ Modern web platform for international investment, residency, and citizenship ser
 - Repo: https://github.com/berfinida/GoldenVisa
 
 ## Contact
-- LinkedIn: https://www.linkedin.com/in/berfin-nida-%C3%B6zt%C3%BCrk-6a12131b7/
-- GitHub: https://github.com/berfinida
-- WhatsApp: https://wa.me/905443744032
-- Email: berfinnidaozturk@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/berfin-nida-%C3%B6zt%C3%BCrk-6a12131b7/
+- **GitHub:** https://github.com/berfinida
+- **WhatsApp:** https://wa.me/905443744032
+- **Email:** berfinnidaozturk@gmail.com
