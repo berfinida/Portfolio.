@@ -352,11 +352,24 @@
       gap:18px;
     }
 
+    .build-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+    }
+
     .service{
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:24px;
       background:var(--soft);
+    }
+
+    .build-item{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      background:var(--surface);
     }
 
     .service h3{
@@ -441,6 +454,54 @@
       display:block;
       font-weight:700;
       margin-bottom:4px;
+    }
+
+    .project-meta-title{
+      margin:0;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--muted-2);
+      font-weight:600;
+    }
+
+    .project-tech{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0;
+      padding:0;
+    }
+
+    .project-tech span,
+    .project-role-list span,
+    .project-system-list span{
+      display:inline-flex;
+      align-items:center;
+      padding:6px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:var(--soft);
+      font-size:12px;
+      color:var(--text);
+      line-height:1;
+      white-space:nowrap;
+    }
+
+    .project-role-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0;
+      padding:0;
+    }
+
+    .project-system-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0;
+      padding:0;
     }
 
     .project-stack span{
@@ -700,6 +761,31 @@
       font-size:14px;
     }
 
+    .footer-specialties{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+
+    .footer-specialties-title{
+      font-size:11px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .footer-specialty{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      color:var(--text);
+      background:var(--surface);
+    }
+
     [data-lang]{
       display:none !important;
     }
@@ -720,14 +806,19 @@
 
     @media (max-width: 980px){
       .hero-grid,
-      .services,
-      .projects,
-      .about,
-      .system-grid,
-      .contact-grid,
-      .why-grid{
-        grid-template-columns:1fr;
-      }
+    .services,
+    .projects,
+    .about,
+    .build-grid,
+    .system-grid,
+    .contact-grid,
+    .why-grid{
+      grid-template-columns:1fr;
+    }
+
+    .build-section{
+      background:linear-gradient(180deg, var(--card-soft) 0%, var(--surface) 100%);
+    }
 
       .section-head{
         flex-direction:column;
@@ -906,6 +997,7 @@
         <div class="nav-links">
           <a href="#services"><span data-lang-inline="tr">Hizmetler</span><span data-lang-inline="en">Services</span></a>
           <a href="#projects"><span data-lang-inline="tr">Projeler</span><span data-lang-inline="en">Projects</span></a>
+          <a href="#builds"><span data-lang-inline="tr">Neler Geliştiriyorum</span><span data-lang-inline="en">What I Build</span></a>
           <a href="#why"><span data-lang-inline="tr">Neden Ben</span><span data-lang-inline="en">Why Me</span></a>
           <a href="#about"><span data-lang-inline="tr">Hakkımda</span><span data-lang-inline="en">About</span></a>
           <a href="#contact"><span data-lang-inline="tr">İletişim</span><span data-lang-inline="en">Contact</span></a>
@@ -930,8 +1022,8 @@
           <span data-lang-inline="en">Web Developer</span>
         </div>
 
-        <h1 data-lang="tr">Öne çıkmak isteyen markalar için modern web siteleri.</h1>
-        <h1 data-lang="en">Modern websites for brands that want to stand out.</h1>
+        <h1 data-lang="tr">Tasarım, Arayüz ve Sistem Mantığını Birleştiren Projeler</h1>
+        <h1 data-lang="en">Projects that Combine Design, Interface and System Logic</h1>
 
         <div class="hero-meta">
           <span class="hero-name">Berfin Nida</span>
@@ -940,10 +1032,10 @@
         </div>
 
         <p class="hero-sub" data-lang="tr">
-          Şirketler, kişisel markalar ve dijital projeler için temiz, modern ve güzel görünen web siteleri tasarlıyor ve geliştiriyorum.
+          Frontend tasarımın yanında admin panel, dinamik içerik yapısı, kullanıcı akışları ve sistem mantığı içeren projeler geliştiriyorum.
         </p>
         <p class="hero-sub" data-lang="en">
-          I design and build clean, modern and visually strong websites for businesses, personal brands and digital projects.
+          I develop projects that combine frontend design with admin panels, dynamic content structures, user flows, and system logic.
         </p>
 
         <div class="cta-row">
@@ -986,24 +1078,52 @@
 
       <div class="services">
         <article class="service">
-          <h3 data-lang="tr">Web Sitesi Geliştirme</h3>
-          <h3 data-lang="en">Website Development</h3>
-          <p data-lang="tr">Modern, mobil uyumlu ve güzel ilk izlenim bırakan web siteleri.</p>
-          <p data-lang="en">Modern, responsive websites built to create a strong first impression.</p>
+          <h3 data-lang="tr">UI/UX Design</h3>
+          <h3 data-lang="en">UI/UX Design</h3>
+          <p data-lang="tr">Arayüz hiyerarşisi, kullanıcı akışı ve dönüşüm odaklı deneyim tasarımı.</p>
+          <p data-lang="en">Interface hierarchy, user flows, and conversion-oriented experience design.</p>
         </article>
 
         <article class="service">
-          <h3 data-lang="tr">Landing Page Tasarımı</h3>
-          <h3 data-lang="en">Landing Pages</h3>
-          <p data-lang="tr">Daha net anlatan, daha iyi görünen ve daha etkili tek sayfa çözümler.</p>
-          <p data-lang="en">Single-page experiences designed for clarity, presentation and stronger impact.</p>
+          <h3 data-lang="tr">Frontend Development</h3>
+          <h3 data-lang="en">Frontend Development</h3>
+          <p data-lang="tr">HTML, CSS ve JavaScript tabanlı hızlı, erişilebilir ve ölçeklenebilir arayüz geliştirme.</p>
+          <p data-lang="en">Fast, accessible, and scalable interface development with HTML, CSS, and JavaScript.</p>
         </article>
 
         <article class="service">
-          <h3 data-lang="tr">Özel Web Çözümleri</h3>
-          <h3 data-lang="en">Custom Web Solutions</h3>
-          <p data-lang="tr">İhtiyaca göre özelleştirilen, işlev ve görsel bütünlüğü birlikte düşünen çözümler.</p>
-          <p data-lang="en">Tailored web solutions built around both functionality and visual quality.</p>
+          <h3 data-lang="tr">Web Application Interfaces</h3>
+          <h3 data-lang="en">Web Application Interfaces</h3>
+          <p data-lang="tr">İş süreçlerini destekleyen ve panellerle bütünleşen uygulama arayüzleri.</p>
+          <p data-lang="en">Application interfaces aligned with business logic and designed for admin/user workflows.</p>
+        </article>
+
+        <article class="service">
+          <h3 data-lang="tr">Admin Panel Design</h3>
+          <h3 data-lang="en">Admin Panel Design</h3>
+          <p data-lang="tr">Rol tabanlı yönetim, onay, raporlama ve içerik düzenleme akışları için panel tasarımı.</p>
+          <p data-lang="en">Panel design for role-based operations including approvals, reporting, and content management.</p>
+        </article>
+
+        <article class="service">
+          <h3 data-lang="tr">E-commerce System Design</h3>
+          <h3 data-lang="en">E-commerce System Design</h3>
+          <p data-lang="tr">Ürün, kategori, kampanya ve sipariş akışlarını birlikte ele alan sistem tasarımı.</p>
+          <p data-lang="en">System design covering products, categories, campaigns, and order flows.</p>
+        </article>
+
+        <article class="service">
+          <h3 data-lang="tr">Dynamic Website Development</h3>
+          <h3 data-lang="en">Dynamic Website Development</h3>
+          <p data-lang="tr">İçerik güdümlü, yönetilebilir ve tekrar kullanılabilir bileşenlerle yaşayan web çözümleri.</p>
+          <p data-lang="en">Living websites built from reusable components and dynamic content architecture.</p>
+        </article>
+
+        <article class="service">
+          <h3 data-lang="tr">Digital Product Design</h3>
+          <h3 data-lang="en">Digital Product Design</h3>
+          <p data-lang="tr">İş fikrinden lansmana kadar ürün mantığıyla tamamlanan uçtan uca dijital ürün geliştirme.</p>
+          <p data-lang="en">End-to-end digital product development from concept and architecture to launch.</p>
         </article>
       </div>
     </div>
@@ -1035,8 +1155,39 @@
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Hotel</span><span data-lang-inline="en">Hotel</span></div>
             <h3>Hotel17</h3>
-            <p data-lang="tr">Butik otel deneyimi için tasarlanmış, premium sunum dili ve güzel atmosfer hissine sahip modern web arayüzüdür.</p>
-            <p data-lang="en">A modern hotel website interface designed with a premium presentation style and a strong atmospheric feel.</p>
+            <p data-lang="tr"><strong>Problem:</strong> Butik otel tanıtımında güçlü bir atmosfer dili vardı ancak içerik yönetimi ve sayfa akışları operasyonel açıdan dağınıktı.</p>
+            <p data-lang="en"><strong>Problem:</strong> The hotel project had a strong visual tone, but content and flow were not structured for ongoing operations.</p>
+            <p data-lang="tr"><strong>Çözüm:</strong> Görsel dili koruyarak, kullanıcıyı net sonuca taşıyan hikâye akışı ve sayfa düzenini yeniden tasarladım.</p>
+            <p data-lang="en"><strong>Solution:</strong> I kept the premium visual language and redesigned the flow to support clearer user decisions.</p>
+            <p data-lang="tr"><strong>Sistem:</strong> Dinamik içerik blokları, arayüz hiyerarşisi ve yönetim panelinden kontrol edilebilen içerik/sahne akışı kurdum.</p>
+            <p data-lang="en"><strong>System:</strong> I built dynamic content blocks, interface hierarchy, and panel-controlled content orchestration.</p>
+            <p class="project-meta-title"><span data-lang-inline="tr">Teknoloji</span><span data-lang-inline="en">Tech Stack</span></p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Responsive Design</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Rolüm</span><span data-lang-inline="en">My Role</span></p>
+            <div class="project-role-list">
+              <span>UI Design</span>
+              <span>Frontend Development</span>
+              <span>System Planning</span>
+              <span>Admin Panel Structure</span>
+              <span>Content Architecture</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Sistem Özellikleri</span><span data-lang-inline="en">System Features</span></p>
+            <div class="project-system-list">
+              <span>Admin Panel</span>
+              <span>Authentication</span>
+              <span>Dynamic Content Management</span>
+              <span>Category Structure</span>
+              <span>User Account Flow</span>
+              <span>Database-driven Architecture</span>
+            </div>
             <div class="project-links">
               <a class="mini-link" href="https://github.com/berfinida/Hotel17" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://hotel17-lilac.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
@@ -1051,8 +1202,34 @@
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Restoran</span><span data-lang-inline="en">Restaurant</span></div>
             <h3>Cafe17</h3>
-            <p data-lang="tr">Kafe markası için hazırlanmış, menü deneyimini ve marka atmosferini öne çıkaran modern web arayüzü.</p>
-            <p data-lang="en">A modern cafe website interface built to highlight the menu experience, atmosphere, and brand presentation.</p>
+            <p data-lang="tr"><strong>Problem:</strong> Menü akışı, kampanya ve marka anlatısı tek bir kullanıcı yolculuğunda bütünleşmemişti.</p>
+            <p data-lang="en"><strong>Problem:</strong> The menu flow, promotions, and brand storytelling were not unified in one coherent user journey.</p>
+            <p data-lang="tr"><strong>Çözüm:</strong> Menü keşfini hızlandıran ve markayı destekleyen, sade ama güçlü bir deneyim düzeni kurguladım.</p>
+            <p data-lang="en"><strong>Solution:</strong> I created a cleaner, stronger browsing structure that aligns menu discovery with brand communication.</p>
+            <p data-lang="tr"><strong>Sistem:</strong> Kategoriye göre menu modelleme, dinamik içerik güncelleme ve admin onay/özet akışı kurdum.</p>
+            <p data-lang="en"><strong>System:</strong> I implemented category-based menu modeling, dynamic content updating, and admin review/summary workflow.</p>
+            <p class="project-meta-title"><span data-lang-inline="tr">Teknoloji</span><span data-lang-inline="en">Tech Stack</span></p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive Design</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Rolüm</span><span data-lang-inline="en">My Role</span></p>
+            <div class="project-role-list">
+              <span>UI Design</span>
+              <span>Frontend Development</span>
+              <span>System Planning</span>
+              <span>Content Architecture</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Sistem Özellikleri</span><span data-lang-inline="en">System Features</span></p>
+            <div class="project-system-list">
+              <span>Dynamic Content Management</span>
+              <span>Category Structure</span>
+              <span>Search / Filter Logic</span>
+              <span>User Account Flow</span>
+              <span>Database-driven Architecture</span>
+            </div>
             <div class="project-links">
               <a class="mini-link" href="https://github.com/berfinida/cafe17" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://cafe17-adts.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
@@ -1067,8 +1244,45 @@
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">E-Ticaret</span><span data-lang-inline="en">E-Commerce</span></div>
             <h3>NizenStore</h3>
-            <p data-lang="tr">Ürün vitrini, kategori akışı ve alışveriş deneyimini öne çıkaran modern e-ticaret arayüzü.</p>
-            <p data-lang="en">A modern e-commerce interface focused on product showcase, category flow, and shopping experience.</p>
+            <p data-lang="tr"><strong>Problem:</strong> Eski kafa: vitrin güçlüydü ama ürün yönetimi, kategori düzeni, arama/filtre ve sipariş akışı sistem olarak oturmamıştı.</p>
+            <p data-lang="en"><strong>Problem:</strong> The storefront was visually strong, but product operations like management, categorization, search/filter, and order flow were not coherent.</p>
+            <p data-lang="tr"><strong>Çözüm:</strong> Modern bir e-ticaret vitrini ile birlikte operasyonel bir e-ticaret sistemi kurguladım.</p>
+            <p data-lang="en"><strong>Solution:</strong> I paired a modern storefront with a functional e-commerce system architecture.</p>
+            <p data-lang="tr"><strong>Sistem:</strong> Ürün yönetimi, kategori yönetimi, sipariş akışı, kullanıcı hesabı, admin paneli, kampanya/vitrin mantığı, arama çubuğu, öne çıkan kategoriler ve dinamik ürün listeleme eklendi.</p>
+            <p data-lang="en"><strong>System:</strong> I added product and category management, order flow, user account flow, admin panel, campaign/catalog logic, search, featured categories, and dynamic product listing.</p>
+            <p class="project-meta-title"><span data-lang-inline="tr">Teknoloji</span><span data-lang-inline="en">Tech Stack</span></p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Responsive Design</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Rolüm</span><span data-lang-inline="en">My Role</span></p>
+            <div class="project-role-list">
+              <span>UI Design</span>
+              <span>Frontend Development</span>
+              <span>System Planning</span>
+              <span>Admin Panel Structure</span>
+              <span>Content Architecture</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Sistem Özellikleri</span><span data-lang-inline="en">System Features</span></p>
+            <div class="project-system-list">
+              <span>Ürün Yönetimi / Product Management</span>
+              <span>Kategori Yönetimi / Category Management</span>
+              <span>Sipariş Akışı / Order Flow</span>
+              <span>Kullanıcı Hesabı / User Account Flow</span>
+              <span>Admin Panel</span>
+              <span>Kampanya / Vitrin Mantığı / Campaign & Catalog Logic</span>
+              <span>Arama Çubuğu / Search Bar</span>
+              <span>Öne Çıkan Kategoriler / Featured Categories</span>
+              <span>Dinamik Ürün Listeleme / Dynamic Product Listing</span>
+              <span>İçerik Güncelleme Paneli / Content Update Panel</span>
+              <span>Dynamic Content Management</span>
+              <span>Authentication</span>
+            </div>
             <div class="project-links">
               <a class="mini-link" href="https://github.com/berfinida/Nizenstore" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://nizen-store.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
@@ -1083,8 +1297,39 @@
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Seyahat Keşfi</span><span data-lang-inline="en">Travel Discovery</span></div>
             <h3>Wandex</h3>
-            <p data-lang="tr">Destinasyonları öne çıkaran, modern ve akıcı bir seyahat keşif deneyimi.</p>
-            <p data-lang="en">A modern travel discovery experience built around destinations and clean interactions.</p>
+            <p data-lang="tr"><strong>Problem:</strong> Seyahat içeriği zengindi ama kullanıcıların doğru hedefe hızlı ulaşması ve içerik filtrelemesi net değildi.</p>
+            <p data-lang="en"><strong>Problem:</strong> The travel content was rich, but users lacked a clear and fast way to reach relevant destinations.</p>
+            <p data-lang="tr"><strong>Çözüm:</strong> Keşif sürecini daha okunur kılan, kategori-temelli ve filtre odaklı bir yolculuk tasarladım.</p>
+            <p data-lang="en"><strong>Solution:</strong> I redesigned the flow around a cleaner discovery journey with category-driven filtering.</p>
+            <p data-lang="tr"><strong>Sistem:</strong> Search / filter mantığı, kategori yapısı, kullanıcı hesap akışı ve dinamik içerik yönetimi oturtuldu.</p>
+            <p data-lang="en"><strong>System:</strong> I implemented search/filter logic, category structure, user account flow, and dynamic content management.</p>
+            <p class="project-meta-title"><span data-lang-inline="tr">Teknoloji</span><span data-lang-inline="en">Tech Stack</span></p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Responsive Design</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Rolüm</span><span data-lang-inline="en">My Role</span></p>
+            <div class="project-role-list">
+              <span>UI Design</span>
+              <span>Frontend Development</span>
+              <span>System Planning</span>
+              <span>Admin Panel Structure</span>
+              <span>Content Architecture</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Sistem Özellikleri</span><span data-lang-inline="en">System Features</span></p>
+            <div class="project-system-list">
+              <span>Search / Filter Logic</span>
+              <span>Dynamic Content Management</span>
+              <span>User Account Flow</span>
+              <span>Dashboard Logic</span>
+              <span>Database-driven Architecture</span>
+              <span>Category Structure</span>
+            </div>
             <div class="project-links">
               <a class="mini-link" href="https://github.com/berfinida/Wandex" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://wandex-seven.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
@@ -1099,8 +1344,36 @@
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Verimlilik Uygulaması</span><span data-lang-inline="en">Productivity App</span></div>
             <h3>ZenithFocus</h3>
-            <p data-lang="tr">Odak, verimlilik ve düzenli çalışma akışı için geliştirilen modern web uygulaması.</p>
-            <p data-lang="en">A modern productivity web app focused on deep work, concentration, and organized flow.</p>
+            <p data-lang="tr"><strong>Problem:</strong> Görev, odak süresi ve ilerleme durumu için tek bir merkez yoktu.</p>
+            <p data-lang="en"><strong>Problem:</strong> There was no single center for tasks, focus intervals, and progress tracking.</p>
+            <p data-lang="tr"><strong>Çözüm:</strong> Çalışma planlaması, odak ve görev akışını tek bir kullanıcı panelinde birleştirdim.</p>
+            <p data-lang="en"><strong>Solution:</strong> I unified planning, focus, and task flow inside one coherent user dashboard.</p>
+            <p data-lang="tr"><strong>Sistem:</strong> Dashboard mantığı, kullanıcı oturumu, görev durumu/etiketleme ve form/process yönetimi kuruldu.</p>
+            <p data-lang="en"><strong>System:</strong> I implemented dashboard logic, session-based user flow, task status and labeling, and form/process management.</p>
+            <p class="project-meta-title"><span data-lang-inline="tr">Teknoloji</span><span data-lang-inline="en">Tech Stack</span></p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Responsive Design</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Rolüm</span><span data-lang-inline="en">My Role</span></p>
+            <div class="project-role-list">
+              <span>UI Design</span>
+              <span>Frontend Development</span>
+              <span>System Planning</span>
+              <span>Content Architecture</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Sistem Özellikleri</span><span data-lang-inline="en">System Features</span></p>
+            <div class="project-system-list">
+              <span>Dashboard Logic</span>
+              <span>Authentication</span>
+              <span>Form Management</span>
+              <span>Dynamic Content Management</span>
+              <span>Database-driven Architecture</span>
+            </div>
             <div class="project-links">
               <a class="mini-link" href="https://github.com/berfinida/ZenithFocus" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://zenith-focus-five.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
@@ -1114,13 +1387,123 @@
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment & Immigration</span></div>
             <h3>GoldenVisaKW</h3>
-            <p data-lang="tr">GoldenVisaKW, uluslararası yatırım, oturum ve vatandaşlık hizmetleri için geliştirilmiş modern bir web platformudur. SEO uyumlu, hızlı ve mobil uyumlu yapıya sahiptir.</p>
-            <p data-lang="en">GoldenVisaKW is a modern web platform built for international investment, residency and citizenship services, focused on SEO, speed and mobile responsiveness.</p>
+            <p data-lang="tr"><strong>Problem:</strong> Kurumsal hizmet sürecinde güven veren sunum ve başvuru akışı net değildi.</p>
+            <p data-lang="en"><strong>Problem:</strong> For a trust-sensitive corporate service, the conversion messaging and application flow lacked clarity.</p>
+            <p data-lang="tr"><strong>Çözüm:</strong> Marka güvenini destekleyen ve süreç adımlarını netleyen bir platform diliyle sayfa akışını yeniden kurdum.</p>
+            <p data-lang="en"><strong>Solution:</strong> I rebuilt the flow with a clear trust-first platform language and explicit step-based journey.</p>
+            <p data-lang="tr"><strong>Sistem:</strong> Kimlik doğrulama bazlı kullanıcı yolu, form yönetimi, admin paneli ve içerik akışı operasyonlarını sistemsel olarak entegre ettim.</p>
+            <p data-lang="en"><strong>System:</strong> I integrated auth-aware user journey, form management, admin operations panel, and dynamic content flow controls.</p>
+            <p class="project-meta-title"><span data-lang-inline="tr">Teknoloji</span><span data-lang-inline="en">Tech Stack</span></p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Responsive Design</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Rolüm</span><span data-lang-inline="en">My Role</span></p>
+            <div class="project-role-list">
+              <span>UI Design</span>
+              <span>Frontend Development</span>
+              <span>System Planning</span>
+              <span>Admin Panel Structure</span>
+              <span>Content Architecture</span>
+            </div>
+            <p class="project-meta-title"><span data-lang-inline="tr">Sistem Özellikleri</span><span data-lang-inline="en">System Features</span></p>
+            <div class="project-system-list">
+              <span>Admin Panel</span>
+              <span>Authentication</span>
+              <span>Form Management</span>
+              <span>User Account Flow</span>
+              <span>Dynamic Content Management</span>
+              <span>Campaign / Content Flow</span>
+              <span>Database-driven Architecture</span>
+            </div>
             <div class="project-links">
               <a class="mini-link" href="https://github.com/berfinida/goldenvisa" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://goldenvisakw.com" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
           </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="builds" class="build-section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-left">
+          <div class="section-kicker" data-lang="tr">Neler Geliştiriyorum</div>
+          <div class="section-kicker" data-lang="en">What I Build</div>
+          <h2 data-lang="tr">Neler Geliştiriyorum</h2>
+          <h2 data-lang="en">What I Build</h2>
+        </div>
+
+        <p class="section-desc" data-lang="tr">
+          Tasarım odaklı olmakla birlikte canlı sistemler, panel yapıları ve operasyonel akışlar kuruyorum.
+        </p>
+        <p class="section-desc" data-lang="en">
+          Beyond interface design, I build working systems, panel structures, and operational workflows.
+        </p>
+      </div>
+
+      <div class="build-grid">
+        <article class="build-item">
+          <strong data-lang="tr">Admin Paneller</strong>
+          <strong data-lang="en">Admin Panels</strong>
+          <p data-lang="tr">Rol bazlı içerik girişi, onay akışları ve yönetim ekranları oluştururum.</p>
+          <p data-lang="en">I build role-aware admin interfaces for content entry, approvals, and operations.</p>
+        </article>
+
+        <article class="build-item">
+          <strong data-lang="tr">E-ticaret Sistemleri</strong>
+          <strong data-lang="en">E-commerce Systems</strong>
+          <p data-lang="tr">Ürün ve kategori mimarisini sipariş ve kampanya akışlarıyla birlikte kurgularım.</p>
+          <p data-lang="en">I design product and category architectures aligned with order and campaign flows.</p>
+        </article>
+
+        <article class="build-item">
+          <strong data-lang="tr">Kullanıcı Giriş / Kayıt Yapıları</strong>
+          <strong data-lang="en">User Sign-up / Authentication Flows</strong>
+          <p data-lang="tr">Giriş, hesap güvenliği ve rol mantığıyla kullanıcı süreçlerini kurarım.</p>
+          <p data-lang="en">I build user onboarding and account structures with secure authentication logic.</p>
+        </article>
+
+        <article class="build-item">
+          <strong data-lang="tr">Dinamik İçerik Yönetimi</strong>
+          <strong data-lang="en">Dynamic Content Management</strong>
+          <p data-lang="tr">Panel destekli içerik bloklarıyla sürekli güncellenebilen yapı tasarlarım.</p>
+          <p data-lang="en">I design update-friendly CMS-like content block systems controlled from admin side.</p>
+        </article>
+
+        <article class="build-item">
+          <strong data-lang="tr">Dashboard Arayüzleri</strong>
+          <strong data-lang="en">Dashboard Interfaces</strong>
+          <p data-lang="tr">Kullanıcı ve yönetici odaklı akışları tek ekranda takip edilebilir hale getiririm.</p>
+          <p data-lang="en">I create dashboards where user and admin flows can be monitored in one coherent interface.</p>
+        </article>
+
+        <article class="build-item">
+          <strong data-lang="tr">Veritabanı Destekli Web Yapıları</strong>
+          <strong data-lang="en">Database-driven Web Architectures</strong>
+          <p data-lang="tr">Gerçek veri ilişkileriyle çalışan, ölçeklenebilir ve sürdürülebilir yapı kurarım.</p>
+          <p data-lang="en">I build scalable and maintainable systems with practical relational data structures.</p>
+        </article>
+
+        <article class="build-item">
+          <strong data-lang="tr">Ürün / Kategori Yönetimi</strong>
+          <strong data-lang="en">Product / Category Management</strong>
+          <p data-lang="tr">Ürün ve kategori hiyerarşilerini standart kurallara göre tasarlarım.</p>
+          <p data-lang="en">I model product and category hierarchies with structured business rules.</p>
+        </article>
+
+        <article class="build-item">
+          <strong data-lang="tr">Arama ve Filtreleme Kurguları</strong>
+          <strong data-lang="en">Search and Filter Architectures</strong>
+          <p data-lang="tr">Kullanıcıyı doğru içeriğe hızlı ulaştıran filtrelenebilir akışlar kurarım.</p>
+          <p data-lang="en">I build discoverability flows that quickly guide users to relevant content.</p>
         </article>
       </div>
     </div>
@@ -1183,41 +1566,57 @@
       <div class="about">
         <div class="about-box">
           <p data-lang="tr">
-            Ben, tasarım ve geliştirme süreçlerini birlikte düşünen çok yönlü bir dijital üreticiyim.
-            Bugüne kadar otel, kafe, e-ticaret, seyahat, verimlilik ve kurumsal hizmetler gibi farklı alanlarda projeler geliştirerek;
-            her markanın ihtiyacına göre estetik, işlevsel ve güçlü bir dijital görünüm oluşturmayı hedefledim.
-            Benim için iyi bir proje sadece güzel görünmekle sınırlı değildir; aynı zamanda anlaşılır, akıcı, kullanıcı odaklı ve güven veren bir deneyim sunmalıdır.
-            Bu yüzden fikir aşamasından arayüz tasarımına, içerik kurgusundan canlıya alma sürecine kadar her aşamayı bütüncül bir bakışla ele alıyorum.
+            Ben sadece arayüz yapan değil, çalışan bir sistem kuran bir dijital ürün geliştiricisiyim.
+            Fikirden yayına kadar tüm yolculuğu yönetirim: ihtiyacın netleştirilmesi, kullanıcı akışı planı,
+            arayüz tasarımı, veritabanı destekli mimari, test ve canlıya alma.
+            Laravel bilgimi admin panel mantığı, auth kullanıcı işlemleri, ürün ve içerik akışları için kullanır;
+            dinamik içerik yönetimi ve güvenli süreçler üzerine odaklanırım.
+            Böylece görsel kaliteyle birlikte sürdürülebilir, yönetilebilir ve ölçülebilir sistemler teslim ederim.
           </p>
           <p data-lang="en">
-            I am a multidisciplinary digital creator who approaches design and development as one connected process.
-            By building projects across hospitality, cafe, e-commerce, travel, productivity, and corporate service categories,
-            I have focused on creating digital experiences that are visually strong, functional, and tailored to each brand’s needs.
-            For me, a successful project is not only about looking good; it should also feel clear, smooth, user-focused, and trustworthy.
-            That is why I approach every project holistically, from idea development and interface design to content structure and final launch.
+            I am not just an interface designer; I build working systems.
+            I think in full product lifecycle terms: idea definition, user flow planning,
+            UI, database-aware architecture, testing, and production launch.
+            I apply Laravel-oriented backend thinking for admin panel logic, auth and user flows,
+            dynamic content management, and product-content pipelines.
+            This allows me to deliver systems that are both visually strong and production-ready.
           </p>
         </div>
 
         <div class="about-points">
           <div class="point">
-            <strong data-lang="tr">Minimal ama güzel tasarım</strong>
-            <strong data-lang="en">Minimal but strong design</strong>
-            <span data-lang="tr">Sade görünüm içinde güçlü bir marka hissi kurmayı önemsiyorum.</span>
-            <span data-lang="en">I care about creating a strong brand feel within a clean visual system.</span>
+            <strong data-lang="tr">Sadece arayüz değil, sistem de kuruyorum</strong>
+            <strong data-lang="en">Beyond UI, I build systems</strong>
+            <span data-lang="tr">Kullanıcı arayüzünü, iş akışı mantığıyla ve ölçülebilir performans hedefiyle birlikte tasarlarım.</span>
+            <span data-lang="en">I shape the user interface together with real process logic and measurable outcomes.</span>
           </div>
 
           <div class="point">
-            <strong data-lang="tr">Kullanıcı odaklı yaklaşım</strong>
-            <strong data-lang="en">User-focused approach</strong>
-            <span data-lang="tr">Bir projenin sadece görünüşünü değil, kullanım hissini de önemserim.</span>
-            <span data-lang="en">I care not only about how a project looks, but also how it feels to use it.</span>
+            <strong data-lang="tr">Fikirden yayına bitişik süreç</strong>
+            <strong data-lang="en">From idea to launch</strong>
+            <span data-lang="tr">İhtiyaç analizi, içerik kurgusu, geliştirme ve yayınlama aşamalarını tek bir planla yönetirim.</span>
+            <span data-lang="en">I manage idea, architecture, implementation and launch as one continuous flow.</span>
           </div>
 
           <div class="point">
-            <strong data-lang="tr">Güçlü sunum dili</strong>
-            <strong data-lang="en">Strong presentation</strong>
-            <span data-lang="tr">Projelerin profesyonel ve güven veren bir izlenim bırakmasını hedeflerim.</span>
-            <span data-lang="en">I aim for projects to leave a professional and trustworthy impression.</span>
+            <strong data-lang="tr">Yönetim paneli ve dinamik içerik yönetimi</strong>
+            <strong data-lang="en">Admin panel and dynamic content management</strong>
+            <span data-lang="tr">Yönetim paneli, içerik onayı, kategori hiyerarşisi ve kampanya akışlarıyla çalışan yapılar kurarım.</span>
+            <span data-lang="en">I build operational admin workflows for content moderation, category structures, and campaign workflows.</span>
+          </div>
+
+          <div class="point">
+            <strong data-lang="tr">Laravel ve backend mantığı</strong>
+            <strong data-lang="en">Laravel and backend logic</strong>
+            <span data-lang="tr">Auth / kullanıcı işlemleri, veri ilişkileri ve güvenlik mantığı için Laravel-ekosistemi yaklaşımını uygularım.</span>
+            <span data-lang="en">I apply Laravel-style backend thinking for auth flows, data relations, and secure operations.</span>
+          </div>
+
+          <div class="point">
+            <strong data-lang="tr">Veritabanı destekli ürün ve içerik akışları</strong>
+            <strong data-lang="en">Database-driven product and content flows</strong>
+            <span data-lang="tr">Ürün, kategori, envanter ve kampanya akışlarını veritabanı destekli bir mimariyle sürdürülebilir kılarım.</span>
+            <span data-lang="en">I design scalable flows for products, categories, and campaigns with database-driven structures.</span>
           </div>
         </div>
       </div>
@@ -1235,10 +1634,22 @@
         </div>
 
         <p class="section-desc" data-lang="tr">
-          Bir proje, iş birliği veya fikir için bana ulaşabilirsin.
+          Marka arayüzlerinden admin panellere kadar çalışan dijital ürünler geliştirmek için iletişime geçin.
         </p>
         <p class="section-desc" data-lang="en">
-          Feel free to reach out for collaborations, freelance work or project ideas.
+          Reach out to build working digital products from brand interfaces to admin panels.
+        </p>
+        <p class="section-desc" data-lang="tr">
+          Tasarım ve sistem mantığını birlikte düşünen projeler için birlikte çalışalım.
+        </p>
+        <p class="section-desc" data-lang="en">
+          Let&rsquo;s collaborate on projects that combine design and system logic.
+        </p>
+        <p class="section-desc" data-lang="tr">
+          Web arayüzü, yönetim paneli ve dijital ürün kurgusu için iş birliğine açığım.
+        </p>
+        <p class="section-desc" data-lang="en">
+          Open for partnerships in web interfaces, admin panels, and digital product architecture.
         </p>
       </div>
 
@@ -1291,6 +1702,15 @@
   <footer class="footer">
     <div class="container">
       © 2026 Berfin Nida <span data-lang-inline="tr">Kod &amp; Tasarım</span><span data-lang-inline="en">Code &amp; Create</span>
+      <div class="footer-specialties">
+        <span class="footer-specialties-title" data-lang-inline="tr">Uzmanlık</span>
+        <span class="footer-specialties-title" data-lang-inline="en">Specialized In</span>
+        <span class="footer-specialty"><span data-lang="tr">UI/UX</span><span data-lang="en">UI/UX</span></span>
+        <span class="footer-specialty"><span data-lang="tr">Frontend</span><span data-lang="en">Frontend</span></span>
+        <span class="footer-specialty"><span data-lang="tr">Laravel Tabanlı Sistemler</span><span data-lang="en">Laravel-based Systems</span></span>
+        <span class="footer-specialty"><span data-lang="tr">Admin Panelleri</span><span data-lang="en">Admin Panels</span></span>
+        <span class="footer-specialty"><span data-lang="tr">E-ticaret Arayüzleri</span><span data-lang="en">E-commerce Interfaces</span></span>
+      </div>
     </div>
   </footer>
 
@@ -1352,9 +1772,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
