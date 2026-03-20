@@ -392,14 +392,76 @@
     .project{
       border:1px solid var(--line);
       border-radius:var(--radius);
+      overflow:hidden;
       background:var(--surface);
       transition:.2s ease;
-      overflow:hidden;
     }
 
     .project:hover{
       transform:translateY(-2px);
       box-shadow:0 16px 40px rgba(0,0,0,.04);
+    }
+
+    .project-summary{
+      list-style:none;
+      cursor:pointer;
+      border:0;
+      padding:24px;
+      background:var(--surface);
+      color:inherit;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      font:inherit;
+      width:100%;
+      text-align:left;
+      transition:.2s ease;
+    }
+
+    .project-summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .project-summary:hover{
+      background:var(--soft);
+    }
+
+    .project-summary-main{
+      min-width:0;
+    }
+
+    .project-summary .project-category{
+      margin-bottom:8px;
+    }
+
+    .project-summary h3{
+      margin:0;
+      font-size:26px;
+      line-height:1.1;
+      letter-spacing:-.03em;
+    }
+
+    .project-chevron{
+      width:36px;
+      height:36px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      font-size:16px;
+      line-height:1;
+      color:var(--text);
+      transition:.2s ease;
+      flex-shrink:0;
+    }
+
+    .project[open] .project-chevron{
+      transform:rotate(180deg);
+    }
+
+    .project[open]{
+      box-shadow:0 12px 34px rgba(0,0,0,.04);
     }
 
     .project-media{
@@ -526,13 +588,6 @@
       color:var(--muted-2);
       text-transform:uppercase;
       letter-spacing:.12em;
-    }
-
-    .project h3{
-      margin:10px 0;
-      font-size:26px;
-      line-height:1.1;
-      letter-spacing:-.03em;
     }
 
     .project p{
@@ -1148,13 +1203,18 @@
       </div>
 
       <div class="projects">
-        <article class="project">
-          <div class="project-media">
-            <img class="project-image" src="hotel17preview.png" alt="Hotel 17 ürün görseli" loading="lazy" />
-          </div>
+        <details class="project" open>
+          <summary class="project-summary">
+            <div class="project-summary-main">
+              <div class="project-category">
+                <span data-lang-inline="tr">Hotel</span><span data-lang-inline="en">Hotel</span>
+              </div>
+              <h3>Hotel17</h3>
+            </div>
+            <span class="project-chevron" aria-hidden="true">⌄</span>
+          </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Hotel</span><span data-lang-inline="en">Hotel</span></div>
-            <h3>Hotel17</h3>
             <p data-lang="tr"><strong>Problem:</strong> Butik otel tanıtımında güçlü bir atmosfer dili vardı ancak içerik yönetimi ve sayfa akışları operasyonel açıdan dağınıktı.</p>
             <p data-lang="en"><strong>Problem:</strong> The hotel project had a strong visual tone, but content and flow were not structured for ongoing operations.</p>
             <p data-lang="tr"><strong>Çözüm:</strong> Görsel dili koruyarak, kullanıcıyı net sonuca taşıyan hikâye akışı ve sayfa düzenini yeniden tasarladım.</p>
@@ -1192,16 +1252,24 @@
               <a class="mini-link" href="https://github.com/berfinida/Hotel17" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://hotel17-lilac.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
+            <div class="project-media">
+              <img class="project-image" src="hotel17preview.png" alt="Hotel 17 ürün görseli" loading="lazy" />
+            </div>
           </div>
-        </article>
+        </details>
 
-        <article class="project">
-          <div class="project-media">
-            <img class="project-image" src="cafe17preview.png" alt="Cafe17 ürün görseli" loading="lazy" />
-          </div>
+        <details class="project">
+          <summary class="project-summary">
+            <div class="project-summary-main">
+              <div class="project-category">
+                <span data-lang-inline="tr">Restoran</span><span data-lang-inline="en">Restaurant</span>
+              </div>
+              <h3>Cafe17</h3>
+            </div>
+            <span class="project-chevron" aria-hidden="true">⌄</span>
+          </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Restoran</span><span data-lang-inline="en">Restaurant</span></div>
-            <h3>Cafe17</h3>
             <p data-lang="tr"><strong>Problem:</strong> Menü akışı, kampanya ve marka anlatısı tek bir kullanıcı yolculuğunda bütünleşmemişti.</p>
             <p data-lang="en"><strong>Problem:</strong> The menu flow, promotions, and brand storytelling were not unified in one coherent user journey.</p>
             <p data-lang="tr"><strong>Çözüm:</strong> Menü keşfini hızlandıran ve markayı destekleyen, sade ama güçlü bir deneyim düzeni kurguladım.</p>
@@ -1234,16 +1302,24 @@
               <a class="mini-link" href="https://github.com/berfinida/cafe17" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://cafe17-adts.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
+            <div class="project-media">
+              <img class="project-image" src="cafe17preview.png" alt="Cafe17 ürün görseli" loading="lazy" />
+            </div>
           </div>
-        </article>
+        </details>
 
-        <article class="project">
-          <div class="project-media">
-            <img class="project-image" src="nizenstorepreview.png" alt="NizenStore ürün görseli" loading="lazy" />
-          </div>
+        <details class="project">
+          <summary class="project-summary">
+            <div class="project-summary-main">
+              <div class="project-category">
+                <span data-lang-inline="tr">E-Ticaret</span><span data-lang-inline="en">E-Commerce</span>
+              </div>
+              <h3>NizenStore</h3>
+            </div>
+            <span class="project-chevron" aria-hidden="true">⌄</span>
+          </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">E-Ticaret</span><span data-lang-inline="en">E-Commerce</span></div>
-            <h3>NizenStore</h3>
             <p data-lang="tr"><strong>Problem:</strong> Eski kafa: vitrin güçlüydü ama ürün yönetimi, kategori düzeni, arama/filtre ve sipariş akışı sistem olarak oturmamıştı.</p>
             <p data-lang="en"><strong>Problem:</strong> The storefront was visually strong, but product operations like management, categorization, search/filter, and order flow were not coherent.</p>
             <p data-lang="tr"><strong>Çözüm:</strong> Modern bir e-ticaret vitrini ile birlikte operasyonel bir e-ticaret sistemi kurguladım.</p>
@@ -1287,16 +1363,24 @@
               <a class="mini-link" href="https://github.com/berfinida/Nizenstore" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://nizen-store.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
+            <div class="project-media">
+              <img class="project-image" src="nizenstorepreview.png" alt="NizenStore ürün görseli" loading="lazy" />
+            </div>
           </div>
-        </article>
+        </details>
 
-        <article class="project">
-          <div class="project-media">
-            <img class="project-image" src="wandexpreview.png" alt="Wandex ürün görseli" loading="lazy" />
-          </div>
+        <details class="project">
+          <summary class="project-summary">
+            <div class="project-summary-main">
+              <div class="project-category">
+                <span data-lang-inline="tr">Seyahat Keşfi</span><span data-lang-inline="en">Travel Discovery</span>
+              </div>
+              <h3>Wandex</h3>
+            </div>
+            <span class="project-chevron" aria-hidden="true">⌄</span>
+          </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Seyahat Keşfi</span><span data-lang-inline="en">Travel Discovery</span></div>
-            <h3>Wandex</h3>
             <p data-lang="tr"><strong>Problem:</strong> Seyahat içeriği zengindi ama kullanıcıların doğru hedefe hızlı ulaşması ve içerik filtrelemesi net değildi.</p>
             <p data-lang="en"><strong>Problem:</strong> The travel content was rich, but users lacked a clear and fast way to reach relevant destinations.</p>
             <p data-lang="tr"><strong>Çözüm:</strong> Keşif sürecini daha okunur kılan, kategori-temelli ve filtre odaklı bir yolculuk tasarladım.</p>
@@ -1334,16 +1418,24 @@
               <a class="mini-link" href="https://github.com/berfinida/Wandex" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://wandex-seven.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
+            <div class="project-media">
+              <img class="project-image" src="wandexpreview.png" alt="Wandex ürün görseli" loading="lazy" />
+            </div>
           </div>
-        </article>
+        </details>
 
-        <article class="project">
-          <div class="project-media">
-            <img class="project-image" src="zenithfocuspreview.png" alt="ZenithFocus ürün görseli" loading="lazy" />
-          </div>
+        <details class="project">
+          <summary class="project-summary">
+            <div class="project-summary-main">
+              <div class="project-category">
+                <span data-lang-inline="tr">Verimlilik Uygulaması</span><span data-lang-inline="en">Productivity App</span>
+              </div>
+              <h3>ZenithFocus</h3>
+            </div>
+            <span class="project-chevron" aria-hidden="true">⌄</span>
+          </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Verimlilik Uygulaması</span><span data-lang-inline="en">Productivity App</span></div>
-            <h3>ZenithFocus</h3>
             <p data-lang="tr"><strong>Problem:</strong> Görev, odak süresi ve ilerleme durumu için tek bir merkez yoktu.</p>
             <p data-lang="en"><strong>Problem:</strong> There was no single center for tasks, focus intervals, and progress tracking.</p>
             <p data-lang="tr"><strong>Çözüm:</strong> Çalışma planlaması, odak ve görev akışını tek bir kullanıcı panelinde birleştirdim.</p>
@@ -1378,15 +1470,24 @@
               <a class="mini-link" href="https://github.com/berfinida/ZenithFocus" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://zenith-focus-five.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
+            <div class="project-media">
+              <img class="project-image" src="zenithfocuspreview.png" alt="ZenithFocus ürün görseli" loading="lazy" />
+            </div>
           </div>
-        </article>
-                <article class="project">
-          <div class="project-media">
-            <img class="project-image" src="goldenvisakwpreview.png" alt="GoldenVisaKW ürün görseli" loading="lazy" />
-          </div>
+        </details>
+
+        <details class="project">
+          <summary class="project-summary">
+            <div class="project-summary-main">
+              <div class="project-category">
+                <span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment & Immigration</span>
+              </div>
+              <h3>GoldenVisaKW</h3>
+            </div>
+            <span class="project-chevron" aria-hidden="true">⌄</span>
+          </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment & Immigration</span></div>
-            <h3>GoldenVisaKW</h3>
             <p data-lang="tr"><strong>Problem:</strong> Kurumsal hizmet sürecinde güven veren sunum ve başvuru akışı net değildi.</p>
             <p data-lang="en"><strong>Problem:</strong> For a trust-sensitive corporate service, the conversion messaging and application flow lacked clarity.</p>
             <p data-lang="tr"><strong>Çözüm:</strong> Marka güvenini destekleyen ve süreç adımlarını netleyen bir platform diliyle sayfa akışını yeniden kurdum.</p>
@@ -1425,8 +1526,11 @@
               <a class="mini-link" href="https://github.com/berfinida/goldenvisa" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://goldenvisakw.com" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
+            <div class="project-media">
+              <img class="project-image" src="goldenvisakwpreview.png" alt="GoldenVisaKW ürün görseli" loading="lazy" />
+            </div>
           </div>
-        </article>
+        </details>
       </div>
     </div>
   </section>
@@ -1719,6 +1823,7 @@
     const buttons = document.querySelectorAll('[data-set-lang]');
     const themeToggle = document.querySelector('[data-toggle-theme]');
     const metaDescription = document.querySelector('meta[name="description"]');
+    const projectAccordions = document.querySelectorAll('.projects .project');
     const savedLang = localStorage.getItem('portfolio-lang') || 'tr';
     const savedTheme = localStorage.getItem('portfolio-theme');
 
@@ -1756,6 +1861,17 @@
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => setLang(btn.dataset.setLang));
+    });
+
+    projectAccordions.forEach((accordion) => {
+      accordion.addEventListener('toggle', () => {
+        if (!accordion.open) return;
+        projectAccordions.forEach((other) => {
+          if (other !== accordion) {
+            other.removeAttribute('open');
+          }
+        });
+      });
     });
 
     if (themeToggle) {
