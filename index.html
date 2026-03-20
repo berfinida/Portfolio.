@@ -1043,6 +1043,19 @@
         font-size:24px;
       }
 
+      .project-summary{
+        padding:20px;
+      }
+
+      .project-summary-bottom{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .project-summary-hint::before{
+        width:18px;
+      }
+
       .cta-panel{
         padding:28px 22px;
       }
@@ -1149,6 +1162,16 @@
 
       .hero-sub{
         font-size:15px;
+      }
+
+      .project-summary-meta{
+        gap:8px;
+      }
+
+      .project-summary-stat{
+        min-height:34px;
+        padding:0 10px;
+        font-size:11px;
       }
     }
   </style>
@@ -1318,13 +1341,28 @@
       <div class="projects">
         <details class="project">
           <summary class="project-summary">
-            <div class="project-summary-main">
-              <div class="project-category">
-                <span data-lang-inline="tr">Hotel</span><span data-lang-inline="en">Hotel</span>
+            <div class="project-summary-top">
+              <div class="project-summary-main">
+                <div class="project-category">
+                  <span data-lang-inline="tr">Hotel</span><span data-lang-inline="en">Hotel</span>
+                </div>
+                <h3>Hotel17</h3>
               </div>
-              <h3>Hotel17</h3>
+              <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
-            <span class="project-chevron" aria-hidden="true">⌄</span>
+            <div class="project-summary-copy">
+              <p class="project-summary-text" data-lang="tr">Butik otel deneyimini daha güçlü bir hikaye akışı, daha net içerik düzeni ve panel destekli sahne yönetimiyle yeniden kurguladım.</p>
+              <p class="project-summary-text" data-lang="en">A boutique hotel experience redesigned with stronger storytelling, clearer content structure, and panel-managed content scenes.</p>
+              <div class="project-summary-meta">
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>UI + Frontend</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Sistem</strong><strong data-lang-inline="en">System</strong><span>Admin Panel</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Stack</strong><strong data-lang-inline="en">Stack</strong><span>Laravel</span></div>
+              </div>
+            </div>
+            <div class="project-summary-bottom">
+              <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
+              <span class="project-summary-hint" data-lang="en">Open case study</span>
+            </div>
           </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Hotel</span><span data-lang-inline="en">Hotel</span></div>
@@ -1373,13 +1411,28 @@
 
         <details class="project">
           <summary class="project-summary">
-            <div class="project-summary-main">
-              <div class="project-category">
-                <span data-lang-inline="tr">Restoran</span><span data-lang-inline="en">Restaurant</span>
+            <div class="project-summary-top">
+              <div class="project-summary-main">
+                <div class="project-category">
+                  <span data-lang-inline="tr">Restoran</span><span data-lang-inline="en">Restaurant</span>
+                </div>
+                <h3>Cafe17</h3>
               </div>
-              <h3>Cafe17</h3>
+              <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
-            <span class="project-chevron" aria-hidden="true">⌄</span>
+            <div class="project-summary-copy">
+              <p class="project-summary-text" data-lang="tr">Menü keşfini hızlandıran, kampanya iletişimini sadeleştiren ve içerik güncellemelerini daha yönetilebilir hale getiren restoran arayüzü.</p>
+              <p class="project-summary-text" data-lang="en">A restaurant interface that speeds up menu discovery, clarifies campaign messaging, and makes content updates easier to manage.</p>
+              <div class="project-summary-meta">
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>UI + Frontend</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Odak</strong><strong data-lang-inline="en">Focus</strong><span>Menu Flow</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Stack</strong><strong data-lang-inline="en">Stack</strong><span>HTML / CSS / JS</span></div>
+              </div>
+            </div>
+            <div class="project-summary-bottom">
+              <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
+              <span class="project-summary-hint" data-lang="en">Open case study</span>
+            </div>
           </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Restoran</span><span data-lang-inline="en">Restaurant</span></div>
@@ -1423,13 +1476,28 @@
 
         <details class="project">
           <summary class="project-summary">
-            <div class="project-summary-main">
-              <div class="project-category">
-                <span data-lang-inline="tr">E-Ticaret</span><span data-lang-inline="en">E-Commerce</span>
+            <div class="project-summary-top">
+              <div class="project-summary-main">
+                <div class="project-category">
+                  <span data-lang-inline="tr">E-Ticaret</span><span data-lang-inline="en">E-Commerce</span>
+                </div>
+                <h3>NizenStore</h3>
               </div>
-              <h3>NizenStore</h3>
+              <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
-            <span class="project-chevron" aria-hidden="true">⌄</span>
+            <div class="project-summary-copy">
+              <p class="project-summary-text" data-lang="tr">Güçlü vitrin tasarımını ürün, kategori, sipariş ve kampanya akışlarıyla desteklenen gerçek bir e-ticaret sistemine dönüştürdüm.</p>
+              <p class="project-summary-text" data-lang="en">A strong storefront evolved into a full e-commerce system with product, category, order, and campaign workflows.</p>
+              <div class="project-summary-meta">
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>Product + Frontend</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Sistem</strong><strong data-lang-inline="en">System</strong><span>E-commerce Flow</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Stack</strong><strong data-lang-inline="en">Stack</strong><span>Laravel</span></div>
+              </div>
+            </div>
+            <div class="project-summary-bottom">
+              <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
+              <span class="project-summary-hint" data-lang="en">Open case study</span>
+            </div>
           </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">E-Ticaret</span><span data-lang-inline="en">E-Commerce</span></div>
@@ -1484,13 +1552,28 @@
 
         <details class="project">
           <summary class="project-summary">
-            <div class="project-summary-main">
-              <div class="project-category">
-                <span data-lang-inline="tr">Seyahat Keşfi</span><span data-lang-inline="en">Travel Discovery</span>
+            <div class="project-summary-top">
+              <div class="project-summary-main">
+                <div class="project-category">
+                  <span data-lang-inline="tr">Seyahat Keşfi</span><span data-lang-inline="en">Travel Discovery</span>
+                </div>
+                <h3>Wandex</h3>
               </div>
-              <h3>Wandex</h3>
+              <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
-            <span class="project-chevron" aria-hidden="true">⌄</span>
+            <div class="project-summary-copy">
+              <p class="project-summary-text" data-lang="tr">Yoğun seyahat içeriğini keşfi kolaylaştıran filtre mantığı, kategori yapısı ve kullanıcı hesabı akışıyla daha kullanılabilir hale getirdim.</p>
+              <p class="project-summary-text" data-lang="en">Travel discovery made more usable through better filters, structured categories, and a cleaner user account flow.</p>
+              <div class="project-summary-meta">
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>UI + System</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Odak</strong><strong data-lang-inline="en">Focus</strong><span>Search / Filter</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Stack</strong><strong data-lang-inline="en">Stack</strong><span>Laravel</span></div>
+              </div>
+            </div>
+            <div class="project-summary-bottom">
+              <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
+              <span class="project-summary-hint" data-lang="en">Open case study</span>
+            </div>
           </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Seyahat Keşfi</span><span data-lang-inline="en">Travel Discovery</span></div>
@@ -1539,13 +1622,28 @@
 
         <details class="project">
           <summary class="project-summary">
-            <div class="project-summary-main">
-              <div class="project-category">
-                <span data-lang-inline="tr">Verimlilik Uygulaması</span><span data-lang-inline="en">Productivity App</span>
+            <div class="project-summary-top">
+              <div class="project-summary-main">
+                <div class="project-category">
+                  <span data-lang-inline="tr">Verimlilik Uygulaması</span><span data-lang-inline="en">Productivity App</span>
+                </div>
+                <h3>ZenithFocus</h3>
               </div>
-              <h3>ZenithFocus</h3>
+              <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
-            <span class="project-chevron" aria-hidden="true">⌄</span>
+            <div class="project-summary-copy">
+              <p class="project-summary-text" data-lang="tr">Görev yönetimi, odak süresi ve ilerleme görünümünü tek panelde birleştiren verimlilik odaklı bir kullanıcı deneyimi tasarladım.</p>
+              <p class="project-summary-text" data-lang="en">A productivity-focused experience that brings tasks, focus sessions, and progress tracking into one dashboard.</p>
+              <div class="project-summary-meta">
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>UI + Planning</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Sistem</strong><strong data-lang-inline="en">System</strong><span>Dashboard Logic</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Stack</strong><strong data-lang-inline="en">Stack</strong><span>PHP / MySQL</span></div>
+              </div>
+            </div>
+            <div class="project-summary-bottom">
+              <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
+              <span class="project-summary-hint" data-lang="en">Open case study</span>
+            </div>
           </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Verimlilik Uygulaması</span><span data-lang-inline="en">Productivity App</span></div>
@@ -1591,13 +1689,28 @@
 
         <details class="project">
           <summary class="project-summary">
-            <div class="project-summary-main">
-              <div class="project-category">
-                <span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment & Immigration</span>
+            <div class="project-summary-top">
+              <div class="project-summary-main">
+                <div class="project-category">
+                  <span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment & Immigration</span>
+                </div>
+                <h3>GoldenVisaKW</h3>
               </div>
-              <h3>GoldenVisaKW</h3>
+              <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
-            <span class="project-chevron" aria-hidden="true">⌄</span>
+            <div class="project-summary-copy">
+              <p class="project-summary-text" data-lang="tr">Güven duygusunu yükselten kurumsal anlatı, net başvuru adımları ve auth destekli süreçlerle dönüşüm odaklı bir platform akışı kurdum.</p>
+              <p class="project-summary-text" data-lang="en">A trust-first platform flow built around stronger corporate messaging, clearer application steps, and auth-supported processes.</p>
+              <div class="project-summary-meta">
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>UI + Frontend</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Sistem</strong><strong data-lang-inline="en">System</strong><span>Form + Admin</span></div>
+                <div class="project-summary-stat"><strong data-lang-inline="tr">Stack</strong><strong data-lang-inline="en">Stack</strong><span>Laravel</span></div>
+              </div>
+            </div>
+            <div class="project-summary-bottom">
+              <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
+              <span class="project-summary-hint" data-lang="en">Open case study</span>
+            </div>
           </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment & Immigration</span></div>
@@ -1976,16 +2089,29 @@
       btn.addEventListener('click', () => setLang(btn.dataset.setLang));
     });
 
+    function syncAccordionState(){
+      projectAccordions.forEach((accordion) => {
+        const summary = accordion.querySelector('.project-summary');
+        if (summary) {
+          summary.setAttribute('aria-expanded', accordion.open ? 'true' : 'false');
+        }
+      });
+    }
+
     projectAccordions.forEach((accordion) => {
       accordion.addEventListener('toggle', () => {
-        if (!accordion.open) return;
-        projectAccordions.forEach((other) => {
-          if (other !== accordion) {
-            other.removeAttribute('open');
-          }
-        });
+        if (accordion.open) {
+          projectAccordions.forEach((other) => {
+            if (other !== accordion) {
+              other.removeAttribute('open');
+            }
+          });
+        }
+        syncAccordionState();
       });
     });
+
+    syncAccordionState();
 
     if (themeToggle) {
       themeToggle.addEventListener('click', () => {
