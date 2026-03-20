@@ -67,6 +67,7 @@
       color:var(--text);
       font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height:1.6;
+      overflow-x:hidden;
     }
 
     a{
@@ -611,6 +612,82 @@
       }
     }
 
+    @media (max-width: 640px){
+      section{
+        padding:64px 0;
+      }
+
+      h2{
+        font-size:34px;
+      }
+
+      .hero{
+        padding-top:60px;
+        padding-bottom:52px;
+      }
+
+      h1{
+        font-size:34px;
+      }
+
+      .hero-meta{
+        font-size:34px;
+      }
+
+      .hero-sub{
+        max-width:none;
+        font-size:15px;
+      }
+
+      .hero-side{
+        justify-content:flex-start;
+      }
+
+      .photo-card{
+        width:100%;
+        max-width:300px;
+        padding:18px;
+      }
+
+      .about-box p{
+        font-size:16px;
+      }
+
+      .service h3{
+        font-size:20px;
+      }
+
+      .project h3{
+        font-size:24px;
+      }
+
+      .project,
+      .service,
+      .about-box,
+      .about-points,
+      .why-item,
+      .contact-card{
+        border-radius:20px;
+      }
+
+      .cta-row{
+        flex-direction:column;
+      }
+
+      .cta-row .btn{
+        width:100%;
+      }
+
+      .contact-link{
+        min-height:74px;
+        padding:14px 16px;
+      }
+
+      .contact-text div{
+        font-size:15px;
+      }
+    }
+
     @media (max-width: 760px){
       .nav-inner{
         flex-direction:column;
@@ -975,16 +1052,18 @@
       <div class="about">
         <div class="about-box">
           <p data-lang="tr">
-            Grafik tasarım, dijital içerik üretimi ve web projeleri üzerine çalışan çok yönlü bir üreticiyim.
-            Bugüne kadar farklı kategorilerde birçok proje geliştirerek hem tasarım hem de teknik anlamda kendimi sürekli geliştirdim.
-            Ürettiğim işler, estetik, kullanılabilirlik ve güçlü kullanıcı deneyimini bir araya getiren dijital çözümler sunmayı hedefliyor.
-            Sadece tasarım yapmakla kalmıyor; fikir üretmek, sistemi kurmak ve projeyi baştan sona hayata geçirmek de çalışma tarzımın bir parçası.
+            Ben, tasarım ve geliştirme süreçlerini birlikte düşünen çok yönlü bir dijital üreticiyim.
+            Bugüne kadar otel, kafe, e-ticaret, seyahat, verimlilik ve kurumsal hizmetler gibi farklı alanlarda projeler geliştirerek;
+            her markanın ihtiyacına göre estetik, işlevsel ve güçlü bir dijital görünüm oluşturmayı hedefledim.
+            Benim için iyi bir proje sadece güzel görünmekle sınırlı değildir; aynı zamanda anlaşılır, akıcı, kullanıcı odaklı ve güven veren bir deneyim sunmalıdır.
+            Bu yüzden fikir aşamasından arayüz tasarımına, içerik kurgusundan canlıya alma sürecine kadar her aşamayı bütüncül bir bakışla ele alıyorum.
           </p>
           <p data-lang="en">
-            I am a versatile creator working in graphic design, digital content production, and web projects.
-            Through many projects across different categories, I have continuously improved both my creative and technical skills.
-            The work I deliver focuses on strong digital solutions that combine aesthetics, usability, and user experience.
-            My approach is not only designing; it also means generating ideas, building the system, and bringing each project to life from start to finish.
+            I am a multidisciplinary digital creator who approaches design and development as one connected process.
+            By building projects across hospitality, cafe, e-commerce, travel, productivity, and corporate service categories,
+            I have focused on creating digital experiences that are visually strong, functional, and tailored to each brand’s needs.
+            For me, a successful project is not only about looking good; it should also feel clear, smooth, user-focused, and trustworthy.
+            That is why I approach every project holistically, from idea development and interface design to content structure and final launch.
           </p>
         </div>
 
