@@ -228,9 +228,9 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:minmax(0, 1.25fr) minmax(220px, .75fr);
-      gap:32px;
-      align-items:center;
+      grid-template-columns:minmax(0, 1fr) 220px;
+      gap:48px;
+      align-items:start;
     }
 
     .eyebrow{
@@ -327,12 +327,13 @@
     .hero-side{
       display:flex;
       justify-content:flex-end;
+      padding-top:88px;
     }
 
     .photo-card{
-      width:180px;
+      width:210px;
       aspect-ratio:1 / 1;
-      flex:0 0 180px;
+      flex:0 0 210px;
       padding:10px;
       border:1px solid var(--line);
       border-radius:22px;
@@ -1043,6 +1044,7 @@
 
       .hero-side{
         justify-content:center;
+        padding-top:0;
       }
 
       .projects{
@@ -1082,9 +1084,9 @@
       }
 
       .photo-card{
-        width:160px;
-        max-width:160px;
-        flex-basis:160px;
+        width:170px;
+        max-width:170px;
+        flex-basis:170px;
         padding:8px;
       }
 
