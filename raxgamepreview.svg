@@ -1,0 +1,78 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#0b0f19"/>
+  <rect x="40" y="36" width="1200" height="728" rx="28" fill="#111827"/>
+  <rect x="72" y="68" width="1136" height="64" rx="18" fill="#171f2f"/>
+  <text x="104" y="108" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">RAXGAME</text>
+  <rect x="286" y="82" width="440" height="36" rx="18" fill="#0d1320" stroke="#283449"/>
+  <text x="312" y="105" fill="#7f8ca5" font-family="Inter, Arial, sans-serif" font-size="14">PUBG, Valorant, Roblox ara...</text>
+  <rect x="760" y="82" width="92" height="36" rx="18" fill="#22304a"/>
+  <text x="788" y="105" fill="#d8e3ff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Blog</text>
+  <rect x="866" y="82" width="128" height="36" rx="18" fill="#23304a"/>
+  <text x="894" y="105" fill="#d8e3ff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Mağazalar</text>
+  <rect x="1010" y="82" width="166" height="36" rx="18" fill="#27d56d"/>
+  <text x="1045" y="105" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">Bakiye Yükle</text>
+
+  <rect x="72" y="160" width="1136" height="232" rx="24" fill="url(#hero)"/>
+  <circle cx="1002" cy="254" r="146" fill="#4b5dff" opacity=".28"/>
+  <circle cx="228" cy="254" r="118" fill="#22d36c" opacity=".18"/>
+  <text x="116" y="220" fill="#97a6c3" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3">OYUN ALIŞVERİŞİNİN GÜVENLİ ADRESİ</text>
+  <text x="116" y="270" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="900">ROBUX İNDİRİMLERİ</text>
+  <text x="116" y="320" fill="#d6def3" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">E-pin, CD key ve oyun bakiyesi için hızlı satın alma akışı</text>
+  <rect x="116" y="344" width="164" height="40" rx="20" fill="#27d56d"/>
+  <text x="150" y="370" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="900">SATIN AL</text>
+  <rect x="900" y="200" width="228" height="132" rx="22" fill="#101725" stroke="#33415c"/>
+  <text x="928" y="244" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900">10 / 10</text>
+  <text x="928" y="282" fill="#8fa0bd" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Güvenli ödeme</text>
+
+  <g>
+    <rect x="72" y="424" width="160" height="84" rx="18" fill="#202b40"/>
+    <text x="112" y="474" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">PUBG</text>
+    <rect x="248" y="424" width="160" height="84" rx="18" fill="#24304b"/>
+    <text x="286" y="474" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Valorant</text>
+    <rect x="424" y="424" width="160" height="84" rx="18" fill="#202b40"/>
+    <text x="464" y="474" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Roblox</text>
+    <rect x="600" y="424" width="160" height="84" rx="18" fill="#24304b"/>
+    <text x="632" y="474" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">LoL RP</text>
+    <rect x="776" y="424" width="160" height="84" rx="18" fill="#202b40"/>
+    <text x="810" y="474" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">CD Key</text>
+    <rect x="952" y="424" width="256" height="84" rx="18" fill="#23304a"/>
+    <text x="1000" y="474" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Tüm Kategoriler</text>
+  </g>
+
+  <g>
+    <rect x="72" y="542" width="264" height="166" rx="22" fill="#151d2c" stroke="#27344a"/>
+    <rect x="96" y="566" width="74" height="74" rx="16" fill="#263858"/>
+    <text x="192" y="594" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Valorant 8900 VP</text>
+    <text x="192" y="624" fill="#8796b2" font-family="Inter, Arial, sans-serif" font-size="14">Anında teslimat</text>
+    <text x="96" y="680" fill="#27d56d" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="900">2.365 TL</text>
+  </g>
+  <g>
+    <rect x="368" y="542" width="264" height="166" rx="22" fill="#151d2c" stroke="#27344a"/>
+    <rect x="392" y="566" width="74" height="74" rx="16" fill="#283554"/>
+    <text x="488" y="594" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">PUBG Mobile UC</text>
+    <text x="488" y="624" fill="#8796b2" font-family="Inter, Arial, sans-serif" font-size="14">Kampanyalı ürün</text>
+    <text x="392" y="680" fill="#27d56d" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="900">%30 indirim</text>
+  </g>
+  <g>
+    <rect x="664" y="542" width="264" height="166" rx="22" fill="#151d2c" stroke="#27344a"/>
+    <rect x="688" y="566" width="74" height="74" rx="16" fill="#263858"/>
+    <text x="784" y="594" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Steam CD Key</text>
+    <text x="784" y="624" fill="#8796b2" font-family="Inter, Arial, sans-serif" font-size="14">Dijital kod akışı</text>
+    <text x="688" y="680" fill="#27d56d" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="900">Hızlı satın al</text>
+  </g>
+  <g>
+    <rect x="960" y="542" width="248" height="166" rx="22" fill="#151d2c" stroke="#27344a"/>
+    <rect x="984" y="566" width="74" height="74" rx="16" fill="#283554"/>
+    <text x="1080" y="594" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Robux</text>
+    <text x="1080" y="624" fill="#8796b2" font-family="Inter, Arial, sans-serif" font-size="14">Oyuncu bakiyesi</text>
+    <text x="984" y="680" fill="#27d56d" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="900">Satın al</text>
+  </g>
+
+  <defs>
+    <linearGradient id="hero" x1="72" y1="160" x2="1208" y2="392" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1f2a48"/>
+      <stop offset=".48" stop-color="#252150"/>
+      <stop offset="1" stop-color="#102c2a"/>
+    </linearGradient>
+  </defs>
+</svg>
