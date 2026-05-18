@@ -12,7 +12,7 @@ Personal portfolio website and project showcase.
 - Background: Molecular Biology and Genetics -> Web Development
 
 ## Live Portfolio
-- **Website:** https://berfinida.github.io/portfolio./
+- **Website:** https://berfinida.com.tr/
 
 ## Featured Projects
 
