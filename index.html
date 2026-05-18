@@ -583,6 +583,26 @@
       background:var(--line);
     }
 
+    .project-summary-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:0 12px;
+      border:1px solid var(--primary-border);
+      border-radius:999px;
+      background:var(--primary-bg);
+      color:var(--primary-text);
+      font-size:12px;
+      font-weight:700;
+      white-space:nowrap;
+      transition:.2s ease;
+    }
+
+    .project-summary-link:hover{
+      transform:translateY(-1px);
+    }
+
     .project-chevron{
       width:36px;
       height:36px;
@@ -1519,6 +1539,9 @@
             <div class="project-summary-bottom">
               <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
               <span class="project-summary-hint" data-lang="en">Open case study</span>
+              <a class="project-summary-link" href="/enterprise-kpi-case-study.html" onclick="event.stopPropagation();">
+                <span data-lang-inline="tr">Case Study'yi Aç</span><span data-lang-inline="en">Open Page</span>
+              </a>
             </div>
           </summary>
           <div class="project-body">
@@ -1546,7 +1569,7 @@
               <span>Scalable Department File Support</span>
             </div>
             <div class="project-links">
-              <a class="mini-link" href="enterprise-kpi-case-study.html"><span data-lang-inline="tr">Case Study</span><span data-lang-inline="en">Case Study</span></a>
+              <a class="mini-link" href="/enterprise-kpi-case-study.html"><span data-lang-inline="tr">Case Study</span><span data-lang-inline="en">Case Study</span></a>
             </div>
           </div>
         </details>
