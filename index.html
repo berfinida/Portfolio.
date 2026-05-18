@@ -3,8 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berfin Nida Öztürk | Designing & Building Digital Products</title>
-    <meta name="description" content="Berfin Nida Öztürk - Graphic Designer, Digital Product Creator, Frontend Developer" />
+    <title>Berfin Nida Öztürk | Frontend &amp; Web Application Developer</title>
+    <meta name="description" content="Berfin Nida Öztürk; responsive web arayüzleri, admin panelleri, e-ticaret sistemleri ve yönetilebilir dijital ürünler geliştiren frontend developer." />
+    <meta name="author" content="Berfin Nida Öztürk" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://berfinida.com.tr/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Berfin Nida Öztürk" />
+    <meta property="og:title" content="Berfin Nida Öztürk | Frontend &amp; Web Application Developer" />
+    <meta property="og:description" content="Responsive web arayüzleri, admin panelleri, e-ticaret sistemleri ve yönetilebilir dijital ürünler." />
+    <meta property="og:url" content="https://berfinida.com.tr/" />
+    <meta property="og:image" content="https://berfinida.com.tr/preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Berfin Nida Öztürk | Frontend &amp; Web Application Developer" />
+    <meta name="twitter:description" content="Responsive web arayüzleri, admin panelleri, e-ticaret sistemleri ve yönetilebilir dijital ürünler." />
+    <meta name="twitter:image" content="https://berfinida.com.tr/preview.png" />
+    <link rel="preload" as="image" href="vesikalik.bw.jpg" />
   <style>
     :root{
       --bg:#ffffff;
@@ -81,6 +97,24 @@
     img{
       max-width:100%;
       display:block;
+    }
+
+    .skip-link{
+      position:absolute;
+      left:16px;
+      top:12px;
+      z-index:100;
+      transform:translateY(-140%);
+      padding:10px 14px;
+      border-radius:999px;
+      background:var(--primary-bg);
+      color:var(--primary-text);
+      font-weight:700;
+      transition:.2s ease;
+    }
+
+    .skip-link:focus{
+      transform:translateY(0);
     }
 
     .container{
@@ -1289,6 +1323,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#content">Ana içeriğe geç</a>
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#top" class="brand">
@@ -1310,8 +1345,8 @@
           <button class="lang-btn active" data-set-lang="tr" type="button" aria-label="Türkçe" aria-pressed="true">TR</button>
           <button class="lang-btn" data-set-lang="en" type="button" aria-label="English" aria-pressed="false">EN</button>
         </div>
-        <button class="theme-btn" data-toggle-theme type="button" aria-label="Tema değiştir" aria-pressed="false">
-          <span class="theme-icon" aria-hidden="true">☀️</span>
+        <button class="theme-btn" data-toggle-theme type="button" aria-label="Koyu temaya geç" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">◐</span>
         </button>
       </div>
     </div>
@@ -1326,7 +1361,7 @@
         </div>
 
         <h1 data-lang="tr">Modern Web Arayüzleri, Admin Panelleri ve E-Ticaret Sistemleri Geliştiriyorum</h1>
-        <h1 data-lang="en">Building Modern Web Interfaces, Admin Panels & E-Commerce Systems</h1>
+        <h1 data-lang="en">Building Modern Web Interfaces, Admin Panels &amp; E-Commerce Systems</h1>
 
         <div class="hero-meta">
           <span class="hero-name">Berfin Nida</span>
@@ -1355,12 +1390,13 @@
 
       <div class="hero-side">
         <div class="photo-card">
-          <img src="vesikalik.bw.jpg" alt="Berfin Nida" class="photo">
+          <img src="vesikalik.bw.jpg" alt="Berfin Nida Öztürk portre fotoğrafı" class="photo" width="779" height="899" loading="eager" decoding="async" fetchpriority="high">
         </div>
       </div>
     </div>
   </header>
 
+  <main id="content">
   <section id="services">
     <div class="container">
       <div class="section-head">
@@ -1516,7 +1552,7 @@
               <span>Combination Code Generation</span>
               <span>User Login / Registration</span>
               <span>Saved Designs</span>
-              <span>Comments & Revision History</span>
+              <span>Comments &amp; Revision History</span>
               <span>TR / EN Localization</span>
               <span>PDF Export</span>
               <span>Smoke Test Workflow</span>
@@ -1525,7 +1561,7 @@
               <a class="mini-link" href="https://github.com/berfinida/design" target="_blank" rel="noopener">GitHub</a>
             </div>
             <div class="project-media">
-              <img class="project-image" src="modgispreview.svg" alt="ModGIS modüler gömlek tasarım sistemi önizlemesi" loading="lazy" />
+              <img class="project-image" src="modgispreview.svg" alt="ModGIS modüler gömlek tasarım sistemi önizlemesi" width="1280" height="800" loading="lazy" decoding="async" />
             </div>
           </div>
         </details>
@@ -1595,7 +1631,7 @@
               <a class="mini-link" href="https://hotel17-lilac.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
             <div class="project-media">
-              <img class="project-image" src="hotel17preview.png" alt="Hotel 17 ürün görseli" loading="lazy" />
+              <img class="project-image" src="hotel17preview.png" alt="Hotel17 butik otel web arayüzü önizlemesi" width="1887" height="906" loading="lazy" decoding="async" />
             </div>
           </div>
         </details>
@@ -1658,7 +1694,7 @@
             <p class="project-meta-title"><span data-lang-inline="tr">Sistem Özellikleri</span><span data-lang-inline="en">System Features</span></p>
             <div class="project-system-list">
               <span>E-Pin / CD Key Sales</span>
-              <span>Product & Category Structure</span>
+              <span>Product &amp; Category Structure</span>
               <span>Product Import / Sync</span>
               <span>External Product Feed Integration</span>
               <span>Admin Product Management</span>
@@ -1683,7 +1719,7 @@
               <a class="mini-link" href="https://raxgame.com/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Site</span><span data-lang-inline="en">Live Site</span></a>
             </div>
             <div class="project-media">
-              <img class="project-image" src="raxgamepreview.svg" alt="RaxGame oyun alışveriş platformu önizlemesi" loading="lazy" />
+              <img class="project-image" src="raxgamepreview.svg" alt="RaxGame oyun alışveriş platformu önizlemesi" width="1280" height="800" loading="lazy" decoding="async" />
             </div>
           </div>
         </details>
@@ -1748,7 +1784,7 @@
               <a class="mini-link" href="https://cafe17-adts.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
             <div class="project-media">
-              <img class="project-image" src="cafe17preview.png" alt="Cafe17 ürün görseli" loading="lazy" />
+              <img class="project-image" src="cafe17preview.png" alt="Cafe17 restoran web arayüzü önizlemesi" width="1896" height="912" loading="lazy" decoding="async" />
             </div>
           </div>
         </details>
@@ -1780,7 +1816,7 @@
           </summary>
           <div class="project-body">
             <div class="project-tag"><span data-lang-inline="tr">E-Ticaret</span><span data-lang-inline="en">E-Commerce</span></div>
-            <p data-lang="tr"><strong>Problem:</strong> Eski kafa: vitrin güçlüydü ama ürün yönetimi, kategori düzeni, arama/filtre ve sipariş akışı sistem olarak oturmamıştı.</p>
+            <p data-lang="tr"><strong>Problem:</strong> Vitrin güçlüydü ancak ürün yönetimi, kategori düzeni, arama/filtre ve sipariş akışı sistem olarak yeterince tutarlı değildi.</p>
             <p data-lang="en"><strong>Problem:</strong> The storefront was visually strong, but product operations like management, categorization, search/filter, and order flow were not coherent.</p>
             <p data-lang="tr"><strong>Çözüm:</strong> Modern bir e-ticaret vitrini ile birlikte operasyonel bir e-ticaret sistemi kurguladım.</p>
             <p data-lang="en"><strong>Solution:</strong> I paired a modern storefront with a functional e-commerce system architecture.</p>
@@ -1811,7 +1847,7 @@
               <span>Sipariş Akışı / Order Flow</span>
               <span>Kullanıcı Hesabı / User Account Flow</span>
               <span>Admin Panel</span>
-              <span>Kampanya / Vitrin Mantığı / Campaign & Catalog Logic</span>
+              <span>Kampanya / Vitrin Mantığı / Campaign &amp; Catalog Logic</span>
               <span>Arama Çubuğu / Search Bar</span>
               <span>Öne Çıkan Kategoriler / Featured Categories</span>
               <span>Dinamik Ürün Listeleme / Dynamic Product Listing</span>
@@ -1824,7 +1860,7 @@
               <a class="mini-link" href="https://nizen-store.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
             <div class="project-media">
-              <img class="project-image" src="nizenstorepreview.png" alt="NizenStore ürün görseli" loading="lazy" />
+              <img class="project-image" src="nizenstorepreview.png" alt="NizenStore e-ticaret arayüzü önizlemesi" width="1883" height="908" loading="lazy" decoding="async" />
             </div>
           </div>
         </details>
@@ -1894,7 +1930,7 @@
               <a class="mini-link" href="https://wandex-seven.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
             <div class="project-media">
-              <img class="project-image" src="wandexpreview.png" alt="Wandex ürün görseli" loading="lazy" />
+              <img class="project-image" src="wandexpreview.png" alt="Wandex seyahat keşfi arayüzü önizlemesi" width="1888" height="912" loading="lazy" decoding="async" />
             </div>
           </div>
         </details>
@@ -1961,7 +1997,7 @@
               <a class="mini-link" href="https://zenith-focus-five.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
             <div class="project-media">
-              <img class="project-image" src="zenithfocuspreview.png" alt="ZenithFocus ürün görseli" loading="lazy" />
+              <img class="project-image" src="zenithfocuspreview.png" alt="ZenithFocus verimlilik uygulaması önizlemesi" width="1907" height="866" loading="lazy" decoding="async" />
             </div>
           </div>
         </details>
@@ -1971,7 +2007,7 @@
             <div class="project-summary-top">
               <div class="project-summary-main">
                 <div class="project-category">
-                  <span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment & Immigration</span>
+                  <span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment &amp; Immigration</span>
                 </div>
                 <h3>GoldenVisaKW</h3>
               </div>
@@ -1992,7 +2028,7 @@
             </div>
           </summary>
           <div class="project-body">
-            <div class="project-tag"><span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment & Immigration</span></div>
+            <div class="project-tag"><span data-lang-inline="tr">Yatırım ve Göçmenlik</span><span data-lang-inline="en">Investment &amp; Immigration</span></div>
             <p data-lang="tr"><strong>Problem:</strong> Kurumsal hizmet sürecinde güven veren sunum ve başvuru akışı net değildi.</p>
             <p data-lang="en"><strong>Problem:</strong> For a trust-sensitive corporate service, the conversion messaging and application flow lacked clarity.</p>
             <p data-lang="tr"><strong>Çözüm:</strong> Marka güvenini destekleyen ve süreç adımlarını netleyen bir platform diliyle sayfa akışını yeniden kurdum.</p>
@@ -2032,7 +2068,7 @@
               <a class="mini-link" href="https://goldenvisakw.com" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
             <div class="project-media">
-              <img class="project-image" src="goldenvisakwpreview.png" alt="GoldenVisaKW ürün görseli" loading="lazy" />
+              <img class="project-image" src="goldenvisakwpreview.png" alt="GoldenVisaKW kurumsal platform önizlemesi" width="1893" height="907" loading="lazy" decoding="async" />
             </div>
           </div>
         </details>
@@ -2294,7 +2330,7 @@
             </span>
           </a>
 
-          <a class="contact-link" href="mailto:berfinnidaozturk@gmail.com" target="_blank" rel="noopener">
+          <a class="contact-link" href="mailto:berfinnidaozturk@gmail.com">
             <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M1.5 4h21a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 22.5 20h-21A1.5 1.5 0 0 1 0 18.5v-13A1.5 1.5 0 0 1 1.5 4zm10.58 9.8L4.2 8.21a.75.75 0 0 0-.9 1.19l7.4 5.6a.75.75 0 0 0 .9 0l7.4-5.6a.75.75 0 0 0-.9-1.19L12 13.24 2.08 5.7a.75.75 0 0 0-.9 1.19L12 13.2z"/>
             </svg>
@@ -2307,6 +2343,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -2327,10 +2365,32 @@
     const html = document.documentElement;
     const buttons = document.querySelectorAll('[data-set-lang]');
     const themeToggle = document.querySelector('[data-toggle-theme]');
+    const themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
     const metaDescription = document.querySelector('meta[name="description"]');
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    const socialDescriptions = document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]');
+    const socialTitles = document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]');
     const projectAccordions = document.querySelectorAll('.projects .project');
     const savedLang = localStorage.getItem('portfolio-lang') || 'tr';
     const savedTheme = localStorage.getItem('portfolio-theme');
+    const copy = {
+      tr: {
+        title: 'Berfin Nida Öztürk | Frontend & Web Uygulama Geliştiricisi',
+        description: 'Berfin Nida Öztürk; responsive web arayüzleri, admin panelleri, e-ticaret sistemleri ve yönetilebilir dijital ürünler geliştiren frontend developer.',
+        darkLabel: 'Açık temaya geç',
+        lightLabel: 'Koyu temaya geç'
+      },
+      en: {
+        title: 'Berfin Nida Öztürk | Frontend & Web Application Developer',
+        description: 'Berfin Nida Öztürk builds responsive web interfaces, admin panels, e-commerce systems, and maintainable digital products.',
+        darkLabel: 'Switch to light theme',
+        lightLabel: 'Switch to dark theme'
+      }
+    };
+
+    function currentLang(){
+      return html.classList.contains('lang-en') ? 'en' : 'tr';
+    }
 
     function setTheme(theme){
       const normalizedTheme = theme === 'dark' ? 'dark' : 'light';
@@ -2338,6 +2398,13 @@
       html.setAttribute('data-theme', normalizedTheme);
       if (themeToggle) {
         themeToggle.setAttribute('aria-pressed', normalizedTheme === 'dark' ? 'true' : 'false');
+        themeToggle.setAttribute('aria-label', normalizedTheme === 'dark' ? copy[currentLang()].darkLabel : copy[currentLang()].lightLabel);
+      }
+      if (themeIcon) {
+        themeIcon.textContent = normalizedTheme === 'dark' ? '○' : '◐';
+      }
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', normalizedTheme === 'dark' ? '#000000' : '#ffffff');
       }
       localStorage.setItem('portfolio-theme', normalizedTheme);
     }
@@ -2347,20 +2414,21 @@
       html.classList.remove('lang-tr','lang-en');
       html.classList.add('lang-' + normalizedLang);
       html.setAttribute('lang', normalizedLang);
-      document.title = normalizedLang === 'tr' ? 'Berfin Nida | Kod & Tasarım' : 'Berfin Nida | Code & Create';
+      document.title = copy[normalizedLang].title;
       if (metaDescription) {
-        metaDescription.setAttribute(
-          'content',
-          normalizedLang === 'tr'
-            ? 'Berfin Nida portfolyo web sitesi'
-            : 'Berfin Nida portfolio website'
-        );
+        metaDescription.setAttribute('content', copy[normalizedLang].description);
       }
+      socialTitles.forEach(meta => meta.setAttribute('content', copy[normalizedLang].title));
+      socialDescriptions.forEach(meta => meta.setAttribute('content', copy[normalizedLang].description));
       buttons.forEach(btn => {
         const isActive = btn.dataset.setLang === normalizedLang;
         btn.classList.toggle('active', isActive);
         btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
       });
+      if (themeToggle) {
+        const isDark = html.classList.contains('theme-dark');
+        themeToggle.setAttribute('aria-label', isDark ? copy[normalizedLang].darkLabel : copy[normalizedLang].lightLabel);
+      }
       localStorage.setItem('portfolio-lang', normalizedLang);
     }
 
