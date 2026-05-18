@@ -390,6 +390,16 @@
       font-size:15px;
     }
 
+    .section-copy{
+      display:grid;
+      gap:10px;
+      max-width:480px;
+    }
+
+    .section-copy .section-desc{
+      margin:0;
+    }
+
     .services{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -1056,6 +1066,10 @@
       .section-head{
         flex-direction:column;
         align-items:flex-start;
+      }
+
+      .section-copy{
+        max-width:none;
       }
 
       .hero-grid{
@@ -2366,24 +2380,26 @@
           <h2 data-lang="en">Contact</h2>
         </div>
 
-        <p class="section-desc" data-lang="tr">
-          Marka arayüzlerinden admin panellere kadar çalışan dijital ürünler geliştirmek için iletişime geçin.
-        </p>
-        <p class="section-desc" data-lang="en">
-          Reach out to build working digital products from brand interfaces to admin panels.
-        </p>
-        <p class="section-desc" data-lang="tr">
-          Tasarım ve sistem mantığını birlikte düşünen projeler için birlikte çalışalım.
-        </p>
-        <p class="section-desc" data-lang="en">
-          Let&rsquo;s collaborate on projects that combine design and system logic.
-        </p>
-        <p class="section-desc" data-lang="tr">
-          Web arayüzü, yönetim paneli ve dijital ürün kurgusu için iş birliğine açığım.
-        </p>
-        <p class="section-desc" data-lang="en">
-          Open for partnerships in web interfaces, admin panels, and digital product architecture.
-        </p>
+        <div class="section-copy">
+          <p class="section-desc" data-lang="tr">
+            Marka arayüzlerinden admin panellere kadar çalışan dijital ürünler geliştirmek için iletişime geçin.
+          </p>
+          <p class="section-desc" data-lang="en">
+            Reach out to build working digital products from brand interfaces to admin panels.
+          </p>
+          <p class="section-desc" data-lang="tr">
+            Tasarım ve sistem mantığını birlikte düşünen projeler için birlikte çalışalım.
+          </p>
+          <p class="section-desc" data-lang="en">
+            Let&rsquo;s collaborate on projects that combine design and system logic.
+          </p>
+          <p class="section-desc" data-lang="tr">
+            Web arayüzü, yönetim paneli ve dijital ürün kurgusu için iş birliğine açığım.
+          </p>
+          <p class="section-desc" data-lang="en">
+            Open for partnerships in web interfaces, admin panels, and digital product architecture.
+          </p>
+        </div>
       </div>
 
       <div class="contact-card">
