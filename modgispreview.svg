@@ -1,0 +1,76 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#f4f5f7"/>
+  <rect x="44" y="38" width="1192" height="724" rx="26" fill="#ffffff" stroke="#dfe3ea"/>
+  <rect x="76" y="70" width="1128" height="58" rx="16" fill="#101827"/>
+  <text x="108" y="108" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="850">MODGIS</text>
+  <text x="244" y="106" fill="#9ba8bd" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Moduler Gomlek Tasarim Sistemi</text>
+  <rect x="980" y="84" width="88" height="30" rx="15" fill="#25324a"/>
+  <text x="1006" y="104" fill="#d9e3f6" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800">TR / EN</text>
+  <rect x="1082" y="84" width="92" height="30" rx="15" fill="#2f6df6"/>
+  <text x="1104" y="104" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="850">Export PDF</text>
+
+  <rect x="76" y="156" width="258" height="548" rx="22" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="104" y="196" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">Modul Secimi</text>
+  <text x="104" y="222" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="13">Beden, yaka, kol, manset ve kapama</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800">
+    <rect x="104" y="252" width="202" height="48" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="126" y="282" fill="#0f172a">BD-01 Klasik Kesim</text>
+    <rect x="104" y="314" width="202" height="48" rx="14" fill="#eaf1ff" stroke="#8bb2ff"/>
+    <text x="126" y="344" fill="#1d4ed8">YK-01 Klasik Yaka</text>
+    <rect x="104" y="376" width="202" height="48" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="126" y="406" fill="#0f172a">KL-01 Uzun Kol</text>
+    <rect x="104" y="438" width="202" height="48" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="126" y="468" fill="#0f172a">MN-01 Manset</text>
+    <rect x="104" y="500" width="202" height="48" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="126" y="530" fill="#0f172a">KP-01 Kapama</text>
+  </g>
+  <rect x="104" y="596" width="202" height="72" rx="16" fill="#101827"/>
+  <text x="126" y="626" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="850">Kod</text>
+  <text x="126" y="652" fill="#aab7cc" font-family="Inter, Arial, sans-serif" font-size="12">YK01-KL01-BD01-MN01</text>
+
+  <rect x="364" y="156" width="552" height="548" rx="22" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="396" y="188" width="488" height="52" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="420" y="221" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="850">Canli SVG Katman Onizleme</text>
+  <rect x="456" y="272" width="368" height="390" rx="24" fill="#f8fafc" stroke="#e2e8f0"/>
+  <path d="M578 318 L640 348 L702 318 L770 370 L728 454 L704 438 L704 626 L576 626 L576 438 L552 454 L510 370 Z" fill="#e8edf4" stroke="#0f172a" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M578 318 L640 348 L702 318 L674 386 L640 366 L606 386 Z" fill="#ffffff" stroke="#0f172a" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M640 368 L640 626" stroke="#0f172a" stroke-width="4"/>
+  <circle cx="640" cy="424" r="5" fill="#0f172a"/>
+  <circle cx="640" cy="474" r="5" fill="#0f172a"/>
+  <circle cx="640" cy="524" r="5" fill="#0f172a"/>
+  <g stroke="#2f6df6" stroke-width="2" stroke-dasharray="5 5">
+    <line x1="578" y1="318" x2="520" y2="300"/>
+    <line x1="702" y1="318" x2="760" y2="300"/>
+    <line x1="576" y1="438" x2="530" y2="470"/>
+    <line x1="704" y1="438" x2="750" y2="470"/>
+  </g>
+  <g fill="#2f6df6">
+    <circle cx="578" cy="318" r="6"/>
+    <circle cx="702" cy="318" r="6"/>
+    <circle cx="576" cy="438" r="6"/>
+    <circle cx="704" cy="438" r="6"/>
+  </g>
+
+  <rect x="946" y="156" width="258" height="548" rx="22" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="974" y="196" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">Pantone & Kurallar</text>
+  <text x="974" y="222" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="13">Renk, kumas, uyumluluk ve revizyon</text>
+  <g>
+    <rect x="974" y="254" width="44" height="44" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="984" y="264" width="24" height="24" rx="6" fill="#f8efe0"/>
+    <text x="1030" y="281" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="850">PANTONE 11-0601</text>
+    <text x="1030" y="300" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="12">Bright White</text>
+    <rect x="974" y="318" width="44" height="44" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="984" y="328" width="24" height="24" rx="6" fill="#97a8c9"/>
+    <text x="1030" y="345" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="850">PANTONE 17-4021</text>
+    <text x="1030" y="364" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="12">Blue Fog</text>
+  </g>
+  <rect x="974" y="402" width="202" height="76" rx="16" fill="#ecfdf3" stroke="#9ee6b8"/>
+  <text x="996" y="432" fill="#166534" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="850">Hard Rule: Uyumlu</text>
+  <text x="996" y="454" fill="#3f7a54" font-family="Inter, Arial, sans-serif" font-size="12">Anchor ve katman kontrolu basarili</text>
+  <rect x="974" y="496" width="202" height="76" rx="16" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="996" y="526" fill="#9a3412" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="850">Soft Rule: Uyari</text>
+  <text x="996" y="548" fill="#a16207" font-family="Inter, Arial, sans-serif" font-size="12">Manset secimi gozden gecirilebilir</text>
+  <rect x="974" y="596" width="202" height="72" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="996" y="626" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="850">Kayitli Tasarimlar</text>
+  <text x="996" y="650" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="12">Yorum + revizyon gecmisi</text>
+</svg>
