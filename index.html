@@ -228,8 +228,8 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.25fr .75fr;
-      gap:28px;
+      grid-template-columns:minmax(0, 1.18fr) minmax(320px, .82fr);
+      gap:42px;
       align-items:center;
     }
 
@@ -326,22 +326,25 @@
 
     .hero-side{
       display:flex;
-      justify-content:center;
+      justify-content:flex-end;
     }
 
     .photo-card{
-      width:min(100%, 360px);
-      padding:22px;
+      width:min(100%, 420px);
+      padding:16px;
       border:1px solid var(--line);
-      border-radius:30px;
-      background:linear-gradient(180deg, var(--card-grad-a) 0%, var(--card-grad-b) 100%);
+      border-radius:26px;
+      background:
+        linear-gradient(180deg, var(--card-grad-a) 0%, var(--card-grad-b) 100%);
+      box-shadow:0 24px 70px rgba(0,0,0,.08);
     }
 
     .photo{
       width:100%;
-      aspect-ratio:1 / 1.15;
+      aspect-ratio:779 / 899;
       object-fit:cover;
-      border-radius:22px;
+      object-position:center 34%;
+      border-radius:18px;
       filter:grayscale(100%);
     }
 
@@ -1036,7 +1039,7 @@
       }
 
       .hero-side{
-        justify-content:flex-start;
+        justify-content:center;
       }
 
       .projects{
@@ -1072,13 +1075,13 @@
       }
 
       .hero-side{
-        justify-content:flex-start;
+        justify-content:center;
       }
 
       .photo-card{
         width:100%;
-        max-width:280px;
-        padding:18px;
+        max-width:340px;
+        padding:14px;
       }
 
       .about-box p{
