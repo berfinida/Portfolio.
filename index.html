@@ -13,6 +13,7 @@
       --muted-2:#8b8b8b;
       --line:#ebebeb;
       --soft:#f7f7f7;
+      --card-soft:#f7f7f7;
       --surface:#ffffff;
       --nav-bg:rgba(255,255,255,.88);
       --meta:#1d1d1d;
@@ -37,6 +38,7 @@
       --muted-2:#8f8f8f;
       --line:#2a2a2a;
       --soft:#0f0f0f;
+      --card-soft:#0f0f0f;
       --surface:#121212;
       --nav-bg:rgba(0,0,0,.88);
       --meta:#ffffff;
@@ -68,6 +70,7 @@
       font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height:1.6;
       overflow-x:hidden;
+      overflow-wrap:anywhere;
     }
 
     a{
@@ -215,7 +218,7 @@
       margin:0;
       font-size:clamp(34px, 5.4vw, 62px);
       line-height:1.02;
-      letter-spacing:-.04em;
+      letter-spacing:0;
       font-weight:800;
       max-width:780px;
     }
@@ -226,7 +229,7 @@
       color:var(--meta);
       font-weight:700;
       line-height:1.05;
-      letter-spacing:-.03em;
+      letter-spacing:0;
     }
 
     .hero-name{
@@ -337,7 +340,7 @@
       margin:0;
       font-size:clamp(30px, 4vw, 54px);
       line-height:1;
-      letter-spacing:-.05em;
+      letter-spacing:0;
     }
 
     .section-desc{
@@ -470,7 +473,7 @@
       margin:0;
       font-size:26px;
       line-height:1.1;
-      letter-spacing:-.03em;
+      letter-spacing:0;
     }
 
     .project-summary-copy{
@@ -822,7 +825,7 @@
 
     .cta-panel h2{
       font-size:clamp(28px, 3.4vw, 48px);
-      letter-spacing:-.03em;
+      letter-spacing:0;
       margin:0;
       line-height:1.1;
     }
@@ -921,6 +924,7 @@
     .contact-link div{
       font-weight:600;
       word-break:break-word;
+      overflow-wrap:anywhere;
     }
 
     .footer{
@@ -992,6 +996,18 @@
         flex-direction:column;
         align-items:flex-start;
       }
+
+      .hero-grid{
+        gap:38px;
+      }
+
+      .hero-side{
+        justify-content:flex-start;
+      }
+
+      .projects{
+        gap:16px;
+      }
     }
 
     @media (max-width: 640px){
@@ -1027,7 +1043,7 @@
 
       .photo-card{
         width:100%;
-        max-width:300px;
+        max-width:280px;
         padding:18px;
       }
 
@@ -1044,7 +1060,38 @@
       }
 
       .project-summary{
-        padding:20px;
+        padding:18px;
+      }
+
+      .project-summary-top{
+        gap:10px;
+      }
+
+      .project-summary-text{
+        font-size:14px;
+      }
+
+      .project-summary-stat{
+        white-space:normal;
+        line-height:1.25;
+        padding:8px 10px;
+        min-height:0;
+      }
+
+      .project-body{
+        padding:0 18px 18px;
+      }
+
+      .project-media{
+        aspect-ratio:4 / 3;
+      }
+
+      .project-tech span,
+      .project-role-list span,
+      .project-system-list span,
+      .project-category{
+        white-space:normal;
+        line-height:1.25;
       }
 
       .project-summary-bottom{
@@ -1095,7 +1142,8 @@
       .nav-inner{
         flex-direction:column;
         align-items:flex-start;
-        padding:14px 0;
+        gap:12px;
+        padding:12px 0;
       }
 
       .nav-right{
@@ -1109,8 +1157,9 @@
       .nav-links{
         width:100%;
         flex-wrap:wrap;
-        gap:10px 14px;
+        gap:8px 12px;
         font-size:13px;
+        line-height:1.2;
       }
 
       .lang-btn{
@@ -1124,15 +1173,69 @@
       }
 
       .hero{
-        padding-top:56px;
+        padding-top:42px;
       }
 
       h1{
-        font-size:36px;
+        font-size:clamp(32px, 9vw, 36px);
       }
 
       .hero-sub{
-        font-size:16px;
+        font-size:15px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .container{
+        width:min(calc(100% - 28px), var(--max));
+      }
+
+      .nav{
+        position:relative;
+      }
+
+      .eyebrow{
+        max-width:100%;
+        font-size:11px;
+        line-height:1.25;
+        white-space:normal;
+      }
+
+      h1,
+      .hero-meta{
+        font-size:clamp(30px, 9vw, 34px);
+        line-height:1.08;
+      }
+
+      .hero-meta{
+        display:grid;
+        gap:6px;
+      }
+
+      .hero-slogan{
+        display:block;
+      }
+
+      .btn{
+        min-height:48px;
+        padding:0 16px;
+      }
+
+      .services,
+      .build-grid,
+      .system-grid,
+      .why-grid{
+        gap:14px;
+      }
+
+      .service,
+      .build-item,
+      .about-box,
+      .about-points,
+      .system-item,
+      .why-item,
+      .contact-card{
+        padding:20px;
       }
     }
 
@@ -1172,6 +1275,15 @@
         min-height:34px;
         padding:0 10px;
         font-size:11px;
+      }
+
+      .project-summary-stat{
+        min-height:0;
+        padding:7px 9px;
+      }
+
+      .contact-link{
+        align-items:flex-start;
       }
     }
   </style>
