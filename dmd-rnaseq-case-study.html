@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DMD vs WT RNA-seq Analysis Pipeline (Nextflow DSL2) | Case Study</title>
+    <meta
+      name="description"
+      content="Professional bioinformatics case study: reproducible single-end RNA-seq analysis workflow built with Nextflow DSL2 for DMD vs WT mouse data from FASTQ to expression matrix."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f3f5f8" />
+    <link rel="canonical" href="https://berfinida.com.tr/dmd-rnaseq-case-study.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Berfin Nida Ozturk Portfolio" />
+    <meta property="og:title" content="DMD vs WT RNA-seq Analysis Pipeline (Nextflow DSL2)" />
+    <meta
+      property="og:description"
+      content="Reproducible single-end RNA-seq workflow built with Nextflow DSL2: FASTQ, QC, trimming, quantification, MultiQC, and expression matrix generation."
+    />
+    <meta property="og:url" content="https://berfinida.com.tr/dmd-rnaseq-case-study.html" />
+    <meta property="og:image" content="https://berfinida.com.tr/preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DMD vs WT RNA-seq Analysis Pipeline (Nextflow DSL2)" />
+    <meta
+      name="twitter:description"
+      content="A computational biology case study for a reproducible RNA-seq pipeline in Nextflow DSL2."
+    />
+    <meta name="twitter:image" content="https://berfinida.com.tr/preview.png" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f3f5f8;
+        --text: #0f172a;
+        --muted: #475569;
+        --line: #d8dee8;
+        --surface: #ffffff;
+        --soft: #edf2f7;
+        --chip: #e2e8f0;
+        --accent: #0b7db8;
+        --accent-soft: #d9f0fb;
+        --dark-bg: #0a0f16;
+        --dark-surface: #111827;
+        --dark-line: #273142;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
+        background:
+          radial-gradient(circle at 18% 8%, rgba(11, 125, 184, 0.12), transparent 26%),
+          radial-gradient(circle at 82% 12%, rgba(30, 64, 175, 0.1), transparent 25%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.62;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        padding: 20px 0;
+      }
+
+      .topbar a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .hero {
+        padding: 18px 0 56px;
+      }
+
+      .glass {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        border-radius: 26px;
+      }
+
+      .hero-card {
+        padding: clamp(24px, 4vw, 40px);
+        animation: rise .6s ease;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 12px;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 14px 0 10px;
+        font-size: clamp(30px, 5vw, 58px);
+        line-height: 1.02;
+      }
+
+      .subtitle {
+        margin: 0;
+        font-size: clamp(17px, 2.4vw, 22px);
+        color: var(--muted);
+        max-width: 780px;
+      }
+
+      .hero-actions {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 18px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform .2s ease, border-color .2s ease;
+      }
+
+      .btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+      .btn.primary { background: #0f172a; color: #fff; border-color: #0f172a; }
+
+      section {
+        padding: 30px 0 12px;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: clamp(25px, 3.5vw, 38px);
+      }
+
+      p { margin: 0 0 10px; color: var(--muted); }
+
+      .grid-2 {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--surface);
+        padding: 20px;
+      }
+
+      .workflow {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .step {
+        background: linear-gradient(180deg, #fff, var(--soft));
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 14px 10px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        position: relative;
+        animation: rise .55s ease both;
+      }
+
+      .step:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        right: -9px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .tech-grid, .metrics-grid {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .chip {
+        padding: 13px 14px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: var(--chip);
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--surface);
+        padding: 16px;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 28px;
+        line-height: 1.1;
+        margin-bottom: 4px;
+      }
+
+      .links-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .links-row a {
+        border: 1px solid var(--line);
+        background: var(--surface);
+        border-radius: 999px;
+        padding: 10px 14px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      footer {
+        padding: 38px 0 58px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (max-width: 920px) {
+        .grid-2, .tech-grid, .metrics-grid { grid-template-columns: 1fr 1fr; }
+        .workflow { grid-template-columns: 1fr 1fr 1fr; }
+        .step::after { display: none; }
+      }
+
+      @media (max-width: 640px) {
+        .grid-2, .tech-grid, .metrics-grid { grid-template-columns: 1fr; }
+        .workflow { grid-template-columns: 1fr; }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background:
+            radial-gradient(circle at 18% 8%, rgba(56, 189, 248, 0.18), transparent 26%),
+            radial-gradient(circle at 82% 12%, rgba(37, 99, 235, 0.14), transparent 25%),
+            var(--dark-bg);
+          color: #e5e7eb;
+        }
+        .glass { background: rgba(17, 24, 39, 0.72); border-color: var(--dark-line); }
+        p, .topbar a { color: #b1bacb; }
+        .panel, .metric, .links-row a { background: var(--dark-surface); border-color: var(--dark-line); color: #e5e7eb; }
+        .chip { background: #1e293b; border-color: var(--dark-line); color: #e5e7eb; }
+        .step { background: linear-gradient(180deg, #162131, #111827); border-color: var(--dark-line); color: #e5e7eb; }
+        .btn { border-color: var(--dark-line); color: #e5e7eb; }
+        .btn.primary { background: #f8fafc; color: #0f172a; border-color: #f8fafc; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container topbar">
+      <a href="/index.html#projects">← Back to portfolio projects</a>
+    </div>
+
+    <header class="hero">
+      <div class="container">
+        <div class="hero-card glass">
+          <span class="eyebrow">Bioinformatics Case Study</span>
+          <h1>DMD vs WT RNA-seq Analysis Pipeline (Nextflow DSL2)</h1>
+          <p class="subtitle">Reproducible single-end RNA-seq analysis workflow built with Nextflow DSL2</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://github.com/berfinida/pipeline" target="_blank" rel="noopener">GitHub Repository</a>
+            <a class="btn" href="https://berfinida.github.io/pipeline/" target="_blank" rel="noopener">Project Page</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <div class="panel">
+          <h2>About the Project</h2>
+          <p>This project presents a production-style bioinformatics workflow for RNA-seq analysis using public DMD vs WT mouse data. The pipeline is implemented in Nextflow DSL2 and designed for reproducibility, maintainability, and transparent computational reporting.</p>
+          <p>It processes single-end RNA-seq reads from raw FASTQ through quality control, trimming, transcript quantification, and final expression matrix generation for downstream comparative analysis.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="panel">
+          <h2>Workflow Steps</h2>
+          <div class="workflow" aria-label="RNA-seq workflow">
+            <div class="step">FASTQ</div>
+            <div class="step">FastQC</div>
+            <div class="step">fastp</div>
+            <div class="step">Salmon</div>
+            <div class="step">MultiQC</div>
+            <div class="step">Expression Matrix</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid-2">
+          <div class="panel">
+            <h2>Dataset Information</h2>
+            <p><strong>GEO:</strong> GSE156496</p>
+            <p><strong>SRA:</strong> SRP278118</p>
+            <p><strong>Biological context:</strong> WT vs DMD DeltaEx51 mouse tibialis anterior muscle RNA-seq</p>
+          </div>
+          <div class="panel">
+            <h2>Results</h2>
+            <p>Expression matrix generation for all samples</p>
+            <p>TPM-based comparison between WT and DMD groups</p>
+            <p>Top upregulated and downregulated transcript extraction</p>
+            <p>Fully reproducible end-to-end workflow execution</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="panel">
+          <h2>Technologies Used</h2>
+          <div class="tech-grid">
+            <div class="chip">Nextflow DSL2</div>
+            <div class="chip">Python</div>
+            <div class="chip">pandas</div>
+            <div class="chip">Salmon</div>
+            <div class="chip">FastQC</div>
+            <div class="chip">fastp</div>
+            <div class="chip">MultiQC</div>
+            <div class="chip">Conda</div>
+            <div class="chip">GitHub</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="panel">
+          <h2>Project Metrics</h2>
+          <div class="metrics-grid">
+            <div class="metric"><strong>4</strong>RNA-seq samples</div>
+            <div class="metric"><strong>Public</strong>real FASTQ dataset</div>
+            <div class="metric"><strong>Automated</strong>pipeline orchestration</div>
+            <div class="metric"><strong>End-to-end</strong>reproducibility</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="panel">
+          <h2>Project Links</h2>
+          <div class="links-row">
+            <a href="https://github.com/berfinida/pipeline" target="_blank" rel="noopener">GitHub Repository</a>
+            <a href="https://berfinida.github.io/pipeline/" target="_blank" rel="noopener">Project Page</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
+      DMD vs WT RNA-seq Analysis Pipeline (Nextflow DSL2)
+    </footer>
+  </body>
+</html>
