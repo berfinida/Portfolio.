@@ -2,49 +2,48 @@
 
 ![Portfolio Preview](preview.png)
 
-Personal portfolio website and project showcase.
+Personal portfolio website and project showcase for product engineering, data automation, and reproducible bioinformatics workflows.
 
 ---
 
 ## About
-- Focus: Frontend and UI-first web development
+- Focus: Product engineering, bioinformatics workflows, data automation, and functional web systems
 - Based in Istanbul, Turkiye
-- Background: Molecular Biology and Genetics -> Web Development
+- Background: Molecular Biology and Genetics -> Bioinformatics, data analysis, and software engineering
 
 ## Live Portfolio
 - **Website:** https://berfinida.com.tr/
 
 ## Featured Projects
 
-### Hotel17
-Modern hotel website interface with a premium presentation style and strong atmosphere.
-- Demo: https://hotel17-lilac.vercel.app/
-- Repo: https://github.com/berfinida/Hotel17
+### DMD vs WT RNA-seq Analysis Pipeline
+Reproducible RNA-seq workflow with Nextflow DSL2, FastQC, fastp, Salmon, MultiQC, expression matrix generation, and downstream transcriptomics analysis.
+- Case Study: https://berfinida.com.tr/dmd-rnaseq-case-study.html
+- Pipeline Repo: https://github.com/berfinida/pipeline
+- Downstream Repo: https://github.com/berfinida/dmd-rnaseq-downstream-analysis
 
-### Cafe17
-Restaurant website interface focused on menu experience and brand atmosphere.
-- Demo: https://cafe17-adts.vercel.app/
-- Repo: https://github.com/berfinida/cafe17
+### Enterprise KPI Consolidation
+Data automation and reporting workflow for consolidating multi-department KPI files with Excel and Power Query.
+- Case Study: https://berfinida.com.tr/enterprise-kpi-case-study.html
 
-### NizenStore
-Modern e-commerce interface focused on product showcase, category flow, and shopping experience.
-- Demo: https://nizen-store.vercel.app/
-- Repo: https://github.com/berfinida/Nizenstore
+### ModGIS
+Functional product configurator with SVG layer engine, rule logic, Pantone controls, authentication, saved designs, revision history, and PDF export.
+- Case Study: https://berfinida.com.tr/modgis-case-study.html
+- Demo: https://www.berfinida.xyz/
+- Repo: https://github.com/berfinida/design
 
-### Wandex
-Travel discovery concept with a clean and modern user experience.
-- Demo: https://wandex-seven.vercel.app/
-- Repo: https://github.com/berfinida/Wandex
+### RaxGame
+Live gaming commerce system with payment integrations, SMS/OTP, product synchronization, stock and price management, cart, coupons, wallet, and order tracking.
+- Live: https://raxgame.com/
 
-### ZenithFocus
-Modern productivity web app concept focused on deep work, focus, and organized flow.
-- Demo: https://zenith-focus-five.vercel.app/
-- Repo: https://github.com/berfinida/ZenithFocus
+### Other Product / Web Projects
+- Hotel17: https://hotel17-lilac.vercel.app/
+- Cafe17: https://cafe17-adts.vercel.app/
+- NizenStore: https://nizen-store.vercel.app/
+- Wandex: https://wandex-seven.vercel.app/
+- ZenithFocus: https://zenith-focus-five.vercel.app/
+- GoldenVisaKW: https://goldenvisakw.com
 
-### GoldenVisaKW
-Modern web platform for international investment, residency, and citizenship services.
-- Demo: https://goldenvisakw.com
-- Repo: https://github.com/berfinida/GoldenVisa
 
 ## Contact
 - **LinkedIn:** https://www.linkedin.com/in/berfin-nida-%C3%B6zt%C3%BCrk-6a12131b7/

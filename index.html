@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berfin Nida Öztürk | Product Engineer</title>
-    <meta name="description" content="Berfin Nida Öztürk is a product engineer building scalable digital products, admin systems, integrations and automation-driven web platforms." />
+    <title>Berfin Nida Öztürk | Product Engineer &amp; Bioinformatics Researcher</title>
+    <meta name="description" content="Berfin Nida Öztürk builds digital products, data systems, and reproducible bioinformatics workflows across bioinformatics, data automation, and product engineering." />
     <meta name="author" content="Berfin Nida Öztürk" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#ffffff" />
@@ -12,13 +12,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:site_name" content="Berfin Nida Öztürk" />
-    <meta property="og:title" content="Berfin Nida Öztürk | Product Engineer" />
-    <meta property="og:description" content="Scalable digital products, admin systems, integrations and automation-driven web platforms." />
+    <meta property="og:title" content="Berfin Nida Öztürk | Product Engineer &amp; Bioinformatics Researcher" />
+    <meta property="og:description" content="Digital products, data systems, and reproducible bioinformatics workflows." />
     <meta property="og:url" content="https://berfinida.com.tr/" />
     <meta property="og:image" content="https://berfinida.com.tr/preview.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Berfin Nida Öztürk | Product Engineer" />
-    <meta name="twitter:description" content="Scalable digital products, admin systems, integrations and automation-driven web platforms." />
+    <meta name="twitter:title" content="Berfin Nida Öztürk | Product Engineer &amp; Bioinformatics Researcher" />
+    <meta name="twitter:description" content="Digital products, data systems, and reproducible bioinformatics workflows." />
     <meta name="twitter:image" content="https://berfinida.com.tr/preview.png" />
     <link rel="preload" as="image" href="vesikalik.bw.jpg" />
   <style>
@@ -282,6 +282,28 @@
       color:var(--muted);
     }
 
+    .hero-specialties{
+      margin-top:22px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      max-width:720px;
+    }
+
+    .hero-specialties span{
+      display:inline-flex;
+      align-items:center;
+      min-height:34px;
+      padding:0 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--text);
+      font-size:13px;
+      font-weight:600;
+      white-space:nowrap;
+    }
+
     .hero-availability{
       margin-top:20px;
       color:var(--text);
@@ -435,6 +457,70 @@
     .service p{
       margin:0;
       color:var(--muted);
+    }
+
+    .service-list{
+      margin:18px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:8px;
+    }
+
+    .service-list li{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.35;
+    }
+
+    .service-list li::before{
+      content:"";
+      display:inline-block;
+      width:6px;
+      height:6px;
+      margin-right:9px;
+      border-radius:999px;
+      background:var(--text);
+      vertical-align:2px;
+    }
+
+    .service-link{
+      margin-top:20px;
+      display:inline-flex;
+      align-items:center;
+      border-bottom:1px solid var(--link-underline);
+      padding-bottom:2px;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .project-map{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+      margin-bottom:22px;
+    }
+
+    .project-map-item{
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+      background:var(--soft);
+    }
+
+    .project-map-item strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:15px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .project-map-item span{
+      display:block;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.45;
     }
 
     .projects{
@@ -687,7 +773,8 @@
     }
 
     .project-problem,
-    .project-solution{
+    .project-solution,
+    .project-outcome{
       margin:0;
       color:var(--muted);
     }
@@ -1049,8 +1136,9 @@
 
     @media (max-width: 980px){
       .hero-grid,
-    .services,
-    .projects,
+      .services,
+      .project-map,
+      .projects,
     .about,
     .build-grid,
     .system-grid,
@@ -1399,34 +1487,52 @@
     <div class="container hero-grid">
       <div>
         <div class="eyebrow">
-          <span data-lang-inline="tr">Product Engineer</span>
-          <span data-lang-inline="en">Product Engineer</span>
+          <span data-lang-inline="tr">MSc Candidate / Product Engineer</span>
+          <span data-lang-inline="en">MSc Candidate / Product Engineer</span>
         </div>
 
-        <h1 data-lang="tr">Ölçeklenebilir Dijital Ürünler, Admin Sistemleri ve Otomasyon Odaklı Web Platformları Geliştiriyorum</h1>
-        <h1 data-lang="en">Building Scalable Digital Products, Admin Systems, Integrations &amp; Automation-Driven Web Platforms</h1>
+        <h1 data-lang="tr">Berfin Nida Öztürk</h1>
+        <h1 data-lang="en">Berfin Nida Öztürk</h1>
 
         <div class="hero-meta">
-          <span class="hero-name">Berfin Nida</span>
-          <span class="hero-slogan" data-lang-inline="tr">Product Engineer</span>
-          <span class="hero-slogan" data-lang-inline="en">Product Engineer</span>
+          <span class="hero-slogan" data-lang-inline="tr">Product Engineer &amp; Bioinformatics Researcher</span>
+          <span class="hero-slogan" data-lang-inline="en">Product Engineer &amp; Bioinformatics Researcher</span>
         </div>
 
         <p class="hero-sub" data-lang="tr">
-          Ölçeklenebilir dijital ürünler, admin sistemleri, entegrasyonlar ve otomasyon odaklı web platformları geliştiriyorum. Gerçek dünyada kullanılan, yönetilebilir ve sürdürülebilir ürün akışları kurmaya odaklanıyorum.
+          Building digital products, data systems, and reproducible bioinformatics workflows.
         </p>
         <p class="hero-sub" data-lang="en">
-          I build scalable digital products, admin systems, integrations and automation-driven web platforms. My focus is on maintainable product workflows used in real-world operations.
+          Building digital products, data systems, and reproducible bioinformatics workflows.
+        </p>
+        <p class="hero-sub" data-lang="tr">
+          Moleküler biyoloji araştırmasını yazılım mühendisliği ve veri analiziyle birleştirerek pratik, tekrarlanabilir ve ölçeklenebilir çözümler geliştiriyorum.
+        </p>
+        <p class="hero-sub" data-lang="en">
+          I combine molecular biology research with software engineering and data analysis to build practical, reproducible, and scalable solutions.
         </p>
 
+        <div class="hero-specialties" aria-label="Specialty areas">
+          <span>Bioinformatics &amp; Computational Biology</span>
+          <span>Data &amp; Automation</span>
+          <span>Product &amp; Web Engineering</span>
+        </div>
+
+        <p class="hero-availability" data-lang="tr">İTÜ Moleküler Biyoloji ve Genetik / Biyoteknoloji tezli yüksek lisans programında MSc Candidate olarak araştırma odaklı çalışıyorum.</p>
+        <p class="hero-availability" data-lang="en">MSc Candidate in Molecular Biology and Genetics / Biotechnology at Istanbul Technical University, with a research-oriented focus.</p>
+
         <div class="cta-row">
-          <a href="#projects" class="btn primary">
+          <a href="#contact" class="btn primary">
+            <span data-lang-inline="tr">Birlikte Çalışalım</span>
+            <span data-lang-inline="en">Work With Me</span>
+          </a>
+          <a href="#projects" class="btn secondary">
             <span data-lang-inline="tr">Projeleri Gör</span>
             <span data-lang-inline="en">View Projects</span>
           </a>
-          <a href="#contact" class="btn secondary">
-            <span data-lang-inline="tr">İletişime Geç</span>
-            <span data-lang-inline="en">Contact Me</span>
+          <a href="mailto:berfinnidaozturk@gmail.com" class="btn secondary">
+            <span data-lang-inline="tr">Konuşalım</span>
+            <span data-lang-inline="en">Let's Talk</span>
           </a>
         </div>
       </div>
@@ -1444,68 +1550,68 @@
     <div class="container">
       <div class="section-head">
         <div class="section-left">
-          <div class="section-kicker" data-lang="tr">Ne Yapıyorum</div>
-          <div class="section-kicker" data-lang="en">What I Do</div>
+          <div class="section-kicker" data-lang="tr">Nasıl Yardımcı Olabilirim</div>
+          <div class="section-kicker" data-lang="en">What I Can Help With</div>
           <h2 data-lang="tr">Hizmetler</h2>
           <h2 data-lang="en">Services</h2>
         </div>
 
         <p class="section-desc" data-lang="tr">
-          Sade tanıtım sitelerinden daha özel dijital çözümlere kadar farklı ihtiyaçlara uygun web projeleri geliştiriyorum.
+          Bilimsel veri iş akışlarından iş otomasyonuna ve ürün geliştirmeye kadar, gerçek ihtiyacı netleştiren ve sürdürülebilir çıktıya dönüştüren sistemler kuruyorum.
         </p>
         <p class="section-desc" data-lang="en">
-          From clean showcase websites to more tailored digital solutions, I build web projects around real needs.
+          From scientific data workflows to business automation and product engineering, I build practical systems that turn real needs into maintainable outcomes.
         </p>
       </div>
 
       <div class="services">
         <article class="service">
-          <h3 data-lang="tr">UI/UX Design</h3>
-          <h3 data-lang="en">UI/UX Design</h3>
-          <p data-lang="tr">Arayüz hiyerarşisi, kullanıcı akışı ve dönüşüm odaklı deneyim tasarımı.</p>
-          <p data-lang="en">Interface hierarchy, user flows, and conversion-oriented experience design.</p>
+          <h3>Bioinformatics &amp; Computational Biology</h3>
+          <p data-lang="tr">RNA-seq ve transcriptomics çalışmalarını tekrarlanabilir, raporlanabilir analiz akışlarına dönüştürürüm.</p>
+          <p data-lang="en">I turn RNA-seq and transcriptomics work into reproducible, reportable analysis workflows.</p>
+          <ul class="service-list">
+            <li>RNA-seq analysis</li>
+            <li>Transcriptomics</li>
+            <li>Biological data analysis</li>
+            <li>Reproducible bioinformatics pipelines</li>
+            <li>QC and preprocessing</li>
+            <li>PCA and heatmap visualization</li>
+            <li>Gene expression analysis</li>
+            <li>Research data workflows</li>
+          </ul>
+          <a class="service-link" href="#projects"><span data-lang-inline="tr">İlgili işleri gör</span><span data-lang-inline="en">View Relevant Work</span></a>
         </article>
 
         <article class="service">
-          <h3 data-lang="tr">Frontend Development</h3>
-          <h3 data-lang="en">Frontend Development</h3>
-          <p data-lang="tr">HTML, CSS ve JavaScript tabanlı hızlı, erişilebilir ve ölçeklenebilir arayüz geliştirme.</p>
-          <p data-lang="en">Fast, accessible, and scalable interface development with HTML, CSS, and JavaScript.</p>
+          <h3>Data &amp; Automation</h3>
+          <p data-lang="tr">Dağınık veri kaynaklarını temiz, yenilenebilir ve dashboard-ready iş akışlarına bağlarım.</p>
+          <p data-lang="en">I connect messy data sources into clean, refreshable, dashboard-ready workflows.</p>
+          <ul class="service-list">
+            <li>Python data analysis</li>
+            <li>Data cleaning and transformation</li>
+            <li>Excel / Power Query automation</li>
+            <li>Power BI-ready data workflows</li>
+            <li>Reporting automation</li>
+            <li>Business data pipelines</li>
+            <li>Custom dashboards</li>
+          </ul>
+          <a class="service-link" href="#projects"><span data-lang-inline="tr">İlgili işleri gör</span><span data-lang-inline="en">View Relevant Work</span></a>
         </article>
 
         <article class="service">
-          <h3 data-lang="tr">Web Application Interfaces</h3>
-          <h3 data-lang="en">Web Application Interfaces</h3>
-          <p data-lang="tr">İş süreçlerini destekleyen ve panellerle bütünleşen uygulama arayüzleri.</p>
-          <p data-lang="en">Application interfaces aligned with business logic and designed for admin/user workflows.</p>
-        </article>
-
-        <article class="service">
-          <h3 data-lang="tr">Admin Panel Design</h3>
-          <h3 data-lang="en">Admin Panel Design</h3>
-          <p data-lang="tr">Rol tabanlı yönetim, onay, raporlama ve içerik düzenleme akışları için panel tasarımı.</p>
-          <p data-lang="en">Panel design for role-based operations including approvals, reporting, and content management.</p>
-        </article>
-
-        <article class="service">
-          <h3 data-lang="tr">E-commerce System Design</h3>
-          <h3 data-lang="en">E-commerce System Design</h3>
-          <p data-lang="tr">Ürün, kategori, kampanya ve sipariş akışlarını birlikte ele alan sistem tasarımı.</p>
-          <p data-lang="en">System design covering products, categories, campaigns, and order flows.</p>
-        </article>
-
-        <article class="service">
-          <h3 data-lang="tr">Dynamic Website Development</h3>
-          <h3 data-lang="en">Dynamic Website Development</h3>
-          <p data-lang="tr">İçerik güdümlü, yönetilebilir ve tekrar kullanılabilir bileşenlerle yaşayan web çözümleri.</p>
-          <p data-lang="en">Living websites built from reusable components and dynamic content architecture.</p>
-        </article>
-
-        <article class="service">
-          <h3 data-lang="tr">Digital Product Design</h3>
-          <h3 data-lang="en">Digital Product Design</h3>
-          <p data-lang="tr">İş fikrinden lansmana kadar ürün mantığıyla tamamlanan uçtan uca dijital ürün geliştirme.</p>
-          <p data-lang="en">End-to-end digital product development from concept and architecture to launch.</p>
+          <h3>Product &amp; Software Engineering</h3>
+          <p data-lang="tr">Sadece tanıtım sitesi değil; çalışan ürünler, paneller, entegrasyonlar ve iş araçları geliştiririm.</p>
+          <p data-lang="en">Not just websites: I build working products, panels, integrations, and internal tools.</p>
+          <ul class="service-list">
+            <li>Web applications</li>
+            <li>Admin dashboards</li>
+            <li>Internal business tools</li>
+            <li>E-commerce systems</li>
+            <li>API integrations</li>
+            <li>SaaS / MVP development</li>
+            <li>Custom data-driven applications</li>
+          </ul>
+          <a class="service-link" href="#projects"><span data-lang-inline="tr">İlgili işleri gör</span><span data-lang-inline="en">View Relevant Work</span></a>
         </article>
       </div>
     </div>
@@ -1515,18 +1621,33 @@
     <div class="container">
       <div class="section-head">
         <div class="section-left">
-          <div class="section-kicker" data-lang="tr">Öne Çıkan Projeler</div>
-          <div class="section-kicker" data-lang="en">Featured Projects</div>
-          <h2 data-lang="tr">Projeler</h2>
-          <h2 data-lang="en">Projects</h2>
+          <div class="section-kicker" data-lang="tr">Seçilmiş İşler</div>
+          <div class="section-kicker" data-lang="en">Selected Work</div>
+          <h2 data-lang="tr">Problemden çalışan sisteme</h2>
+          <h2 data-lang="en">From problem to working system</h2>
         </div>
 
         <p class="section-desc" data-lang="tr">
-          Gerçek dünyada kullanılan, ölçeklenebilir ve yönetilebilir web uygulamaları, admin panelleri ve e-ticaret sistemleri. Her proje, teknik çözüm ve üretim odaklı bir yaklaşımla geliştirildi.
+          Projeleri yalnızca teknoloji listesi olarak değil; problem, çözüm, kullanılan teknoloji ve ortaya çıkan kabiliyet üzerinden okuyabilirsiniz.
         </p>
         <p class="section-desc" data-lang="en">
-          Real-world, scalable, and maintainable web apps, admin panels, and e-commerce systems. Each project is built with a technical, production-focused approach.
+          Projects are structured around the problem, the solution, the technology, and the capability delivered, not only as a technology showcase.
         </p>
+      </div>
+
+      <div class="project-map" aria-label="Project categories">
+        <div class="project-map-item">
+          <strong>Bioinformatics</strong>
+          <span>DMD RNA-seq / transcriptomics project</span>
+        </div>
+        <div class="project-map-item">
+          <strong>Data &amp; Automation</strong>
+          <span>Enterprise KPI Consolidation and reporting workflows</span>
+        </div>
+        <div class="project-map-item">
+          <strong>Product / Software</strong>
+          <span>ModGIS, RaxGame, and other functional product systems</span>
+        </div>
       </div>
 
       <div class="projects">
@@ -1542,7 +1663,7 @@
               <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
             <div class="project-summary-copy">
-              <p class="project-summary-text" data-lang="tr">Public DMD vs WT fare RNA-seq verisi üzerinde, FASTQ'dan expression matrix'e kadar uzanan, Nextflow DSL2 ile kurulmuş uçtan uca tekrarlanabilir analiz hattı.</p>
+              <p class="project-summary-text" data-lang="tr">Public DMD vs WT fare RNA-seq verisi üzerinde, FASTQ'dan expression matrix'e kadar uzanan, Nextflow DSL2 ile kurulmuş uçtan uca tekrarlanabilir bilimsel analiz hattı.</p>
               <p class="project-summary-text" data-lang="en">An end-to-end reproducible RNA-seq analysis workflow built with Nextflow DSL2, processing public DMD vs WT mouse data from FASTQ to expression matrix.</p>
               <div class="project-summary-meta">
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>Bioinformatics + Pipeline Engineering</span></div>
@@ -1562,8 +1683,12 @@
             <div class="project-tag"><span data-lang-inline="tr">Reproducible RNA-seq Pipeline</span><span data-lang-inline="en">Reproducible RNA-seq Pipeline</span></div>
             <p data-lang="tr"><strong>Dataset:</strong> GSE156496 / SRP278118 (WT vs DMD DeltaEx51 mouse tibialis anterior muscle RNA-seq)</p>
             <p data-lang="en"><strong>Dataset:</strong> GSE156496 / SRP278118 (WT vs DMD DeltaEx51 mouse tibialis anterior muscle RNA-seq)</p>
+            <p class="project-problem" data-lang="tr"><strong>Problem:</strong> Ham FASTQ verisini kalite kontrol, trimming, quantification ve downstream transcriptomics analizi için tekrarlanabilir bir akışa dönüştürmek gerekiyordu.</p>
+            <p class="project-problem" data-lang="en"><strong>Problem:</strong> Raw FASTQ data needed a reproducible route through quality control, trimming, quantification, and downstream transcriptomics analysis.</p>
             <p data-lang="tr"><strong>Workflow:</strong> FASTQ, FastQC, fastp, Salmon, MultiQC adımlarıyla expression matrix üretimi ve TPM tabanlı karşılaştırma.</p>
             <p data-lang="en"><strong>Workflow:</strong> Expression matrix generation and TPM-based comparison through FASTQ, FastQC, fastp, Salmon, and MultiQC stages.</p>
+            <p class="project-solution" data-lang="tr"><strong>Çözüm:</strong> Nextflow DSL2 modülleri ve Conda ortamlarıyla çalıştırılabilir, izlenebilir ve GitHub üzerinde paylaşılabilir bir pipeline yapısı kuruldu.</p>
+            <p class="project-solution" data-lang="en"><strong>Solution:</strong> The workflow was built with Nextflow DSL2 modules and Conda environments for executable, traceable, GitHub-shareable analysis.</p>
             <p class="project-meta-title"><span data-lang-inline="tr">Teknoloji</span><span data-lang-inline="en">Tech Stack</span></p>
             <div class="project-tech">
               <span>Nextflow DSL2</span>
@@ -1574,13 +1699,17 @@
               <span>fastp</span>
               <span>MultiQC</span>
               <span>Conda</span>
-              <span>GitHub</span>
+              <span>Git / GitHub</span>
             </div>
-            <p class="project-meta-title"><span data-lang-inline="tr">Öne Çıkan Çıktılar</span><span data-lang-inline="en">Key Outputs</span></p>
+            <p class="project-meta-title"><span data-lang-inline="tr">Çıktı / Kabiliyet</span><span data-lang-inline="en">Outcome / Capability</span></p>
             <div class="project-system-list">
               <span>4 RNA-seq Samples</span>
               <span>Real Public FASTQ Data</span>
               <span>Automated Pipeline Execution</span>
+              <span>Expression Matrix</span>
+              <span>PCA Visualization</span>
+              <span>Heatmap Visualization</span>
+              <span>Downstream Transcriptomics Analysis</span>
               <span>Top Up/Down Regulated Transcripts</span>
               <span>End-to-end Reproducibility</span>
             </div>
@@ -1599,7 +1728,7 @@
             <div class="project-summary-top">
               <div class="project-summary-main">
                 <div class="project-category">
-                  <span data-lang-inline="tr">BI / Veri Operasyonları</span><span data-lang-inline="en">BI / Data Operations</span>
+                  <span data-lang-inline="tr">Data &amp; Automation</span><span data-lang-inline="en">Data &amp; Automation</span>
                 </div>
                 <h3>Enterprise KPI Consolidation</h3>
               </div>
@@ -1657,15 +1786,15 @@
             <div class="project-summary-top">
               <div class="project-summary-main">
                 <div class="project-category">
-                  <span data-lang-inline="tr">Ürün Konfigüratörü</span><span data-lang-inline="en">Product Configurator</span>
+                  <span data-lang-inline="tr">Product / Software Engineering</span><span data-lang-inline="en">Product / Software Engineering</span>
                 </div>
                 <h3>ModGIS App</h3>
               </div>
               <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
             <div class="project-summary-copy">
-              <p class="project-summary-text" data-lang="tr">Modüler gömlek tasarımı için SVG katman motoru, anchor yerleşimi, Pantone renk paneli, kural motoru, kullanıcı oturumu ve PDF export akışlarını birleştiren tasarım sistemi.</p>
-              <p class="project-summary-text" data-lang="en">A modular shirt design system combining an SVG layer engine, anchor-based layout, Pantone color panel, rule engine, user sessions, and PDF export flows.</p>
+              <p class="project-summary-text" data-lang="tr">Sadece web sitesi değil; SVG katman motoru, kural motoru, Pantone paneli, authentication, kayıtlı tasarımlar, revizyon geçmişi ve PDF export içeren fonksiyonel bir ürün sistemi.</p>
+              <p class="project-summary-text" data-lang="en">Not just a website: a functional product system with an SVG layer engine, rule engine, Pantone panel, authentication, saved designs, revision history, and PDF export.</p>
               <div class="project-summary-meta">
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>Product + Frontend</span></div>
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Sistem</strong><strong data-lang-inline="en">System</strong><span>Configurator Engine</span></div>
@@ -1718,6 +1847,7 @@
               <span>Pantone Color Panel</span>
               <span>Fabric Selection</span>
               <span>Combination Code Generation</span>
+              <span>Authentication</span>
               <span>User Login / Registration</span>
               <span>Saved Designs</span>
               <span>Comments &amp; Revision History</span>
@@ -1811,14 +1941,14 @@
             <div class="project-summary-top">
               <div class="project-summary-main">
                 <div class="project-category">
-                  <span data-lang-inline="tr">Oyun E-Ticaret</span><span data-lang-inline="en">Gaming Commerce</span>
+                  <span data-lang-inline="tr">Product / Software Engineering</span><span data-lang-inline="en">Product / Software Engineering</span>
                 </div>
                 <h3>RaxGame</h3>
               </div>
               <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
             <div class="project-summary-copy">
-              <p class="project-summary-text" data-lang="tr">Oyuncular için e-pin, CD key, bakiye, kampanya, ürün çekme, sepet, kupon, ödeme ve SMS doğrulama akışlarını kategori, arama ve üyelik sistemiyle birleştiren canlı oyun pazaryeri.</p>
+              <p class="project-summary-text" data-lang="tr">Gerçek dünya e-ticaret operasyonu için e-pin, CD key, bakiye, kampanya, ürün senkronizasyonu, sepet, kupon, ödeme ve SMS/OTP akışlarını birleştiren canlı oyun pazaryeri.</p>
               <p class="project-summary-text" data-lang="en">A live gaming marketplace that brings e-pin, CD key, wallet balance, campaigns, product import, cart, coupon, payment, SMS verification, search, and account flows into one storefront.</p>
               <div class="project-summary-meta">
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>Frontend + System</span></div>
@@ -2250,17 +2380,17 @@
     <div class="container">
       <div class="section-head">
         <div class="section-left">
-          <div class="section-kicker" data-lang="tr">Neler Geliştiriyorum</div>
-          <div class="section-kicker" data-lang="en">What I Build</div>
-          <h2 data-lang="tr">Neler Geliştiriyorum</h2>
-          <h2 data-lang="en">What I Build</h2>
+          <div class="section-kicker" data-lang="tr">Sistem Kabiliyetleri</div>
+          <div class="section-kicker" data-lang="en">System Capabilities</div>
+          <h2 data-lang="tr">Uçtan uca geliştirdiğim yapılar</h2>
+          <h2 data-lang="en">Systems I build end to end</h2>
         </div>
 
         <p class="section-desc" data-lang="tr">
-          Tasarım odaklı olmakla birlikte canlı sistemler, panel yapıları ve operasyonel akışlar kuruyorum.
+          Araştırma verisi, iş verisi ve ürün arayüzlerini aynı disiplinle ele alıyorum: net veri modeli, sürdürülebilir akış ve kullanılabilir arayüz.
         </p>
         <p class="section-desc" data-lang="en">
-          Beyond interface design, I build working systems, panel structures, and operational workflows.
+          I approach research data, business data, and product interfaces with the same discipline: clear data models, maintainable workflows, and usable interfaces.
         </p>
       </div>
 
@@ -2337,17 +2467,17 @@
 
       <div class="why-grid">
         <div class="why-item">
-          <strong data-lang="tr">Modern görünüm</strong>
-          <strong data-lang="en">Modern visual style</strong>
-          <p data-lang="tr">Temiz, güncel ve güzel görünen arayüzler tasarlamaya odaklanıyorum.</p>
-          <p data-lang="en">I focus on clean, current and visually strong interfaces.</p>
+          <strong data-lang="tr">Araştırma + mühendislik bakışı</strong>
+          <strong data-lang="en">Research + engineering mindset</strong>
+          <p data-lang="tr">Biyoloji arka planımı veri analizi ve ürün geliştirme pratiğiyle birleştiriyorum.</p>
+          <p data-lang="en">I combine a biology background with data analysis and product engineering practice.</p>
         </div>
 
         <div class="why-item">
-          <strong data-lang="tr">Detaylara dikkat</strong>
-          <strong data-lang="en">Attention to detail</strong>
-          <p data-lang="tr">Boşluk, tipografi ve genel hissin güzel olmasına önem veririm.</p>
-          <p data-lang="en">Spacing, typography and the overall feel matter in my work.</p>
+          <strong data-lang="tr">Tekrarlanabilir iş akışları</strong>
+          <strong data-lang="en">Reproducible workflows</strong>
+          <p data-lang="tr">Analiz, otomasyon ve ürün sistemlerinde izlenebilir, sürdürülebilir akışlar kurarım.</p>
+          <p data-lang="en">I build traceable, maintainable workflows for analysis, automation, and product systems.</p>
         </div>
 
         <div class="why-item">
@@ -2358,10 +2488,10 @@
         </div>
 
         <div class="why-item">
-          <strong data-lang="tr">Gerçek ihtiyaç odaklı</strong>
-          <strong data-lang="en">Built around real needs</strong>
-          <p data-lang="tr">Sadece güzel görünmek değil, gerçekten işe yarayan işler üretmek isterim.</p>
-          <p data-lang="en">I aim to build work that is not only beautiful, but genuinely useful.</p>
+          <strong data-lang="tr">Gerçek problem odaklı</strong>
+          <strong data-lang="en">Built around real problems</strong>
+          <p data-lang="tr">Görsel kaliteyi veri, süreç ve iş hedefiyle birlikte düşünürüm.</p>
+          <p data-lang="en">I connect visual quality with data, process, and business goals.</p>
         </div>
       </div>
     </div>
@@ -2371,7 +2501,7 @@
     <div class="container">
       <div class="section-head">
         <div class="section-left">
-          <div class="section-kicker" data-lang="tr">Kısa Tanım</div>
+          <div class="section-kicker" data-lang="tr">Kısa Profil</div>
           <div class="section-kicker" data-lang="en">About</div>
           <h2 data-lang="tr">Hakkımda</h2>
           <h2 data-lang="en">About Me</h2>
@@ -2381,57 +2511,53 @@
       <div class="about">
         <div class="about-box">
           <p data-lang="tr">
-            Ben sadece arayüz yapan değil, çalışan bir sistem kuran bir dijital ürün geliştiricisiyim.
-            Fikirden yayına kadar tüm yolculuğu yönetirim: ihtiyacın netleştirilmesi, kullanıcı akışı planı,
-            arayüz tasarımı, veritabanı destekli mimari, test ve canlıya alma.
-            Laravel bilgimi admin panel mantığı, auth kullanıcı işlemleri, ürün ve içerik akışları için kullanır;
-            dinamik içerik yönetimi ve güvenli süreçler üzerine odaklanırım.
-            Böylece görsel kaliteyle birlikte sürdürülebilir, yönetilebilir ve ölçülebilir sistemler teslim ederim.
+            Product Engineer &amp; Bioinformatics Researcher olarak dijital ürünler, veri sistemleri ve tekrarlanabilir biyoinformatik iş akışları geliştiriyorum.
+            İTÜ Moleküler Biyoloji ve Genetik / Biyoteknoloji tezli yüksek lisans programında MSc Candidate olarak araştırma odaklı çalışıyorum.
+            Moleküler biyoloji arka planımı yazılım mühendisliği, veri analizi, otomasyon ve ürün geliştirme pratiğiyle birleştiriyorum.
+            Amacım; bilimsel analizlerden iş panellerine kadar sürdürülebilir, yönetilebilir ve gerçek probleme temas eden sistemler üretmek.
           </p>
           <p data-lang="en">
-            I am not just an interface designer; I build working systems.
-            I think in full product lifecycle terms: idea definition, user flow planning,
-            UI, database-aware architecture, testing, and production launch.
-            I apply Laravel-oriented backend thinking for admin panel logic, auth and user flows,
-            dynamic content management, and product-content pipelines.
-            This allows me to deliver systems that are both visually strong and production-ready.
+            I work as a Product Engineer &amp; Bioinformatics Researcher building digital products, data systems, and reproducible bioinformatics workflows.
+            I am an MSc Candidate in Molecular Biology and Genetics / Biotechnology at Istanbul Technical University, with a research-oriented focus.
+            I combine molecular biology with software engineering, data analysis, automation, and product development.
+            My goal is to build maintainable, manageable systems that solve real problems, from scientific analysis workflows to business tools.
           </p>
         </div>
 
         <div class="about-points">
           <div class="point">
-            <strong data-lang="tr">Sadece arayüz değil, sistem de kuruyorum</strong>
-            <strong data-lang="en">Beyond UI, I build systems</strong>
-            <span data-lang="tr">Kullanıcı arayüzünü, iş akışı mantığıyla ve ölçülebilir performans hedefiyle birlikte tasarlarım.</span>
-            <span data-lang="en">I shape the user interface together with real process logic and measurable outcomes.</span>
+            <strong data-lang="tr">MSc Candidate, İTÜ</strong>
+            <strong data-lang="en">MSc Candidate, Istanbul Technical University</strong>
+            <span data-lang="tr">Moleküler Biyoloji ve Genetik / Biyoteknoloji alanında tezli yüksek lisans programına başladım.</span>
+            <span data-lang="en">Started a thesis-based MSc program in Molecular Biology and Genetics / Biotechnology.</span>
           </div>
 
           <div class="point">
-            <strong data-lang="tr">Fikirden yayına bitişik süreç</strong>
-            <strong data-lang="en">From idea to launch</strong>
-            <span data-lang="tr">İhtiyaç analizi, içerik kurgusu, geliştirme ve yayınlama aşamalarını tek bir planla yönetirim.</span>
-            <span data-lang="en">I manage idea, architecture, implementation and launch as one continuous flow.</span>
+            <strong data-lang="tr">Biyoinformatik ve transcriptomics</strong>
+            <strong data-lang="en">Bioinformatics and transcriptomics</strong>
+            <span data-lang="tr">RNA-seq, QC, expression matrix, PCA, heatmap ve downstream analiz süreçlerine odaklanıyorum.</span>
+            <span data-lang="en">Focused on RNA-seq, QC, expression matrices, PCA, heatmaps, and downstream analysis workflows.</span>
           </div>
 
           <div class="point">
-            <strong data-lang="tr">Yönetim paneli ve dinamik içerik yönetimi</strong>
-            <strong data-lang="en">Admin panel and dynamic content management</strong>
-            <span data-lang="tr">Yönetim paneli, içerik onayı, kategori hiyerarşisi ve kampanya akışlarıyla çalışan yapılar kurarım.</span>
-            <span data-lang="en">I build operational admin workflows for content moderation, category structures, and campaign workflows.</span>
+            <strong data-lang="tr">Veri ve otomasyon</strong>
+            <strong data-lang="en">Data and automation</strong>
+            <span data-lang="tr">Python, Excel / Power Query ve dashboard-ready veri akışlarıyla tekrar eden işleri sadeleştiririm.</span>
+            <span data-lang="en">I simplify repeated work with Python, Excel / Power Query, and dashboard-ready data workflows.</span>
           </div>
 
           <div class="point">
-            <strong data-lang="tr">Laravel ve backend mantığı</strong>
-            <strong data-lang="en">Laravel and backend logic</strong>
-            <span data-lang="tr">Auth / kullanıcı işlemleri, veri ilişkileri ve güvenlik mantığı için Laravel-ekosistemi yaklaşımını uygularım.</span>
-            <span data-lang="en">I apply Laravel-style backend thinking for auth flows, data relations, and secure operations.</span>
+            <strong data-lang="tr">Ürün ve web mühendisliği</strong>
+            <strong data-lang="en">Product and web engineering</strong>
+            <span data-lang="tr">Admin paneller, e-ticaret akışları, entegrasyonlar ve custom data-driven uygulamalar geliştiririm.</span>
+            <span data-lang="en">I build admin panels, e-commerce flows, integrations, and custom data-driven applications.</span>
           </div>
 
           <div class="point">
-            <strong data-lang="tr">Veritabanı destekli ürün ve içerik akışları</strong>
-            <strong data-lang="en">Database-driven product and content flows</strong>
-            <span data-lang="tr">Ürün, kategori, envanter ve kampanya akışlarını veritabanı destekli bir mimariyle sürdürülebilir kılarım.</span>
-            <span data-lang="en">I design scalable flows for products, categories, and campaigns with database-driven structures.</span>
+            <strong data-lang="tr">Gerçek çıktı odaklı çalışma</strong>
+            <strong data-lang="en">Outcome-oriented work</strong>
+            <span data-lang="tr">Var olmayan başarı metrikleri eklemeden; problemi, çözümü, teknolojiyi ve ortaya çıkan kabiliyeti net gösteririm.</span>
+            <span data-lang="en">I keep projects grounded in the real problem, solution, technology, and delivered capability.</span>
           </div>
         </div>
       </div>
@@ -2450,22 +2576,22 @@
 
         <div class="section-copy">
           <p class="section-desc" data-lang="tr">
-            Marka arayüzlerinden admin panellere kadar çalışan dijital ürünler geliştirmek için iletişime geçin.
+            Biyoinformatik analiz, veri otomasyonu veya çalışan dijital ürün geliştirme ihtiyacınız varsa iletişime geçebilirsiniz.
           </p>
           <p class="section-desc" data-lang="en">
-            Reach out to build working digital products from brand interfaces to admin panels.
+            Reach out for bioinformatics analysis, data automation, or working digital product development.
           </p>
           <p class="section-desc" data-lang="tr">
-            Tasarım ve sistem mantığını birlikte düşünen projeler için birlikte çalışalım.
+            İlk görüşmede problemi, mevcut veriyi/sistemi, hedef çıktıyı ve en gerçekçi iş akışını netleştirebiliriz.
           </p>
           <p class="section-desc" data-lang="en">
-            Let&rsquo;s collaborate on projects that combine design and system logic.
+            In a first conversation, we can clarify the problem, current data/system, target output, and the most realistic workflow.
           </p>
           <p class="section-desc" data-lang="tr">
-            Web arayüzü, yönetim paneli ve dijital ürün kurgusu için iş birliğine açığım.
+            Freelance consulting ve proje bazlı iş birliklerine açığım.
           </p>
           <p class="section-desc" data-lang="en">
-            Open for partnerships in web interfaces, admin panels, and digital product architecture.
+            Open for freelance consulting and project-based collaboration.
           </p>
         </div>
       </div>
@@ -2520,15 +2646,15 @@
 
   <footer class="footer">
     <div class="container">
-      © 2026 Berfin Nida <span data-lang-inline="tr">Kod &amp; Tasarım</span><span data-lang-inline="en">Code &amp; Create</span>
+      © 2026 Berfin Nida Öztürk <span data-lang-inline="tr">Product Engineering &amp; Bioinformatics</span><span data-lang-inline="en">Product Engineering &amp; Bioinformatics</span>
       <div class="footer-specialties">
         <span class="footer-specialties-title" data-lang-inline="tr">Uzmanlık</span>
         <span class="footer-specialties-title" data-lang-inline="en">Specialized In</span>
-        <span class="footer-specialty"><span data-lang="tr">UI/UX</span><span data-lang="en">UI/UX</span></span>
-        <span class="footer-specialty"><span data-lang="tr">Frontend</span><span data-lang="en">Frontend</span></span>
-        <span class="footer-specialty"><span data-lang="tr">Laravel Tabanlı Sistemler</span><span data-lang="en">Laravel-based Systems</span></span>
-        <span class="footer-specialty"><span data-lang="tr">Admin Panelleri</span><span data-lang="en">Admin Panels</span></span>
-        <span class="footer-specialty"><span data-lang="tr">E-ticaret Arayüzleri</span><span data-lang="en">E-commerce Interfaces</span></span>
+        <span class="footer-specialty"><span data-lang="tr">Bioinformatics</span><span data-lang="en">Bioinformatics</span></span>
+        <span class="footer-specialty"><span data-lang="tr">Data Automation</span><span data-lang="en">Data Automation</span></span>
+        <span class="footer-specialty"><span data-lang="tr">Product Engineering</span><span data-lang="en">Product Engineering</span></span>
+        <span class="footer-specialty"><span data-lang="tr">Admin Dashboards</span><span data-lang="en">Admin Dashboards</span></span>
+        <span class="footer-specialty"><span data-lang="tr">E-commerce Systems</span><span data-lang="en">E-commerce Systems</span></span>
       </div>
     </div>
   </footer>
@@ -2547,14 +2673,14 @@
     const savedTheme = localStorage.getItem('portfolio-theme');
     const copy = {
       tr: {
-        title: 'Berfin Nida Öztürk | Product Engineer',
-        description: 'Berfin Nida Öztürk; ölçeklenebilir dijital ürünler, admin sistemleri, entegrasyonlar ve otomasyon odaklı web platformları geliştiren product engineer.',
+        title: 'Berfin Nida Öztürk | Product Engineer & Bioinformatics Researcher',
+        description: 'Berfin Nida Öztürk; dijital ürünler, veri sistemleri ve tekrarlanabilir biyoinformatik iş akışları geliştiren Product Engineer & Bioinformatics Researcher.',
         darkLabel: 'Açık temaya geç',
         lightLabel: 'Koyu temaya geç'
       },
       en: {
-        title: 'Berfin Nida Öztürk | Product Engineer',
-        description: 'Berfin Nida Öztürk builds scalable digital products, admin systems, integrations and automation-driven web platforms.',
+        title: 'Berfin Nida Öztürk | Product Engineer & Bioinformatics Researcher',
+        description: 'Berfin Nida Öztürk builds digital products, data systems, and reproducible bioinformatics workflows across bioinformatics, data automation, and product engineering.',
         darkLabel: 'Switch to light theme',
         lightLabel: 'Switch to dark theme'
       }
