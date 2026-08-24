@@ -538,6 +538,58 @@
       position:relative;
     }
 
+    .project.featured{
+      border-color:color-mix(in srgb, var(--text) 18%, var(--line));
+      box-shadow:0 12px 34px rgba(0,0,0,.05);
+    }
+
+    .project.featured .project-summary{
+      min-height:300px;
+    }
+
+    .project.featured .project-summary::before{
+      content:"Featured Work";
+      align-self:flex-start;
+      display:inline-flex;
+      min-height:26px;
+      align-items:center;
+      padding:0 9px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:var(--soft);
+      color:var(--text);
+      font-size:11px;
+      font-weight:800;
+      line-height:1;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+    }
+
+    .project.featured .project-category{
+      background:var(--primary-bg);
+      border-color:var(--primary-border);
+      color:var(--primary-text);
+    }
+
+    .project.secondary{
+      opacity:.86;
+    }
+
+    .project.secondary .project-summary{
+      min-height:230px;
+    }
+
+    .project-dmd{order:1;}
+    .project-kpi{order:2;}
+    .project-modgis{order:3;}
+    .project-raxgame{order:4;}
+    .project-hotel{order:5;}
+    .project-nizen{order:6;}
+    .project-wandex{order:7;}
+    .project-zenith{order:8;}
+    .project-goldenvisa{order:9;}
+    .project-cafe{order:10;}
+
     .project:hover{
       transform:translateY(-2px);
       box-shadow:0 18px 44px rgba(0,0,0,.06);
@@ -887,7 +939,7 @@
 
     .why-grid{
       display:grid;
-      grid-template-columns:repeat(4,1fr);
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
       gap:16px;
     }
 
@@ -1030,6 +1082,32 @@
       background:var(--surface);
     }
 
+    .working-models{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      margin-bottom:18px;
+    }
+
+    .working-model{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+      background:var(--soft);
+    }
+
+    .working-model strong{
+      display:block;
+      font-size:15px;
+      margin-bottom:4px;
+    }
+
+    .working-model span{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.4;
+    }
+
     .contact-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
@@ -1047,6 +1125,9 @@
       background:var(--soft);
       transition:.2s ease;
     }
+
+    .contact-link.email-link{order:3;}
+    .contact-link.whatsapp-link{order:4;}
 
     .contact-icon{
       flex:0 0 24px;
@@ -1142,6 +1223,7 @@
     .about,
     .build-grid,
     .system-grid,
+    .working-models,
     .contact-grid,
     .why-grid{
       grid-template-columns:1fr;
@@ -1487,8 +1569,8 @@
     <div class="container hero-grid">
       <div>
         <div class="eyebrow">
-          <span data-lang-inline="tr">MSc Candidate / Product Engineer</span>
-          <span data-lang-inline="en">MSc Candidate / Product Engineer</span>
+          <span data-lang-inline="tr">MSc Candidate · Product Engineer</span>
+          <span data-lang-inline="en">MSc Candidate · Product Engineer</span>
         </div>
 
         <h1 data-lang="tr">Berfin Nida Öztürk</h1>
@@ -1621,8 +1703,8 @@
     <div class="container">
       <div class="section-head">
         <div class="section-left">
-          <div class="section-kicker" data-lang="tr">Seçilmiş İşler</div>
-          <div class="section-kicker" data-lang="en">Selected Work</div>
+          <div class="section-kicker" data-lang="tr">Featured Work</div>
+          <div class="section-kicker" data-lang="en">Featured Work</div>
           <h2 data-lang="tr">Problemden çalışan sisteme</h2>
           <h2 data-lang="en">From problem to working system</h2>
         </div>
@@ -1651,7 +1733,7 @@
       </div>
 
       <div class="projects">
-        <details class="project">
+        <details class="project featured project-dmd">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -1710,7 +1792,7 @@
               <span>PCA Visualization</span>
               <span>Heatmap Visualization</span>
               <span>Downstream Transcriptomics Analysis</span>
-              <span>Top Up/Down Regulated Transcripts</span>
+              <span>TPM-based Gene Expression Comparison</span>
               <span>End-to-end Reproducibility</span>
             </div>
             <div class="project-links">
@@ -1723,7 +1805,7 @@
           </div>
         </details>
 
-        <details class="project">
+        <details class="project featured project-kpi">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -1781,7 +1863,7 @@
           </div>
         </details>
 
-        <details class="project">
+        <details class="project featured project-modgis">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -1866,7 +1948,7 @@
           </div>
         </details>
 
-        <details class="project">
+        <details class="project secondary project-hotel">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -1936,7 +2018,7 @@
           </div>
         </details>
 
-        <details class="project">
+        <details class="project featured project-raxgame">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -2024,7 +2106,7 @@
           </div>
         </details>
 
-        <details class="project">
+        <details class="project secondary project-cafe">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -2089,7 +2171,7 @@
           </div>
         </details>
 
-        <details class="project">
+        <details class="project secondary project-nizen">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -2165,7 +2247,7 @@
           </div>
         </details>
 
-        <details class="project">
+        <details class="project secondary project-wandex">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -2235,7 +2317,7 @@
           </div>
         </details>
 
-        <details class="project">
+        <details class="project secondary project-zenith">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -2302,7 +2384,7 @@
           </div>
         </details>
 
-        <details class="project">
+        <details class="project secondary project-goldenvisa">
           <summary class="project-summary">
             <div class="project-summary-top">
               <div class="project-summary-main">
@@ -2396,59 +2478,31 @@
 
       <div class="build-grid">
         <article class="build-item">
-          <strong data-lang="tr">Admin Paneller</strong>
-          <strong data-lang="en">Admin Panels</strong>
-          <p data-lang="tr">Rol bazlı içerik girişi, onay akışları ve yönetim ekranları oluştururum.</p>
-          <p data-lang="en">I build role-aware admin interfaces for content entry, approvals, and operations.</p>
+          <strong data-lang="tr">Research Workflows</strong>
+          <strong data-lang="en">Research Workflows</strong>
+          <p data-lang="tr">Tekrarlanabilir biyoinformatik pipeline'lar, biyolojik veri analizi ve araştırma odaklı iş akışları kurarım.</p>
+          <p data-lang="en">Reproducible bioinformatics pipelines, biological data analysis, and research-oriented workflows.</p>
         </article>
 
         <article class="build-item">
-          <strong data-lang="tr">E-ticaret Sistemleri</strong>
-          <strong data-lang="en">E-commerce Systems</strong>
-          <p data-lang="tr">Ürün ve kategori mimarisini sipariş ve kampanya akışlarıyla birlikte kurgularım.</p>
-          <p data-lang="en">I design product and category architectures aligned with order and campaign flows.</p>
+          <strong data-lang="tr">Data Systems</strong>
+          <strong data-lang="en">Data Systems</strong>
+          <p data-lang="tr">Veri dönüşümü, raporlama akışları, otomasyon ve dashboard-ready veri setleri geliştiririm.</p>
+          <p data-lang="en">Data transformation, reporting workflows, automation, and dashboard-ready datasets.</p>
         </article>
 
         <article class="build-item">
-          <strong data-lang="tr">Kullanıcı Giriş / Kayıt Yapıları</strong>
-          <strong data-lang="en">User Sign-up / Authentication Flows</strong>
-          <p data-lang="tr">Giriş, hesap güvenliği ve rol mantığıyla kullanıcı süreçlerini kurarım.</p>
-          <p data-lang="en">I build user onboarding and account structures with secure authentication logic.</p>
+          <strong data-lang="tr">Product Systems</strong>
+          <strong data-lang="en">Product Systems</strong>
+          <p data-lang="tr">Admin paneller, authentication, dashboard'lar, içerik yönetimi ve custom business tools geliştiririm.</p>
+          <p data-lang="en">Admin panels, authentication, dashboards, content management, and custom business tools.</p>
         </article>
 
         <article class="build-item">
-          <strong data-lang="tr">Dinamik İçerik Yönetimi</strong>
-          <strong data-lang="en">Dynamic Content Management</strong>
-          <p data-lang="tr">Panel destekli içerik bloklarıyla sürekli güncellenebilen yapı tasarlarım.</p>
-          <p data-lang="en">I design update-friendly CMS-like content block systems controlled from admin side.</p>
-        </article>
-
-        <article class="build-item">
-          <strong data-lang="tr">Dashboard Arayüzleri</strong>
-          <strong data-lang="en">Dashboard Interfaces</strong>
-          <p data-lang="tr">Kullanıcı ve yönetici odaklı akışları tek ekranda takip edilebilir hale getiririm.</p>
-          <p data-lang="en">I create dashboards where user and admin flows can be monitored in one coherent interface.</p>
-        </article>
-
-        <article class="build-item">
-          <strong data-lang="tr">Veritabanı Destekli Web Yapıları</strong>
-          <strong data-lang="en">Database-driven Web Architectures</strong>
-          <p data-lang="tr">Gerçek veri ilişkileriyle çalışan, ölçeklenebilir ve sürdürülebilir yapı kurarım.</p>
-          <p data-lang="en">I build scalable and maintainable systems with practical relational data structures.</p>
-        </article>
-
-        <article class="build-item">
-          <strong data-lang="tr">Ürün / Kategori Yönetimi</strong>
-          <strong data-lang="en">Product / Category Management</strong>
-          <p data-lang="tr">Ürün ve kategori hiyerarşilerini standart kurallara göre tasarlarım.</p>
-          <p data-lang="en">I model product and category hierarchies with structured business rules.</p>
-        </article>
-
-        <article class="build-item">
-          <strong data-lang="tr">Arama ve Filtreleme Kurguları</strong>
-          <strong data-lang="en">Search and Filter Architectures</strong>
-          <p data-lang="tr">Kullanıcıyı doğru içeriğe hızlı ulaştıran filtrelenebilir akışlar kurarım.</p>
-          <p data-lang="en">I build discoverability flows that quickly guide users to relevant content.</p>
+          <strong data-lang="tr">E-commerce &amp; Integrations</strong>
+          <strong data-lang="en">E-commerce &amp; Integrations</strong>
+          <p data-lang="tr">Ürün, sipariş, envanter, ödeme ve API-driven iş akışlarını birlikte kurgularım.</p>
+          <p data-lang="en">Product, order, inventory, payment, and API-driven workflows.</p>
         </article>
       </div>
     </div>
@@ -2492,6 +2546,13 @@
           <strong data-lang="en">Built around real problems</strong>
           <p data-lang="tr">Görsel kaliteyi veri, süreç ve iş hedefiyle birlikte düşünürüm.</p>
           <p data-lang="en">I connect visual quality with data, process, and business goals.</p>
+        </div>
+
+        <div class="why-item">
+          <strong data-lang="tr">Bilimsel + teknik iletişim</strong>
+          <strong data-lang="en">Scientific + technical communication</strong>
+          <p data-lang="tr">Teknik çıktıları hem araştırma bağlamında hem de teknik olmayan paydaşlar için kullanılabilir kalacak şekilde yapılandırırım.</p>
+          <p data-lang="en">Technical outputs are structured so they remain useful both in research contexts and for non-technical stakeholders.</p>
         </div>
       </div>
     </div>
@@ -2596,6 +2657,27 @@
         </div>
       </div>
 
+      <div class="working-models" aria-label="Working models">
+        <div class="working-model">
+          <strong data-lang="tr">Project-based</strong>
+          <strong data-lang="en">Project-based</strong>
+          <span data-lang="tr">Net kapsamlı analiz, otomasyon veya ürün geliştirme işleri.</span>
+          <span data-lang="en">Clearly scoped analysis, automation, or product development work.</span>
+        </div>
+        <div class="working-model">
+          <strong data-lang="tr">Consulting</strong>
+          <strong data-lang="en">Consulting</strong>
+          <span data-lang="tr">Teknik yön, veri akışı, mimari veya proje planlama desteği.</span>
+          <span data-lang="en">Technical direction, data workflow, architecture, or project planning support.</span>
+        </div>
+        <div class="working-model">
+          <strong data-lang="tr">Ongoing remote / part-time</strong>
+          <strong data-lang="en">Ongoing remote / part-time</strong>
+          <span data-lang="tr">MSc çalışmalarıyla uyumlu seçili uzun soluklu iş birlikleri.</span>
+          <span data-lang="en">Selected longer-term collaborations aligned with MSc work.</span>
+        </div>
+      </div>
+
       <div class="contact-card">
         <div class="contact-grid">
           <a class="contact-link" href="https://github.com/berfinida" target="_blank" rel="noopener">
@@ -2618,7 +2700,7 @@
             </span>
           </a>
 
-          <a class="contact-link" href="https://wa.me/905443744032" target="_blank" rel="noopener">
+          <a class="contact-link whatsapp-link" href="https://wa.me/905443744032" target="_blank" rel="noopener">
             <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12.002 0C5.372 0 0 5.372 0 12c0 2.117.553 4.136 1.604 5.942L0 24l6.247-1.636A11.95 11.95 0 0 0 12.002 24c6.628 0 12-5.372 12-12S18.63 0 12.002 0zm6.57 17.153c-.28.785-1.633 1.5-2.252 1.595-.605.093-1.367.133-2.19-.131-.499-.16-1.14-.374-1.966-.732-3.466-1.512-5.729-4.965-5.905-5.204-.176-.24-1.47-1.96-1.47-3.739 0-1.779.933-2.654 1.265-3.02.332-.367.72-.455 0 0 .32-.053.68.014.98.014h.715c.228 0 .536-.086.838.638.29.7.986 2.414 1.072 2.588.09.175.15.381.03.608-.12.227-.18.36-.36.553-.18.193-.38.433-.542.58-.18.167-.367.35-.158.686.209.337.928 1.53 1.99 2.477 1.367 1.215 2.523 1.59 2.892 1.77.37.18.583.154.8-.092.217-.246.942-1.093 1.192-1.47.25-.378.5-.314.85-.19.35.126 2.22 1.047 2.6 1.236.38.19.63.282.722.442.093.162.093.94-.188 1.725z"/>
             </svg>
@@ -2628,7 +2710,7 @@
             </span>
           </a>
 
-          <a class="contact-link" href="mailto:berfinnidaozturk@gmail.com">
+          <a class="contact-link email-link" href="mailto:berfinnidaozturk@gmail.com">
             <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M1.5 4h21a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 22.5 20h-21A1.5 1.5 0 0 1 0 18.5v-13A1.5 1.5 0 0 1 1.5 4zm10.58 9.8L4.2 8.21a.75.75 0 0 0-.9 1.19l7.4 5.6a.75.75 0 0 0 .9 0l7.4-5.6a.75.75 0 0 0-.9-1.19L12 13.24 2.08 5.7a.75.75 0 0 0-.9 1.19L12 13.2z"/>
             </svg>

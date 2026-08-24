@@ -300,15 +300,16 @@
     <main class="container">
       <section>
         <div class="panel">
-          <h2>About the Project</h2>
-          <p>This project presents a production-style bioinformatics workflow for RNA-seq analysis using public DMD vs WT mouse data. The pipeline is implemented in Nextflow DSL2 and designed for reproducibility, maintainability, and transparent computational reporting.</p>
+          <h2>Problem</h2>
+          <p>This project uses a public DMD vs WT mouse RNA-seq dataset and turns raw sequencing inputs into a structured, reproducible computational biology workflow.</p>
+          <p>The pipeline is implemented in Nextflow DSL2 and designed for reproducibility, maintainability, and transparent computational reporting.</p>
           <p>It processes single-end RNA-seq reads from raw FASTQ through quality control, trimming, transcript quantification, and final expression matrix generation for downstream comparative analysis.</p>
         </div>
       </section>
 
       <section>
         <div class="panel">
-          <h2>Workflow Steps</h2>
+          <h2>Pipeline</h2>
           <div class="workflow" aria-label="RNA-seq workflow">
             <div class="step">FASTQ</div>
             <div class="step">FastQC</div>
@@ -329,11 +330,11 @@
             <p><strong>Biological context:</strong> WT vs DMD DeltaEx51 mouse tibialis anterior muscle RNA-seq</p>
           </div>
           <div class="panel">
-            <h2>Results</h2>
+            <h2>Analysis</h2>
             <p>Expression matrix generation for all samples</p>
             <p>TPM-based comparison between WT and DMD groups</p>
             <p>PCA and heatmap visualization for downstream transcriptomics analysis</p>
-            <p>Top upregulated and downregulated transcript extraction</p>
+            <p>TPM-based gene expression comparison for downstream review</p>
             <p>Fully reproducible end-to-end workflow execution</p>
           </div>
         </div>
@@ -341,17 +342,17 @@
 
       <section>
         <div class="panel">
-          <h2>Technologies Used</h2>
+          <h2>Reproducibility</h2>
           <div class="tech-grid">
             <div class="chip">Nextflow DSL2</div>
-            <div class="chip">Python</div>
-            <div class="chip">pandas</div>
-            <div class="chip">Salmon</div>
-            <div class="chip">FastQC</div>
-            <div class="chip">fastp</div>
-            <div class="chip">MultiQC</div>
             <div class="chip">Conda</div>
             <div class="chip">Git / GitHub</div>
+            <div class="chip">Python</div>
+            <div class="chip">pandas</div>
+            <div class="chip">FastQC</div>
+            <div class="chip">fastp</div>
+            <div class="chip">Salmon</div>
+            <div class="chip">MultiQC</div>
           </div>
         </div>
       </section>
