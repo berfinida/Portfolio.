@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berfin Nida Öztürk | Product Engineer &amp; Bioinformatics Researcher</title>
+    <title>Berfin Nida Öztürk | Product Engineering &amp; Bioinformatics</title>
     <meta name="description" content="Berfin Nida Öztürk builds digital products, data systems, and reproducible bioinformatics workflows across bioinformatics, data automation, and product engineering." />
     <meta name="author" content="Berfin Nida Öztürk" />
     <meta name="robots" content="index, follow" />
@@ -12,12 +12,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:site_name" content="Berfin Nida Öztürk" />
-    <meta property="og:title" content="Berfin Nida Öztürk | Product Engineer &amp; Bioinformatics Researcher" />
+    <meta property="og:title" content="Berfin Nida Öztürk | Product Engineering &amp; Bioinformatics" />
     <meta property="og:description" content="Digital products, data systems, and reproducible bioinformatics workflows." />
     <meta property="og:url" content="https://berfinida.com.tr/" />
     <meta property="og:image" content="https://berfinida.com.tr/preview.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Berfin Nida Öztürk | Product Engineer &amp; Bioinformatics Researcher" />
+    <meta name="twitter:title" content="Berfin Nida Öztürk | Product Engineering &amp; Bioinformatics" />
     <meta name="twitter:description" content="Digital products, data systems, and reproducible bioinformatics workflows." />
     <meta name="twitter:image" content="https://berfinida.com.tr/preview.png" />
     <link rel="preload" as="image" href="vesikalik.bw.jpg" />
@@ -285,35 +285,6 @@
       max-width:640px;
       font-size:18px;
       color:var(--muted);
-    }
-
-    .hero-specialties{
-      margin-top:22px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      max-width:720px;
-    }
-
-    .hero-specialties span{
-      display:inline-flex;
-      align-items:center;
-      min-height:34px;
-      padding:0 12px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:var(--soft);
-      color:var(--text);
-      font-size:13px;
-      font-weight:600;
-      white-space:nowrap;
-    }
-
-    .hero-availability{
-      margin-top:20px;
-      color:var(--text);
-      font-size:14px;
-      font-weight:600;
     }
 
     .cta-row{
@@ -1244,28 +1215,30 @@
       font-size:14px;
     }
 
-    .footer-specialties{
-      margin-top:14px;
+    .footer .container{
       display:flex;
-      flex-wrap:wrap;
-      gap:10px;
       align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
     }
 
-    .footer-specialties-title{
-      font-size:11px;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      color:var(--muted);
-      font-weight:600;
+    .footer-links{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
     }
 
-    .footer-specialty{
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:6px 10px;
-      font-size:12px;
+    .footer-links a{
       color:var(--text);
+      font-weight:600;
+      font-size:13px;
+      transition:color .2s ease;
+    }
+
+    .footer-links a:hover{
+      color:var(--accent);
       background:var(--surface);
     }
 
@@ -1655,44 +1628,25 @@
         </h1>
 
         <div class="hero-meta">
-          <span class="hero-slogan" data-lang-inline="tr">Product Engineer &amp; Bioinformatics Researcher</span>
-          <span class="hero-slogan" data-lang-inline="en">Product Engineer &amp; Bioinformatics Researcher</span>
+          <span class="hero-slogan" data-lang-inline="tr">Data-driven ürünler ve biyoinformatik iş akışları geliştiren product engineer.</span>
+          <span class="hero-slogan" data-lang-inline="en">Product engineer building data-driven products and bioinformatics workflows.</span>
         </div>
 
         <p class="hero-sub" data-lang="tr">
-          Dijital ürünler, veri sistemleri ve tekrarlanabilir biyoinformatik iş akışları geliştiriyorum.
+          Moleküler biyoloji arka planımı yazılım, veri sistemleri ve tekrarlanabilir hesaplamalı iş akışlarına taşıyorum.
         </p>
         <p class="hero-sub" data-lang="en">
-          Building digital products, data systems, and reproducible bioinformatics workflows.
+          I bring a molecular biology background into software, data systems, and reproducible computational workflows.
         </p>
-        <p class="hero-sub" data-lang="tr">
-          Software engineering, data ve bioinformatics arka planını pratik teknik çözümlere dönüştürüyorum.
-        </p>
-        <p class="hero-sub" data-lang="en">
-          Software engineering, data, and bioinformatics combined into practical technical solutions.
-        </p>
-
-        <div class="hero-specialties" aria-label="Specialty areas">
-          <span>Bioinformatics &amp; Computational Biology</span>
-          <span>Data &amp; Automation</span>
-          <span>Product &amp; Web Engineering</span>
-        </div>
-
-        <p class="hero-availability" data-lang="tr">İTÜ Moleküler Biyoloji ve Genetik / Biyoteknoloji tezli yüksek lisans programında MSc Candidate olarak araştırma odaklı çalışıyorum.</p>
-        <p class="hero-availability" data-lang="en">MSc Candidate in Molecular Biology and Genetics / Biotechnology at Istanbul Technical University, with a research-oriented focus.</p>
 
         <div class="cta-row">
-          <a href="#contact" class="btn primary">
-            <span data-lang-inline="tr">Birlikte Çalışalım</span>
-            <span data-lang-inline="en">Work With Me</span>
-          </a>
-          <a href="#projects" class="btn secondary">
+          <a href="#projects" class="btn primary">
             <span data-lang-inline="tr">Projeleri Gör</span>
             <span data-lang-inline="en">View Projects</span>
           </a>
-          <a href="mailto:berfinnidaozturk@gmail.com" class="btn secondary">
-            <span data-lang-inline="tr">Konuşalım</span>
-            <span data-lang-inline="en">Let's Talk</span>
+          <a href="#contact" class="btn secondary">
+            <span data-lang-inline="tr">Birlikte Çalışalım</span>
+            <span data-lang-inline="en">Work With Me</span>
           </a>
         </div>
       </div>
@@ -1817,8 +1771,8 @@
               <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
             <div class="project-summary-copy">
-              <p class="project-summary-text" data-lang="tr">Public DMD vs WT fare RNA-seq verisi üzerinde, FASTQ'dan expression matrix'e kadar uzanan, Nextflow DSL2 ile kurulmuş uçtan uca tekrarlanabilir bilimsel analiz hattı.</p>
-              <p class="project-summary-text" data-lang="en">An end-to-end reproducible RNA-seq analysis workflow built with Nextflow DSL2, processing public DMD vs WT mouse data from FASTQ to expression matrix.</p>
+              <p class="project-summary-text" data-lang="tr">Public DMD vs WT fare RNA-seq verisi için tekrarlanabilir analiz hattı. FASTQ'tan expression matrix ve downstream görselleştirmeye uzanır.</p>
+              <p class="project-summary-text" data-lang="en">A reproducible RNA-seq workflow for public DMD vs WT mouse data, from FASTQ processing to expression matrix and downstream visualization.</p>
               <div class="project-summary-meta">
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>Bioinformatics + Pipeline Engineering</span></div>
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Sistem</strong><strong data-lang-inline="en">System</strong><span>RNA-seq Workflow</span></div>
@@ -1889,8 +1843,8 @@
               <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
             <div class="project-summary-copy">
-              <p class="project-summary-text" data-lang="tr">Farklı departmanlardan gelen Excel KPI dosyalarını standart veri yapısına dönüştüren, Power Query ile konsolide eden ve yönetim dashboard akışına hazırlayan kurumsal raporlama sistemi.</p>
-              <p class="project-summary-text" data-lang="en">An enterprise reporting system that standardizes departmental Excel KPI files, consolidates them with Power Query, and prepares the data for a management dashboard workflow.</p>
+              <p class="project-summary-text" data-lang="tr">Departman KPI dosyalarını ortak bir modele taşıyan raporlama otomasyonu. Veriyi dashboard için temiz, yenilenebilir bir akışa hazırlar.</p>
+              <p class="project-summary-text" data-lang="en">Reporting automation that turns departmental KPI files into a shared model and prepares clean, refreshable dashboard data.</p>
               <div class="project-summary-meta">
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>Data + BI</span></div>
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Sistem</strong><strong data-lang-inline="en">System</strong><span>KPI Automation</span></div>
@@ -1947,8 +1901,8 @@
               <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
             <div class="project-summary-copy">
-              <p class="project-summary-text" data-lang="tr">Sadece web sitesi değil; SVG katman motoru, kural motoru, Pantone paneli, authentication, kayıtlı tasarımlar, revizyon geçmişi ve PDF export içeren fonksiyonel bir ürün sistemi.</p>
-              <p class="project-summary-text" data-lang="en">Not just a website: a functional product system with an SVG layer engine, rule engine, Pantone panel, authentication, saved designs, revision history, and PDF export.</p>
+              <p class="project-summary-text" data-lang="tr">Modüler gömlek tasarımını canlı önizleme, kullanıcı akışı ve export özellikleriyle çalışan bir ürün sistemine dönüştüren configurator.</p>
+              <p class="project-summary-text" data-lang="en">A configurator that turns modular shirt design into a working product system with live preview, user flows, and export features.</p>
               <div class="project-summary-meta">
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>Product + Frontend</span></div>
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Sistem</strong><strong data-lang-inline="en">System</strong><span>Configurator Engine</span></div>
@@ -2102,8 +2056,8 @@
               <span class="project-chevron" aria-hidden="true">⌄</span>
             </div>
             <div class="project-summary-copy">
-              <p class="project-summary-text" data-lang="tr">Gerçek dünya e-ticaret operasyonu için e-pin, CD key, bakiye, kampanya, ürün senkronizasyonu, sepet, kupon, ödeme ve SMS/OTP akışlarını birleştiren canlı oyun pazaryeri.</p>
-              <p class="project-summary-text" data-lang="en">A live gaming marketplace that brings e-pin, CD key, wallet balance, campaigns, product import, cart, coupon, payment, SMS verification, search, and account flows into one storefront.</p>
+              <p class="project-summary-text" data-lang="tr">Canlı oyun alışverişi için ürün keşfi, ödeme ve hesap akışlarını birleştiren e-ticaret deneyimi.</p>
+              <p class="project-summary-text" data-lang="en">A live gaming commerce experience that brings product discovery, checkout, and account flows into one storefront.</p>
               <div class="project-summary-meta">
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Rol</strong><strong data-lang-inline="en">Role</strong><span>Frontend + System</span></div>
                 <div class="project-summary-stat"><strong data-lang-inline="tr">Sistem</strong><strong data-lang-inline="en">System</strong><span>Gaming Marketplace</span></div>
@@ -2660,14 +2614,12 @@
       <div class="about">
         <div class="about-box">
           <p data-lang="tr">
-            Moleküler Biyoloji ve Genetik arka planımı yazılım, veri analizi ve biyoinformatik çalışmalarıyla birleştiriyorum.
-            İTÜ'de Moleküler Biyoloji ve Genetik / Biyoteknoloji alanında tezli yüksek lisans programında MSc Candidate olarak araştırma odaklı çalışıyorum.
-            İşlerimde bilimsel düşünme biçimini pratik ürün, otomasyon ve veri sistemi geliştirme sürecine taşıyorum.
+            Moleküler Biyoloji ve Genetik ile başlayan yolum yazılım, veri analizi ve biyoinformatik çalışmalarıyla ürün geliştirme pratiğine dönüştü.
+            Bilimsel düşünme biçimini pratik dijital ürünler, otomasyonlar ve tekrarlanabilir veri iş akışları kurarken kullanıyorum.
           </p>
           <p data-lang="en">
-            I combine a Molecular Biology and Genetics background with software, data analysis, and bioinformatics work.
-            I am an MSc Candidate in Molecular Biology and Genetics / Biotechnology at Istanbul Technical University, with a research-oriented focus.
-            My work brings scientific thinking into practical product, automation, and data-system development.
+            My path started in Molecular Biology and Genetics, then grew into software, data analysis, bioinformatics, and product development.
+            I use scientific thinking to build practical digital products, automations, and reproducible data workflows.
           </p>
         </div>
 
@@ -2723,16 +2675,10 @@
 
         <div class="section-copy">
           <p class="section-desc" data-lang="tr">
-            Biyoinformatik analiz, veri otomasyonu veya çalışan dijital ürün geliştirme ihtiyacınız varsa iletişime geçebilirsiniz.
+            Proje bazlı geliştirme, teknik danışmanlık ve seçili uzun soluklu iş birlikleri için iletişime geçebilirsiniz.
           </p>
           <p class="section-desc" data-lang="en">
-            Reach out for bioinformatics analysis, data automation, or working digital product development.
-          </p>
-          <p class="section-desc" data-lang="tr">
-            Freelance consulting ve proje bazlı iş birliklerine açığım.
-          </p>
-          <p class="section-desc" data-lang="en">
-            Open for freelance consulting and project-based collaboration.
+            Available for project-based work, technical consulting, and selected ongoing collaborations.
           </p>
         </div>
       </div>
@@ -2808,15 +2754,12 @@
 
   <footer class="footer">
     <div class="container">
-      © 2026 Berfin Nida Öztürk <span data-lang-inline="tr">Product Engineering &amp; Bioinformatics</span><span data-lang-inline="en">Product Engineering &amp; Bioinformatics</span>
-      <div class="footer-specialties">
-        <span class="footer-specialties-title" data-lang-inline="tr">Uzmanlık</span>
-        <span class="footer-specialties-title" data-lang-inline="en">Specialized In</span>
-        <span class="footer-specialty"><span data-lang="tr">Bioinformatics</span><span data-lang="en">Bioinformatics</span></span>
-        <span class="footer-specialty"><span data-lang="tr">Data Automation</span><span data-lang="en">Data Automation</span></span>
-        <span class="footer-specialty"><span data-lang="tr">Product Engineering</span><span data-lang="en">Product Engineering</span></span>
-        <span class="footer-specialty"><span data-lang="tr">Admin Dashboards</span><span data-lang="en">Admin Dashboards</span></span>
-        <span class="footer-specialty"><span data-lang="tr">E-commerce Systems</span><span data-lang="en">E-commerce Systems</span></span>
+      <span>© 2026 Berfin Nida Öztürk · Product Engineering &amp; Bioinformatics</span>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="https://github.com/berfinida" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/berfin-nida-%C3%B6zt%C3%BCrk-6a12131b7/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://wa.me/905443744032" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:berfinnidaozturk@gmail.com">Email</a>
       </div>
     </div>
   </footer>
