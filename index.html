@@ -79,6 +79,11 @@
       scroll-behavior:smooth;
     }
 
+    main{
+      display:flex;
+      flex-direction:column;
+    }
+
     body{
       margin:0;
       background:var(--bg);
@@ -428,6 +433,15 @@
       gap:18px;
     }
 
+    #projects{order:1;}
+    #services{order:2;}
+    #about{order:3;}
+    #contact{order:4;}
+    #builds,
+    #why{
+      display:none;
+    }
+
     .build-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -502,7 +516,7 @@
     }
 
     .project-map{
-      display:grid;
+      display:none;
       grid-template-columns:repeat(3,minmax(0,1fr));
       gap:16px;
       margin-bottom:22px;
@@ -579,11 +593,61 @@
     }
 
     .project.secondary{
-      opacity:.86;
+      display:none;
     }
 
     .project.secondary .project-summary{
       min-height:230px;
+    }
+
+    .project-archive{
+      margin-top:22px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:var(--surface);
+      overflow:hidden;
+    }
+
+    .project-archive summary{
+      list-style:none;
+      cursor:pointer;
+      padding:18px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      font-weight:700;
+    }
+
+    .project-archive summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .archive-list{
+      border-top:1px solid var(--line);
+      padding:18px 20px 20px;
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+    }
+
+    .archive-link{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px 16px;
+      background:var(--soft);
+      color:var(--text);
+      font-weight:700;
+    }
+
+    .archive-link span{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:600;
     }
 
     .project-dmd{order:1;}
@@ -971,8 +1035,9 @@
 
     .about{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
+      grid-template-columns:1fr;
       gap:18px;
+      max-width:860px;
     }
 
     .about-box,
@@ -990,7 +1055,7 @@
     }
 
     .about-points{
-      display:grid;
+      display:none;
       gap:16px;
     }
 
@@ -1227,6 +1292,7 @@
       .services,
       .project-map,
       .projects,
+      .archive-list,
     .about,
     .build-grid,
     .system-grid,
@@ -1557,10 +1623,9 @@
 
       <div class="nav-right">
         <div class="nav-links">
-          <a href="#services"><span data-lang-inline="tr">Hizmetler</span><span data-lang-inline="en">Services</span></a>
-          <a href="#projects"><span data-lang-inline="tr">Projeler</span><span data-lang-inline="en">Projects</span></a>
-          <a href="#builds"><span data-lang-inline="tr">Neler Geliştiriyorum</span><span data-lang-inline="en">What I Build</span></a>
-          <a href="#why"><span data-lang-inline="tr">Neden Ben</span><span data-lang-inline="en">Why Me</span></a>
+          <a href="#top"><span data-lang-inline="tr">Ana Sayfa</span><span data-lang-inline="en">Home</span></a>
+          <a href="#projects"><span data-lang-inline="tr">İşler</span><span data-lang-inline="en">Work</span></a>
+          <a href="#services"><span data-lang-inline="tr">Uzmanlık</span><span data-lang-inline="en">Expertise</span></a>
           <a href="#about"><span data-lang-inline="tr">Hakkımda</span><span data-lang-inline="en">About</span></a>
           <a href="#contact"><span data-lang-inline="tr">İletişim</span><span data-lang-inline="en">Contact</span></a>
         </div>
@@ -1593,16 +1658,16 @@
         </div>
 
         <p class="hero-sub" data-lang="tr">
-          Building digital products, data systems, and reproducible bioinformatics workflows.
+          Dijital ürünler, veri sistemleri ve tekrarlanabilir biyoinformatik iş akışları geliştiriyorum.
         </p>
         <p class="hero-sub" data-lang="en">
           Building digital products, data systems, and reproducible bioinformatics workflows.
         </p>
         <p class="hero-sub" data-lang="tr">
-          Moleküler biyoloji araştırmasını yazılım mühendisliği ve veri analiziyle birleştirerek pratik, tekrarlanabilir ve ölçeklenebilir çözümler geliştiriyorum.
+          Software engineering, data ve bioinformatics arka planını pratik teknik çözümlere dönüştürüyorum.
         </p>
         <p class="hero-sub" data-lang="en">
-          I combine molecular biology research with software engineering and data analysis to build practical, reproducible, and scalable solutions.
+          Software engineering, data, and bioinformatics combined into practical technical solutions.
         </p>
 
         <div class="hero-specialties" aria-label="Specialty areas">
@@ -1643,17 +1708,17 @@
     <div class="container">
       <div class="section-head">
         <div class="section-left">
-          <div class="section-kicker" data-lang="tr">Nasıl Yardımcı Olabilirim</div>
-          <div class="section-kicker" data-lang="en">What I Can Help With</div>
-          <h2 data-lang="tr">Hizmetler</h2>
-          <h2 data-lang="en">Services</h2>
+          <div class="section-kicker" data-lang="tr">Uzmanlık</div>
+          <div class="section-kicker" data-lang="en">Expertise</div>
+          <h2 data-lang="tr">Üç odak alanı</h2>
+          <h2 data-lang="en">Three focused areas</h2>
         </div>
 
         <p class="section-desc" data-lang="tr">
-          Bilimsel veri iş akışlarından iş otomasyonuna ve ürün geliştirmeye kadar, gerçek ihtiyacı netleştiren ve sürdürülebilir çıktıya dönüştüren sistemler kuruyorum.
+          Yetkinliklerimi uzun hizmet listeleri yerine üç net alanda topluyorum.
         </p>
         <p class="section-desc" data-lang="en">
-          From scientific data workflows to business automation and product engineering, I build practical systems that turn real needs into maintainable outcomes.
+          My work is organized into three clear areas instead of a long service menu.
         </p>
       </div>
 
@@ -1665,12 +1730,9 @@
           <ul class="service-list">
             <li>RNA-seq analysis</li>
             <li>Transcriptomics</li>
-            <li>Biological data analysis</li>
             <li>Reproducible bioinformatics pipelines</li>
             <li>QC and preprocessing</li>
             <li>PCA and heatmap visualization</li>
-            <li>Gene expression analysis</li>
-            <li>Research data workflows</li>
           </ul>
         </article>
 
@@ -1682,9 +1744,7 @@
             <li>Python data analysis</li>
             <li>Data cleaning and transformation</li>
             <li>Excel / Power Query automation</li>
-            <li>Power BI-ready data workflows</li>
             <li>Reporting automation</li>
-            <li>Business data pipelines</li>
             <li>Custom dashboards</li>
           </ul>
         </article>
@@ -1696,10 +1756,8 @@
           <ul class="service-list">
             <li>Web applications</li>
             <li>Admin dashboards</li>
-            <li>Internal business tools</li>
             <li>E-commerce systems</li>
             <li>API integrations</li>
-            <li>SaaS / MVP development</li>
             <li>Custom data-driven applications</li>
           </ul>
         </article>
@@ -2467,6 +2525,22 @@
           </div>
         </details>
       </div>
+
+      <details class="project-archive">
+        <summary>
+          <span data-lang-inline="tr">Project Archive</span>
+          <span data-lang-inline="en">Project Archive</span>
+          <span aria-hidden="true">⌄</span>
+        </summary>
+        <div class="archive-list">
+          <a class="archive-link" href="https://hotel17-lilac.vercel.app/" target="_blank" rel="noopener">Hotel17 <span>Hotel / Admin</span></a>
+          <a class="archive-link" href="https://nizen-store.vercel.app/" target="_blank" rel="noopener">NizenStore <span>E-commerce</span></a>
+          <a class="archive-link" href="https://wandex-seven.vercel.app/" target="_blank" rel="noopener">Wandex <span>Travel Discovery</span></a>
+          <a class="archive-link" href="https://zenith-focus-five.vercel.app/" target="_blank" rel="noopener">ZenithFocus <span>Productivity App</span></a>
+          <a class="archive-link" href="https://goldenvisakw.com" target="_blank" rel="noopener">GoldenVisaKW <span>Corporate Platform</span></a>
+          <a class="archive-link" href="https://cafe17-adts.vercel.app/" target="_blank" rel="noopener">Cafe17 <span>Restaurant</span></a>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -2584,16 +2658,14 @@
       <div class="about">
         <div class="about-box">
           <p data-lang="tr">
-            Product Engineer &amp; Bioinformatics Researcher olarak dijital ürünler, veri sistemleri ve tekrarlanabilir biyoinformatik iş akışları geliştiriyorum.
-            İTÜ Moleküler Biyoloji ve Genetik / Biyoteknoloji tezli yüksek lisans programında MSc Candidate olarak araştırma odaklı çalışıyorum.
-            Moleküler biyoloji arka planımı yazılım mühendisliği, veri analizi, otomasyon ve ürün geliştirme pratiğiyle birleştiriyorum.
-            Amacım; bilimsel analizlerden iş panellerine kadar sürdürülebilir, yönetilebilir ve gerçek probleme temas eden sistemler üretmek.
+            Moleküler Biyoloji ve Genetik arka planımı yazılım, veri analizi ve biyoinformatik çalışmalarıyla birleştiriyorum.
+            İTÜ'de Moleküler Biyoloji ve Genetik / Biyoteknoloji alanında tezli yüksek lisans programında MSc Candidate olarak araştırma odaklı çalışıyorum.
+            İşlerimde bilimsel düşünme biçimini pratik ürün, otomasyon ve veri sistemi geliştirme sürecine taşıyorum.
           </p>
           <p data-lang="en">
-            I work as a Product Engineer &amp; Bioinformatics Researcher building digital products, data systems, and reproducible bioinformatics workflows.
+            I combine a Molecular Biology and Genetics background with software, data analysis, and bioinformatics work.
             I am an MSc Candidate in Molecular Biology and Genetics / Biotechnology at Istanbul Technical University, with a research-oriented focus.
-            I combine molecular biology with software engineering, data analysis, automation, and product development.
-            My goal is to build maintainable, manageable systems that solve real problems, from scientific analysis workflows to business tools.
+            My work brings scientific thinking into practical product, automation, and data-system development.
           </p>
         </div>
 
@@ -2653,12 +2725,6 @@
           </p>
           <p class="section-desc" data-lang="en">
             Reach out for bioinformatics analysis, data automation, or working digital product development.
-          </p>
-          <p class="section-desc" data-lang="tr">
-            İlk görüşmede problemi, mevcut veriyi/sistemi, hedef çıktıyı ve en gerçekçi iş akışını netleştirebiliriz.
-          </p>
-          <p class="section-desc" data-lang="en">
-            In a first conversation, we can clarify the problem, current data/system, target output, and the most realistic workflow.
           </p>
           <p class="section-desc" data-lang="tr">
             Freelance consulting ve proje bazlı iş birliklerine açığım.
