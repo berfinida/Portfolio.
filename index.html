@@ -1079,10 +1079,35 @@
       margin:0 0 12px;
     }
 
-    .about-more-content article + article{
+    .personal-library{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:32px 24px;
       margin-top:24px;
-      padding-top:24px;
-      border-top:1px solid var(--line);
+    }
+
+    .personal-library article{
+      min-width:0;
+    }
+
+    .personal-cover{
+      display:block;
+      margin-bottom:18px;
+    }
+
+    .personal-cover img{
+      display:block;
+      width:100%;
+      height:auto;
+      aspect-ratio:210 / 297;
+      object-fit:contain;
+      background:var(--soft);
+    }
+
+    @media(max-width:560px){
+      .personal-library{
+        grid-template-columns:minmax(0,1fr);
+      }
     }
 
     .system{
@@ -2762,30 +2787,36 @@
             <h3 data-lang="en">Personal Work</h3>
             <p class="section-desc" data-lang="tr">Yazmak da kendimi ifade etme yollarımdan biri. Burada, hayal gücüme ve kişisel dünyama açılan çalışmalarımı paylaşıyorum.</p>
             <p class="section-desc" data-lang="en">Writing is another way I express myself. Here, I share pieces that offer a glimpse into my imagination and personal world.</p>
+            <div class="personal-library">
             <article>
+              <a class="personal-cover" href="assets/fisildayan-saka-kusu-fistik.pdf" target="_blank" rel="noopener"><img src="assets/fisildayan-saka-kusu-fistik-cover.jpg" alt="Fısıldayan Saka Kuşu: Fıstık" loading="lazy" decoding="async" width="1024" height="1536"></a>
               <h3>Fısıldayan Saka Kuşu: Fıstık</h3>
               <p class="section-desc" data-lang="tr">Kişisel bir yaratıcı yazı çalışmam.</p>
               <p class="section-desc" data-lang="en">A piece of my creative writing, in Turkish.</p>
               <a class="mini-link" href="assets/fisildayan-saka-kusu-fistik.pdf" target="_blank" rel="noopener"><span data-lang-inline="tr">Fıstık'ı Oku (PDF)</span><span data-lang-inline="en">Read Fıstık (PDF)</span></a>
             </article>
             <article>
+              <a class="personal-cover" href="assets/itiraz-edilemeyen-seyler-mudurlugu.pdf" target="_blank" rel="noopener"><img src="assets/itiraz-edilemeyen-seyler-mudurlugu-cover.jpg" alt="İtiraz Edilemeyen Şeyler Müdürlüğü" loading="lazy" decoding="async" width="420" height="595"></a>
               <h3>İtiraz Edilemeyen Şeyler Müdürlüğü</h3>
               <p class="section-desc" data-lang="tr">Kişisel bir yaratıcı yazı çalışmam.</p>
               <p class="section-desc" data-lang="en">A piece of my creative writing, in Turkish.</p>
               <a class="mini-link" href="assets/itiraz-edilemeyen-seyler-mudurlugu.pdf" target="_blank" rel="noopener"><span data-lang-inline="tr">Yazıyı Oku (PDF)</span><span data-lang-inline="en">Read the Story (PDF)</span></a>
             </article>
             <article>
+              <a class="personal-cover" href="assets/bayim-siraniz-sizden-once-geldi.pdf" target="_blank" rel="noopener"><img src="assets/bayim-siraniz-sizden-once-geldi-cover.jpg" alt="Bayım, Sıranız Sizden Önce Geldi" loading="lazy" decoding="async" width="420" height="595"></a>
               <h3>Bayım, Sıranız Sizden Önce Geldi</h3>
               <p class="section-desc" data-lang="tr">Kişisel bir yaratıcı yazı çalışmam.</p>
               <p class="section-desc" data-lang="en">A piece of my creative writing, in Turkish.</p>
               <a class="mini-link" href="assets/bayim-siraniz-sizden-once-geldi.pdf" target="_blank" rel="noopener"><span data-lang-inline="tr">Yazıyı Oku (PDF)</span><span data-lang-inline="en">Read the Story (PDF)</span></a>
             </article>
             <article>
+              <a class="personal-cover" href="assets/kiralik-vicdan.pdf" target="_blank" rel="noopener"><img src="assets/kiralik-vicdan-cover.jpg" alt="Kiralık Vicdan" loading="lazy" decoding="async" width="420" height="595"></a>
               <h3>Kiralık Vicdan</h3>
               <p class="section-desc" data-lang="tr">Kişisel bir yaratıcı yazı çalışmam.</p>
               <p class="section-desc" data-lang="en">A piece of my creative writing, in Turkish.</p>
               <a class="mini-link" href="assets/kiralik-vicdan.pdf" target="_blank" rel="noopener"><span data-lang-inline="tr">Yazıyı Oku (PDF)</span><span data-lang-inline="en">Read the Story (PDF)</span></a>
             </article>
+            </div>
           </div>
         </details>
       </div>
