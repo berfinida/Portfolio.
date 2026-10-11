@@ -37,7 +37,7 @@
         --surface: #ffffff;
         --soft: #edf2f7;
         --chip: #e2e8f0;
-        --accent: #0b7db8;
+        --accent: #075d89;
         --accent-soft: #d9f0fb;
         --dark-bg: #0a0f16;
         --dark-surface: #111827;
@@ -247,6 +247,11 @@
         to { opacity: 1; transform: translateY(0); }
       }
 
+      body { overflow-wrap: anywhere; }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; transition: none !important; }
+      }
+
       @media (max-width: 920px) {
         .grid-2, .tech-grid, .metrics-grid { grid-template-columns: 1fr 1fr; }
         .workflow { grid-template-columns: 1fr 1fr 1fr; }
@@ -277,9 +282,9 @@
     </style>
   </head>
   <body>
-    <div class="container topbar">
+    <nav class="container topbar" aria-label="Portfolio">
       <a href="/index.html#projects">← Back to portfolio projects</a>
-    </div>
+    </nav>
 
     <header class="hero">
       <div class="container">

@@ -26,7 +26,7 @@
       --bg:#ffffff;
       --text:#0b0b0b;
       --muted:#666666;
-      --muted-2:#8b8b8b;
+      --muted-2:#6b6b6b;
       --line:#ebebeb;
       --soft:#f7f7f7;
       --card-soft:#f7f7f7;
@@ -77,6 +77,22 @@
 
     html{
       scroll-behavior:smooth;
+    }
+
+    [id]{
+      scroll-margin-top:100px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible{
+      outline:2px solid var(--text);
+      outline-offset:4px;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto;}
+      *, *::before, *::after{animation:none !important;transition:none !important;}
     }
 
     main{
@@ -1440,6 +1456,8 @@
     }
 
     @media (max-width: 760px){
+      [id]{scroll-margin-top:170px;}
+
       .nav-inner{
         flex-direction:column;
         align-items:flex-start;
@@ -1494,6 +1512,8 @@
       .nav{
         position:relative;
       }
+
+      [id]{scroll-margin-top:16px;}
 
       .eyebrow{
         max-width:100%;
@@ -1590,7 +1610,7 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#content">Ana içeriğe geç</a>
+  <a class="skip-link" href="#content"><span data-lang-inline="tr">Ana içeriğe geç</span><span data-lang-inline="en">Skip to content</span></a>
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#top" class="brand">
@@ -1786,9 +1806,6 @@
             <div class="project-summary-bottom">
               <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
               <span class="project-summary-hint" data-lang="en">Open case study</span>
-              <a class="project-summary-link" href="/dmd-rnaseq-case-study.html" onclick="event.stopPropagation();">
-                <span data-lang-inline="tr">Detay Sayfasını Aç</span><span data-lang-inline="en">Open Page</span>
-              </a>
             </div>
           </summary>
           <div class="project-body">
@@ -1858,9 +1875,6 @@
             <div class="project-summary-bottom">
               <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
               <span class="project-summary-hint" data-lang="en">Open case study</span>
-              <a class="project-summary-link" href="/enterprise-kpi-case-study.html" onclick="event.stopPropagation();">
-                <span data-lang-inline="tr">Detay Sayfasını Aç</span><span data-lang-inline="en">Open Page</span>
-              </a>
             </div>
           </summary>
           <div class="project-body">
@@ -1916,9 +1930,6 @@
             <div class="project-summary-bottom">
               <span class="project-summary-hint" data-lang="tr">Detayları incele</span>
               <span class="project-summary-hint" data-lang="en">Open case study</span>
-              <a class="project-summary-link" href="/modgis-case-study.html" onclick="event.stopPropagation();">
-                <span data-lang-inline="tr">Detay Sayfasını Aç</span><span data-lang-inline="en">Open Page</span>
-              </a>
             </div>
           </summary>
           <div class="project-body">
@@ -1969,8 +1980,6 @@
             </div>
             <div class="project-links">
               <a class="mini-link" href="/modgis-case-study.html"><span data-lang-inline="tr">Detay Sayfası</span><span data-lang-inline="en">Case Study</span></a>
-              <a class="mini-link" href="https://github.com/berfinida/design" target="_blank" rel="noopener">GitHub</a>
-              <a class="mini-link" href="https://www.berfinida.xyz/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Site</span><span data-lang-inline="en">Live Site</span></a>
             </div>
             <div class="project-media">
               <img class="project-image" src="modgispreview.svg" alt="ModGIS modüler gömlek tasarım sistemi önizlemesi" width="1280" height="800" loading="lazy" decoding="async" />
@@ -2241,7 +2250,6 @@
               <span>Collection Navigation</span><span>Search &amp; Filtering</span><span>Product Details</span><span>Persistent Cart</span><span>Local Admin Panel</span><span>Responsive Design</span>
             </div>
             <div class="project-links">
-              <a class="mini-link" href="https://github.com/berfinida/ashlesha-jewellery" target="_blank" rel="noopener">GitHub</a>
               <a class="mini-link" href="https://ashlesha-jewellery.vercel.app/" target="_blank" rel="noopener"><span data-lang-inline="tr">Canlı Demo</span><span data-lang-inline="en">Demo</span></a>
             </div>
             <div class="project-media">
@@ -2827,8 +2835,16 @@
     const socialDescriptions = document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]');
     const socialTitles = document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]');
     const projectAccordions = document.querySelectorAll('.projects .project');
-    const savedLang = localStorage.getItem('portfolio-lang') || 'tr';
-    const savedTheme = localStorage.getItem('portfolio-theme');
+    function readPreference(key){
+      try { return localStorage.getItem(key); } catch { return null; }
+    }
+
+    function savePreference(key, value){
+      try { localStorage.setItem(key, value); } catch {}
+    }
+
+    const savedLang = readPreference('portfolio-lang') || 'tr';
+    const savedTheme = readPreference('portfolio-theme');
     const copy = {
       tr: {
         title: 'Berfin Nida Öztürk | Product Engineering & Bioinformatics',
@@ -2862,7 +2878,7 @@
       if (metaThemeColor) {
         metaThemeColor.setAttribute('content', normalizedTheme === 'dark' ? '#000000' : '#ffffff');
       }
-      localStorage.setItem('portfolio-theme', normalizedTheme);
+      savePreference('portfolio-theme', normalizedTheme);
     }
 
     function setLang(lang){
@@ -2870,6 +2886,7 @@
       html.classList.remove('lang-tr','lang-en');
       html.classList.add('lang-' + normalizedLang);
       html.setAttribute('lang', normalizedLang);
+      document.querySelector('meta[property="og:locale"]').setAttribute('content', normalizedLang === 'en' ? 'en_US' : 'tr_TR');
       document.title = copy[normalizedLang].title;
       if (metaDescription) {
         metaDescription.setAttribute('content', copy[normalizedLang].description);
@@ -2885,7 +2902,7 @@
         const isDark = html.classList.contains('theme-dark');
         themeToggle.setAttribute('aria-label', isDark ? copy[normalizedLang].darkLabel : copy[normalizedLang].lightLabel);
       }
-      localStorage.setItem('portfolio-lang', normalizedLang);
+      savePreference('portfolio-lang', normalizedLang);
     }
 
     buttons.forEach(btn => {
