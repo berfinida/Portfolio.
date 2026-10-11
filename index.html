@@ -1130,6 +1130,60 @@
       background:var(--soft);
     }
 
+    .personal-music{
+      margin-top:28px;
+      border-top:1px solid var(--line);
+      padding-top:12px;
+    }
+
+    .personal-music > summary{
+      width:auto;
+      margin-left:0;
+      padding:10px 0;
+      color:var(--text);
+      font-size:17px;
+      font-weight:600;
+    }
+
+    .song-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:24px;
+      margin-top:24px;
+    }
+
+    .song{
+      min-width:0;
+    }
+
+    .song h4{
+      font-size:16px;
+      line-height:1.4;
+      margin:0 0 4px;
+    }
+
+    .song-subtitle,
+    .song-version{
+      display:block;
+      color:var(--muted);
+      font-size:13px;
+      margin:0 0 8px;
+    }
+
+    .song-version{
+      margin-top:12px;
+    }
+
+    .song audio{
+      display:block;
+      width:100%;
+      height:54px;
+    }
+
+    @media(max-width:560px){
+      .song-list{grid-template-columns:minmax(0,1fr);}
+    }
+
     @media(max-width:800px){
       .personal-library{
         grid-template-columns:repeat(3,minmax(0,1fr));
@@ -2931,6 +2985,42 @@
             </article>
               </div>
             </details>
+            <details class="personal-music">
+              <summary><span data-lang-inline="tr">Şarkılar</span><span data-lang-inline="en">Songs</span></summary>
+              <p class="section-desc" data-lang="tr">Sözler, müzik tarzı ve enstrüman seçimleri bana ait; vokaller yapay zekâyla oluşturuldu.</p>
+              <p class="section-desc" data-lang="en">I wrote the lyrics and chose the musical style and instruments; the vocals were generated with AI.</p>
+              <div class="song-list">
+                <article class="song">
+                  <h4 lang="tr">Cennetin Müşteri Hizmetleri</h4>
+                  <p class="song-subtitle" lang="en">Heaven Has a Waiting List</p>
+                  <span class="song-version"><span data-lang-inline="tr">Versiyon 1</span><span data-lang-inline="en">Version 1</span></span>
+                  <audio controls preload="none" aria-label="Cennetin Müşteri Hizmetleri - 1"><source src="assets/cennetin-musteri-hizmetleri-v1.mp3" type="audio/mpeg"><a href="assets/cennetin-musteri-hizmetleri-v1.mp3">Cennetin Müşteri Hizmetleri - 1 (MP3)</a></audio>
+                  <span class="song-version"><span data-lang-inline="tr">Versiyon 2</span><span data-lang-inline="en">Version 2</span></span>
+                  <audio controls preload="none" aria-label="Cennetin Müşteri Hizmetleri - 2"><source src="assets/cennetin-musteri-hizmetleri-v2.mp3" type="audio/mpeg"><a href="assets/cennetin-musteri-hizmetleri-v2.mp3">Cennetin Müşteri Hizmetleri - 2 (MP3)</a></audio>
+                </article>
+                <article class="song">
+                  <h4 lang="tr">Kendime Dava Açtım</h4>
+                  <p class="song-subtitle" lang="en">I Sued Myself</p>
+                  <audio controls preload="none" aria-label="Kendime Dava Açtım"><source src="assets/kendime-dava-actim.mp3" type="audio/mpeg"><a href="assets/kendime-dava-actim.mp3">Kendime Dava Açtım (MP3)</a></audio>
+                </article>
+                <article class="song">
+                  <h4 lang="tr">Ölü Taklidi</h4>
+                  <p class="song-subtitle" lang="en">Playing Dead</p>
+                  <span class="song-version"><span data-lang-inline="tr">Versiyon 1</span><span data-lang-inline="en">Version 1</span></span>
+                  <audio controls preload="none" aria-label="Ölü Taklidi - 1"><source src="assets/olu-taklidi-v1.mp3" type="audio/mpeg"><a href="assets/olu-taklidi-v1.mp3">Ölü Taklidi - 1 (MP3)</a></audio>
+                  <span class="song-version"><span data-lang-inline="tr">Versiyon 2</span><span data-lang-inline="en">Version 2</span></span>
+                  <audio controls preload="none" aria-label="Ölü Taklidi - 2"><source src="assets/olu-taklidi-v2.mp3" type="audio/mpeg"><a href="assets/olu-taklidi-v2.mp3">Ölü Taklidi - 2 (MP3)</a></audio>
+                </article>
+                <article class="song">
+                  <h4 lang="tr">Tanrı Beni Görüldüde Bıraktı</h4>
+                  <p class="song-subtitle" lang="en">God Left Me on Read</p>
+                  <span class="song-version"><span data-lang-inline="tr">Versiyon 1</span><span data-lang-inline="en">Version 1</span></span>
+                  <audio controls preload="none" aria-label="Tanrı Beni Görüldüde Bıraktı - 1"><source src="assets/tanri-beni-goruldude-birakti-v1.mp3" type="audio/mpeg"><a href="assets/tanri-beni-goruldude-birakti-v1.mp3">Tanrı Beni Görüldüde Bıraktı - 1 (MP3)</a></audio>
+                  <span class="song-version"><span data-lang-inline="tr">Versiyon 2</span><span data-lang-inline="en">Version 2</span></span>
+                  <audio controls preload="none" aria-label="Tanrı Beni Görüldüde Bıraktı - 2"><source src="assets/tanri-beni-goruldude-birakti-v2.mp3" type="audio/mpeg"><a href="assets/tanri-beni-goruldude-birakti-v2.mp3">Tanrı Beni Görüldüde Bıraktı - 2 (MP3)</a></audio>
+                </article>
+              </div>
+            </details>
           </div>
         </details>
       </div>
@@ -3145,6 +3235,15 @@
     });
 
     syncAccordionState();
+
+    const songPlayers = document.querySelectorAll('.song audio');
+    songPlayers.forEach(player => {
+      player.addEventListener('play', () => {
+        songPlayers.forEach(other => {
+          if (other !== player) other.pause();
+        });
+      });
+    });
 
     if (themeToggle) {
       themeToggle.addEventListener('click', () => {
