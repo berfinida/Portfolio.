@@ -1050,6 +1050,35 @@
       gap:16px;
     }
 
+    .about-more{
+      min-width:0;
+    }
+
+    .about-more summary{
+      width:fit-content;
+      margin-left:auto;
+      cursor:pointer;
+      color:var(--muted);
+      font-size:14px;
+      padding:6px 0;
+    }
+
+    .about-more summary:hover{
+      color:var(--text);
+    }
+
+    .about-more-content{
+      margin-top:16px;
+      padding-top:20px;
+      border-top:1px solid var(--line);
+      overflow-wrap:anywhere;
+    }
+
+    .about-more-content h3{
+      font-size:20px;
+      margin:0 0 12px;
+    }
+
     .system{
       background:var(--soft);
     }
@@ -2720,6 +2749,21 @@
             <span data-lang="en">I keep projects grounded in the real problem, solution, technology, and delivered capability.</span>
           </div>
         </div>
+        <details id="personal" class="about-more">
+          <summary><span data-lang-inline="tr">Dahası</span><span data-lang-inline="en">More</span></summary>
+          <div class="about-more-content">
+            <h3 data-lang="tr">Kişisel Çalışmalar</h3>
+            <h3 data-lang="en">Personal Work</h3>
+            <p class="section-desc" data-lang="tr">Yazmak da kendimi ifade etme yollarımdan biri. Burada, hayal gücüme ve kişisel dünyama açılan çalışmalarımdan birini paylaşıyorum.</p>
+            <p class="section-desc" data-lang="en">Writing is another way I express myself. Here, I share a piece that offers a glimpse into my imagination and personal world.</p>
+            <article>
+              <h3>Fısıldayan Saka Kuşu: Fıstık</h3>
+              <p class="section-desc" data-lang="tr">Kişisel bir yaratıcı yazı çalışmam.</p>
+              <p class="section-desc" data-lang="en">A piece of my creative writing, in Turkish.</p>
+              <a class="mini-link" href="assets/fisildayan-saka-kusu-fistik.pdf" target="_blank" rel="noopener"><span data-lang-inline="tr">Fıstık'ı Oku (PDF)</span><span data-lang-inline="en">Read Fıstık (PDF)</span></a>
+            </article>
+          </div>
+        </details>
       </div>
     </div>
   </section>
