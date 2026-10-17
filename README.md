@@ -32,6 +32,10 @@ Functional product configurator with SVG layer engine, rule logic, Pantone contr
 - Demo: https://www.berfinida.xyz/
 - Repo: https://github.com/berfinida/design
 
+### How to Cook
+Bilingual editorial recipe platform with Turkish and English routes, recipe search and filtering, recipe details, and a PostgreSQL / Prisma data model.
+- Repo: https://github.com/berfinida/how-to-cook
+
 ### RaxGame
 Live gaming commerce system with payment integrations, SMS/OTP, product synchronization, stock and price management, cart, coupons, wallet, and order tracking.
 - Live: https://raxgame.com/
